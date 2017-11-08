@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>WSL Degital Library</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="ここにサイト説明を入れます">
+<meta name="keywords" content="キーワード１,キーワード２,キーワード３,キーワード４,キーワード５">
+<link rel="stylesheet" href="css/style.css">
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+
+<body>
+
+<header>
+<br>
+<br>
+<h1 id="logo"><a href="index.html"><img src="./images/logo1.png" alt="WSL Degital Library"></a></h1>
+<nav id="menubar">
+<ul>
+<li><a href="#about">About</a></li>
+<li><a href="#gallery">Search</a></li>
+<li><a href="#all_list">ALL List</a></li>
+</ul>
+</nav>
+</header>
+
+<div class="contents" id="about">
+
+<section id="new">
+<h2>更新情報</h2>
+<dl>
+<dt>2017/11/09</dt>
+<dd>WSL Degita Libraryを構築</dd>
+
+</dl>
+</section>
+
+<p class="pagetop"><a href="#">↑</a></p>
+
+</div>
+<!--/contents-->
+
+<div class="contents" id="gallery">
+
+<section>
+
+<h2>Search</h2>
+<p>PDF化した書籍の検索ができます。</p>
+<form name="js">
+検索キーワード：<input type="text" name="txtb_kw" value=""><input type="button" value="検索"><br>
+検索カテゴリ：<input type="text" name="txtb_kc" value=""><input type="button" value="検索">
+
+
+</section>
+
+<p class="pagetop"><a href="#">↑</a></p>
+
+</div>
+
+
+
+<div class="contents" id="all_list">
+
+<section>
+
+<h2>ALL List</h2>
+<p>PFD化した書籍の一覧です。<br></p>
+<script type="text/javascript">
+window.onload =　function readTextFile(){
+    var file = "PDF_list.txt";
+    var url = "";
+    var target = document.getElementById("output");
+    var rawFile = new XMLHttpRequest();
+    rawFile.open("GET", file, true);
+    rawFile.onreadystatechange = function ()
+    {
+        if(rawFile.readyState === 4)
+        {
+            if(rawFile.status === 200 || rawFile.status == 0)
+            {
+                var allText = rawFile.responseText;
+                var type = typeof allText;
+                file_names = allText.split("\n");
+                for(var i = 0; i < file_names.length; i++){
+                  url += file_names[i] + "<a href='dlPDF/" + file_names[i] + ".pdf#page=2 target='_blank''> 開く</a><a href='dlPDF/" + file_names[i] + ".pdf.zip#page=2 target='_blank''> ダウンロード</a><br>";
+                }
+                target.innerHTML = url;
+            }
+        }
+    }
+    rawFile.send(null);
+}
+</script>
+ <div id="output"></div>
+<input type="button" value="Exec" onclick="readTextFile('PDF_list.txt');"/><br/>
+</section>
+
+<p class="pagetop"><a href="#">↑</a></p>
+
+</div>
+<!--/contents-->
+
+<footer>
+<small>Copyright&copy; <a href="index.html">SIMPLE SITE</a> All Rights Reserved.</small>
+<span class="pr">《<a href="http://template-party.com/" target="_blank">Web Design:Template-Party</a>》</span>
+</footer>
+
+<!--背景用の画像の読み込み-->
+<aside id="bg"><img src="images/bg.jpg" class="landscape"><img src="images/bg2.jpg" class="portrait"></aside>
+
+</body>
+</html>

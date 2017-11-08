@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+
+    <script src="../knockout-3.4.2.js"></script>
+    <script src="sample.js"></script>
+  </head>
+  <body>
+    <h1 data-bind="text: message"></h1>
+    <a href="../../dlPDF/初めてのJavaScript.pdf.zip#page=2 target="_blank"">開く</a>
+
+    <script type='text/javascript'>
+      function handleDownload() {
+        var content = '../../dlPDF/初めてのJavaScript';
+        var blob = new Blob([ content ], { "type" : "image/png" });
+
+        if (window.navigator.msSaveBlob) {
+          window.navigator.msSaveBlob(blob, "../../dlPDF/初めてのJavaScript.pdf");
+          // msSaveOrOpenBlobの場合はファイルを保存せずに開ける
+          window.navigator.msSaveOrOpenBlob(blob, "../../dlPDF/初めてのJavaScript.pdf");
+        } else {
+          document.getElementById("download").href = window.URL.createObjectURL(blob);
+        }
+      }
+    </script>
+        <a id="download" href="#" download="初めてのJavaScript.pdf" onclick="handleDownload()">ダウンロード</a>
+
+  </body>
+</html>
