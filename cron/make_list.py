@@ -1,5 +1,5 @@
 import os
-"""
+
 files = os.listdir('../src/ver1/dlPDF')
 count = 0
 with open('../src/ver1/PDF_list.txt', 'w') as f:
@@ -22,3 +22,4 @@ conn = SMBConnection(
         domain='',
         use_ntlm_v2=True)
 conn.connect('yellow.wsl.mind.meiji.ac.jp', 139)
+"""

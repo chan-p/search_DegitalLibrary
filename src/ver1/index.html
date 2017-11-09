@@ -72,14 +72,14 @@
 <p>PFD化した書籍の一覧です。<br></p>
 <script type="text/javascript">
 window.onload =　function readTextFile(){
-    var file = "PDF_list.txt";
+    var file = "./PDF_list.txt";
     var url = "";
     var target = document.getElementById("output");
     var rawFile = new XMLHttpRequest();
     rawFile.open("GET", file, true);
     rawFile.onreadystatechange = function ()
     {
-        if(rawFile.readyState === 4)
+        if(rawFile.readyState == 4)
         {
             if(rawFile.status === 200 || rawFile.status == 0)
             {
@@ -97,7 +97,6 @@ window.onload =　function readTextFile(){
 }
 </script>
  <div id="output"></div>
-<input type="button" value="Exec" onclick="readTextFile('PDF_list.txt');"/><br/>
 </section>
 
 <p class="pagetop"><a href="#">↑</a></p>
