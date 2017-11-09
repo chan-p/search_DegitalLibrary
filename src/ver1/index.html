@@ -74,6 +74,7 @@
 window.onload =　function readTextFile(){
     var file = "./PDF_list.txt";
     var url = "";
+    var spaces = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp";
     var target = document.getElementById("output");
     var rawFile = new XMLHttpRequest();
     rawFile.open("GET", file, true);
@@ -87,7 +88,7 @@ window.onload =　function readTextFile(){
                 var type = typeof allText;
                 file_names = allText.split("\n");
                 for(var i = 0; i < file_names.length; i++){
-                  url += file_names[i] + "<a href='dlPDF/" + file_names[i] + ".pdf#page=2 target='_blank''> 開く</a><a href='dlPDF/" + file_names[i] + ".pdf.zip#page=2 target='_blank''> ダウンロード</a><br>";
+                  url += "<h3><div style='text-align:right;'><div style='text-align:left;float:left;'>" + file_names[i] + "</div><a href='dlPDF/" + file_names[i] + ".pdf#page=1 target='_blank''><img src='images/pdf-hiraku.png' alt='イラスト２' width=100 height=100></a><a href='dlPDF/" + file_names[i] + ".pdf.zip#page=1 target='_blank''><img src='images/pdf-DL.png' alt='イラスト3' width=100 height=100></a></div></h3><br>";
                 }
                 target.innerHTML = url;
             }

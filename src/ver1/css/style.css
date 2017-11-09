@@ -314,4 +314,10 @@ p {
 	top: 38%;		/*ヘッダーブロックに対して上から40%の場所に配置*/
 }
 
+div.left {
+	text-align: left;
+	float: left;
+}
+div.right { text-align: right; }
+
 }
