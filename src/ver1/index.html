@@ -34,9 +34,10 @@
 <section id="new">
 <h2>更新情報</h2>
 <dl>
-<dt>2017/11/09</dt>
-<dd>WSL Degita Libraryを構築</dd>
-
+  <dt>2017/11/10</dt>
+  <dd>ALL Listを実装</dd>
+  <dt>2017/11/09</dt>
+  <dd>WSL Degita Libraryを構築</dd>
 </dl>
 </section>
 
@@ -51,9 +52,55 @@
 
 <h2>Search</h2>
 <p>PDF化した書籍の検索ができます。</p>
-<form name="js">
-検索キーワード：<input type="text" name="txtb_kw" value=""><input type="button" value="検索"><br>
-検索カテゴリ：<input type="text" name="txtb_kc" value=""><input type="button" value="検索">
+<form name="js" id="id_js">
+検索キーワード：<input type="text" name="txtb_kw" id="s1" value="" onkeypress="enterEvent(event.keyCode);"><input type="button" value="検索" onclick="dispButton();"><input type="button" value="クリア" onclick="clearText();"><br>
+<div id="output2"></div>
+<script type="text/javascript">
+function enterEvent(code)
+{
+	//エンターキー押下なら
+	if(13 === code)
+	{
+		dispButton();
+	}
+}
+
+function dispButton(){
+  var val = document.getElementById('s1').value;
+  var target = document.getElementById("output2");
+  var file = "./PDF_list.txt";
+  var url = "<br>";
+  var rawFile = new XMLHttpRequest();
+  rawFile.open("GET", file, true);
+  rawFile.onreadystatechange = function ()
+  {
+      if(rawFile.readyState == 4)
+      {
+          if(rawFile.status === 200 || rawFile.status == 0)
+          {
+              var allText = rawFile.responseText;
+              var type = typeof allText;
+              file_names = allText.split("\n");
+              for(var i = 0; i < file_names.length; i++){
+                  if(file_names[i].indexOf(val) != -1){
+                      url += "<h3><div style='text-align:right;'><div style='text-align:left;float:left;'>" + file_names[i] + "</div><a href='dlPDF/" + file_names[i] + ".pdf#page=1 target='_blank''><img src='images/pdf-hiraku.png' alt='イラスト２' width=100 height=100></a><a href='dlPDF/" + file_names[i] + ".pdf.zip#page=1 target='_blank''><img src='images/pdf-DL.png' alt='イラスト3' width=100 height=100></a></div></h3><br>";
+                  }
+              }
+              if(url === ''){
+                url += val + 'を含むタイトルはありません。'
+              }
+              target.innerHTML = url;
+          }
+      }
+  }
+  rawFile.send(null);
+  target.innerHTML = url;
+}
+function clearText(){
+  document.getElementById('s1').value = '';
+}
+</script>
+検索カテゴリ：<input type="text" name="txtb_kc" value=""><input type="button" value="検索"><input type="button" value="クリア" onclick="clearText();">
 
 
 </section>
@@ -74,7 +121,6 @@
 window.onload =　function readTextFile(){
     var file = "./PDF_list.txt";
     var url = "";
-    var spaces = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp";
     var target = document.getElementById("output");
     var rawFile = new XMLHttpRequest();
     rawFile.open("GET", file, true);
