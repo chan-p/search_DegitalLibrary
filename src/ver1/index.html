@@ -8,10 +8,6 @@
 <meta name="description" content="ここにサイト説明を入れます">
 <meta name="keywords" content="キーワード１,キーワード２,キーワード３,キーワード４,キーワード５">
 <link rel="stylesheet" href="css/style.css">
-<!--[if lt IE 9]>
-<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-<![endif]-->
 </head>
 
 <body>
@@ -34,6 +30,8 @@
 <section id="new">
 <h2>更新情報</h2>
 <dl>
+  <dt>2017/11/11</dt>
+  <dd>カテゴリ機能を実装</dd>
   <dt>2017/11/10</dt>
   <dd>ALL Listを実装</dd>
   <dt>2017/11/09</dt>
@@ -66,6 +64,26 @@ function enterEvent(code)
 }
 
 function dispButton(){
+  var file2 = "./PDF_list_column.txt";
+  var rawFile2 = new XMLHttpRequest();
+  var dic = {};
+  rawFile2.open("GET", file2, true);
+  rawFile2.onreadystatechange = function (){
+      if(rawFile2.readyState == 4){
+          if(rawFile2.status === 200 || rawFile2.status == 0){
+              var allText2 = rawFile2.responseText;
+              file_names2 = allText2.split("\n");
+              for(var i = 0; i < file_names2.length; i++){
+                  columns = file_names2[i].split(",");
+                  dic[columns[0]] = new Array();
+                  for(var ii = 1; ii < columns.length; ii++){
+                      dic[columns[0]].push(columns[ii]);
+                  }
+              }
+          }
+      }
+  }
+  rawFile2.send(null);
   var val = document.getElementById('s1').value;
   var target = document.getElementById("output2");
   var file = "./PDF_list.txt";
@@ -82,9 +100,15 @@ function dispButton(){
               var type = typeof allText;
               file_names = allText.split("\n");
               for(var i = 0; i < file_names.length; i++){
-                  if(file_names[i].indexOf(val) != -1){
-                      url += "<h3><div style='text-align:right;'><div style='text-align:left;float:left;'>" + file_names[i] + "</div><a href='dlPDF/" + file_names[i] + ".pdf#page=1 target='_blank''><img src='images/pdf-hiraku.png' alt='イラスト２' width=100 height=100></a><a href='dlPDF/" + file_names[i] + ".pdf.zip#page=1 target='_blank''><img src='images/pdf-DL.png' alt='イラスト3' width=100 height=100></a></div></h3><br>";
+                if(file_names[i].indexOf(val) != -1){
+                  url += "<h3><div style='text-align:right;'><div style='text-align:left;float:left;'><input type='hidden' id='s31"+i+"' value='" + file_names[i] +"'>" + file_names[i] + "</input></div>カテゴリ：<input type='text' name='word' id='s3"+i+"' value=''></input><input type='button' value='追加' onclick='addCategory("+i+");'></input><input type='button' value='削除' onclick='deleteCategory("+i+");'></input><input type='button'  value='更新' onclick='koshin();'><a href='dlPDF/" + file_names[i] + ".pdf#page=1 target='_blank''><img src='images/pdf-hiraku.png' alt='イラスト２' width=100 height=100></a><a href='dlPDF/" + file_names[i] + ".pdf.zip#page=1 target='_blank''><img src='images/pdf-DL.png' alt='イラスト3' width=100 height=100></a></div></h3><h4>カテゴリ<br>";
+                  if(file_names[i] in dic){
+                    for(n=0; n < dic[file_names[i]].length; n++){
+                      url += "<input type='button' style='font:300pt MS ゴシック; WIDTH:100px; HEIGHT:150px' value='" + dic[file_names[i]][n] + "' onclick='pushingButton("+n+", "+i+", "+file_names.length+");'>";
+                    }
                   }
+                  url += "</h4><br>";
+                }
               }
               if(url === ''){
                 url += val + 'を含むタイトルはありません。'
@@ -96,9 +120,15 @@ function dispButton(){
   rawFile.send(null);
   target.innerHTML = url;
 }
+
 function clearText(){
   document.getElementById('s1').value = '';
 }
+
+function koshin(){
+  location.reload();
+}
+
 </script>
 検索カテゴリ：<input type="text" name="txtb_kc" value=""><input type="button" value="検索"><input type="button" value="クリア" onclick="clearText();">
 
@@ -118,23 +148,95 @@ function clearText(){
 <h2>ALL List</h2>
 <p>PFD化した書籍の一覧です。<br></p>
 <script type="text/javascript">
-window.onload =　function readTextFile(){
+
+function addCategory(a){
+  tmp = String(a)
+  var add_val = document.getElementById('s3' + tmp).value;
+  var title = document.getElementById('s31' + tmp).value;
+  var file = "./PDF_list_column.txt";
+  var request = new XMLHttpRequest();
+  request.open('GET', 'http://localhost:5000/?title='+title+'&column='+add_val);
+  request.onreadystatechange = function () {
+    if (request.readyState != 4) {
+        // リクエスト中
+    } else if (request.status != 0) {
+        // 失敗
+        document.write(request.status);
+        document.write('失敗');
+    } else {
+        // 取得成功
+        var result = request.responseText;
+    }
+  }
+  request.send(null);
+  document.getElementById('s3' + tmp).value = '';
+  readTextFile2();
+}
+
+function deleteCategory(a){
+  tmp = String(a)
+  var add_val = document.getElementById('s3' + tmp).value;
+  var title = document.getElementById('s31' + tmp).value;
+  var file = "./PDF_list_column.txt";
+  var request = new XMLHttpRequest();
+  request.open('GET', 'http://localhost:5000/delete/?title='+title+'&column='+add_val);
+  request.onreadystatechange = function () {
+    if (request.readyState != 4) {
+        // リクエスト中
+    } else if (request.status != 0) {
+        // 失敗
+        document.write(request.status);
+        document.write('失敗');
+    } else {
+        // 取得成功
+        var result = request.responseText;
+    }
+  }
+  request.send(null);
+  document.getElementById('s3' + tmp).value = '';
+  readTextFile2();
+}
+
+function readTextFile2(){
     var file = "./PDF_list.txt";
+    var file2 = "./PDF_list_column.txt";
     var url = "";
     var target = document.getElementById("output");
+    var target2 = document.getElementById("output");
     var rawFile = new XMLHttpRequest();
+    var rawFile2 = new XMLHttpRequest();
+    var dic = {};
+    rawFile2.open("GET", file2, true);
+    rawFile2.onreadystatechange = function (){
+        if(rawFile2.readyState == 4){
+            if(rawFile2.status === 200 || rawFile2.status == 0){
+                var allText2 = rawFile2.responseText;
+                file_names2 = allText2.split("\n");
+                for(var i = 0; i < file_names2.length; i++){
+                    columns = file_names2[i].split(",");
+                    dic[columns[0]] = new Array();
+                    for(var ii = 1; ii < columns.length; ii++){
+                        dic[columns[0]].push(columns[ii]);
+                    }
+                }
+            }
+        }
+    }
+    rawFile2.send(null);
     rawFile.open("GET", file, true);
-    rawFile.onreadystatechange = function ()
-    {
-        if(rawFile.readyState == 4)
-        {
-            if(rawFile.status === 200 || rawFile.status == 0)
-            {
+    rawFile.onreadystatechange = function (){
+        if(rawFile.readyState == 4){
+            if(rawFile.status === 200 || rawFile.status == 0){
                 var allText = rawFile.responseText;
-                var type = typeof allText;
                 file_names = allText.split("\n");
                 for(var i = 0; i < file_names.length; i++){
-                  url += "<h3><div style='text-align:right;'><div style='text-align:left;float:left;'>" + file_names[i] + "</div><a href='dlPDF/" + file_names[i] + ".pdf#page=1 target='_blank''><img src='images/pdf-hiraku.png' alt='イラスト２' width=100 height=100></a><a href='dlPDF/" + file_names[i] + ".pdf.zip#page=1 target='_blank''><img src='images/pdf-DL.png' alt='イラスト3' width=100 height=100></a></div></h3><br>";
+                  url += "<h3><div style='text-align:right;'><div style='text-align:left;float:left;'><input type='hidden' id='s31"+i+"' value='" + file_names[i] +"'>" + file_names[i] + "</input></div>カテゴリ：<input type='text' name='word' id='s3"+i+"' value=''></input><input type='button' value='追加' onclick='addCategory("+i+");'></input><input type='button' value='削除' onclick='deleteCategory("+i+");'></input><input type='button'  value='更新' onclick='koshin();'></input><a href='dlPDF/" + file_names[i] + ".pdf#page=1 target='_blank''><img src='images/pdf-hiraku.png' alt='イラスト２' width=100 height=100></a><a href='dlPDF/" + file_names[i] + ".pdf.zip#page=1 target='_blank''><img src='images/pdf-DL.png' alt='イラスト3' width=100 height=100></a></div></h3><h4>カテゴリ<br>";
+                  if(file_names[i] in dic){
+                      for(n=0; n < dic[file_names[i]].length; n++){
+                        url += "<input type='button' id='"+file_names[i]+"s2"+n+"' style='font:300pt MS ゴシック; WIDTH:100px; HEIGHT:150px' value='" + dic[file_names[i]][n] + "' onclick='pushingButton("+n+", "+i+", "+file_names.length+");'>";
+                      }
+                  }
+                  url += "</h4><br>";
                 }
                 target.innerHTML = url;
             }
@@ -142,6 +244,69 @@ window.onload =　function readTextFile(){
     }
     rawFile.send(null);
 }
+
+function pushingButton(a, b, c){
+    tmp = String(a);
+    tmp1 = String(b);
+    var title = document.getElementById('s31' + tmp1).value;
+    var val = document.getElementById(title + 's2' + tmp).value;
+    document.getElementById('s3' + tmp1).value = val;
+    for(n=0; n < c; n++){
+        tmp2 = String(n);
+        if(tmp2 != tmp1){
+            document.getElementById('s3' + tmp2).value = '';
+        }
+    }
+}
+
+window.onload =　function readTextFile1(){
+    var file = "./PDF_list.txt";
+    var file2 = "./PDF_list_column.txt";
+    var url = "";
+    var target = document.getElementById("output");
+    var target2 = document.getElementById("output");
+    var rawFile = new XMLHttpRequest();
+    var rawFile2 = new XMLHttpRequest();
+    var dic = {};
+    rawFile2.open("GET", file2, true);
+    rawFile2.onreadystatechange = function (){
+        if(rawFile2.readyState == 4){
+            if(rawFile2.status === 200 || rawFile2.status == 0){
+                var allText2 = rawFile2.responseText;
+                file_names2 = allText2.split("\n");
+                for(var i = 0; i < file_names2.length; i++){
+                    columns = file_names2[i].split(",");
+                    dic[columns[0]] = new Array();
+                    for(var ii = 1; ii < columns.length; ii++){
+                        dic[columns[0]].push(columns[ii]);
+                    }
+                }
+            }
+        }
+    }
+    rawFile2.send(null);
+    rawFile.open("GET", file, true);
+    rawFile.onreadystatechange = function (){
+        if(rawFile.readyState == 4){
+            if(rawFile.status === 200 || rawFile.status == 0){
+                var allText = rawFile.responseText;
+                file_names = allText.split("\n");
+                for(var i = 0; i < file_names.length; i++){
+                  url += "<h3><div style='text-align:right;'><div style='text-align:left;float:left;'><input type='hidden' id='s31"+i+"' value='" + file_names[i] +"'>" + file_names[i] + "</b></div>カテゴリ：<input type='text' name='word' id='s3"+i+"' value=''><input type='button' value='追加' onclick='addCategory("+i+");'></input><input type='button' value='削除' onclick='deleteCategory("+i+");'></input><input type='button'  value='更新' onclick='koshin();'></input><a href='dlPDF/" + file_names[i] + ".pdf#page=1 target='_blank''><img src='images/pdf-hiraku.png' alt='イラスト２' width=100 height=100></a><a href='dlPDF/" + file_names[i] + ".pdf.zip#page=1 target='_blank''><img src='images/pdf-DL.png' alt='イラスト3' width=100 height=100></a></div></h3><h4>カテゴリ<br>";
+                  if(file_names[i] in dic){
+                      for(n=0; n < dic[file_names[i]].length; n++){
+                        url += "<input type='button' id='"+file_names[i]+"s2"+n+"'  style='font:300pt MS ゴシック; WIDTH:100px; HEIGHT:150px' value='" + dic[file_names[i]][n] + "' onclick='pushingButton("+n+", "+i+", "+file_names.length+");'>";
+                      }
+                  }
+                  url += "</h4><br>";
+                }
+                target.innerHTML = url;
+            }
+        }
+    }
+    rawFile.send(null);
+}
+
 </script>
  <div id="output"></div>
 </section>

@@ -1,8 +1,9 @@
 import os
+import codecs
 
 files = os.listdir('../src/ver1/dlPDF')
 count = 0
-with open('../src/ver1/PDF_list.txt', 'w') as f:
+with codecs.open('../src/ver1/PDF_list.txt', 'w', 'utf-8') as f:
     for name in files:
         if '.zip' in name:
             f.write(name[:-8])
