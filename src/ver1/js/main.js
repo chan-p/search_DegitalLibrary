@@ -1,3 +1,4 @@
+// カテゴリ追加
 function addCategory(a) {
   tmp = String(a)
   var add_val = document.getElementById('sss3' + tmp).value;
@@ -8,13 +9,11 @@ function addCategory(a) {
   // request.open('GET', 'http://192.168.1.2105000/?title=' + title + '&column=' + add_val);
   request.onreadystatechange = function() {
     if (request.readyState != 4) {
-      // リクエスト中
+      document.write("OK");
     } else if (request.status != 0) {
-      // 失敗
       document.write(request.status);
       document.write('失敗');
     } else {
-      // 取得成
       var result = request.responseText;
     }
   }
@@ -31,23 +30,63 @@ function addCategory(a) {
       document.write(request1.status);
       document.write('失敗');
     } else {
-      // 取得成
       var result = request.responseText;
     }
   }
   request1.send(null);
 }
 
+//カテゴリ削除
+function deleteCategory(a) {
+  tmp = String(a)
+  var add_val = document.getElementById('sss3' + tmp).value;
+  var title = document.getElementById('s31' + tmp).value;
+  var file = "./PDF_list_column.txt";
+  var request = new XMLHttpRequest();
+  request.open('GET', 'http://192.168.60.62:5000/delete/?title=' + title + '&column=' + add_val);
+  // request.open('GET', 'http://192.168.1.210:5000/?title=' + title + '&column=' + add_val);
+  request.onreadystatechange = function() {
+    if (request.readyState != 4) {
+      document.write('OK');
+    } else if (request.status != 0) {
+      document.write(request.status);
+      document.write('失敗');
+    } else {
+      var result = request.responseText;
+    }
+  }
+  request.send(null);
+  document.getElementById('sss3' + tmp).value = '';
+  readTextFile2();
+  var request1 = new XMLHttpRequest();
+  request1.open('GET', 'http://192.168.60.62:5000/update/');
+  // request1.open('GET', 'http://192.168.1.210:5000/update/');
+  request1.onreadystatechange = function() {
+    if (request1.readyState != 4) {
+      document.write('OK')
+    } else if (request1.status != 0) {
+      document.write(request1.status);
+      document.write('失敗');
+    } else {
+      var result = request.responseText;
+    }
+  }
+  request1.send(null);
+}
+
+// 更新
 function koshin() {
   location.reload();
 }
 
+// エンターキーイベント発火
 function enterEvent(code) {
   if (13 === code) {
     dispButton();
   }
 }
 
+// カテゴリ検索, 表示
 function cateSearch(a) {
   var file2 = "./PDF_list_column.txt";
   var rawFile2 = new XMLHttpRequest();
@@ -117,6 +156,7 @@ function cateSearch(a) {
   target.innerHTML = url;
 }
 
+// 一覧表示
 function dispButton() {
   var file2 = "./PDF_list_column.txt";
   var rawFile2 = new XMLHttpRequest();
@@ -172,11 +212,12 @@ function dispButton() {
   target.innerHTML = url;
 }
 
+// テキストボックスクリア
 function clearText() {
   document.getElementById('s1').value = '';
 }
 
-
+// 一覧表示
 function readTextFile2() {
   var file = "./PDF_list.txt";
   var file2 = "./PDF_list_column.txt";
@@ -243,6 +284,7 @@ function readTextFile2() {
   rawFile3.send(null);
 }
 
+// カテゴリ -> テキストボックス入力
 function pushingButton(a, b, c) {
   tmp = String(a);
   tmp1 = String(b);
@@ -253,43 +295,4 @@ function pushingButton(a, b, c) {
     document.getElementById('sss3' + tmp2).value = '';
   }
   document.getElementById('sss3' + tmp1).value = val1;
-}
-
-function deleteCategory(a) {
-  tmp = String(a)
-  var add_val = document.getElementById('sss3' + tmp).value;
-  var title = document.getElementById('s31' + tmp).value;
-  var file = "./PDF_list_column.txt";
-  var request = new XMLHttpRequest();
-  request.open('GET', 'http://192.168.60.62:5000/delete/?title=' + title + '&column=' + add_val);
-  // request.open('GET', 'http://192.168.1.210:5000/?title=' + title + '&column=' + add_val);
-  request.onreadystatechange = function() {
-    if (request.readyState != 4) {
-      // リクエスト中
-    } else if (request.status != 0) {
-      // 失敗
-      document.write(request.status);
-      document.write('失敗');
-    } else {
-      // 取得成功
-      var result = request.responseText;
-    }
-  }
-  request.send(null);
-  document.getElementById('sss3' + tmp).value = '';
-  readTextFile2();
-  var request1 = new XMLHttpRequest();
-  request1.open('GET', 'http://192.168.60.62:5000/update/');
-  // request1.open('GET', 'http://192.168.1.210:5000/update/');
-  request1.onreadystatechange = function() {
-    if (request1.readyState != 4) {
-      document.write('OK')
-    } else if (request1.status != 0) {
-      document.write(request1.status);
-      document.write('失敗');
-    } else {
-      var result = request.responseText;
-    }
-  }
-  request1.send(null);
 }
