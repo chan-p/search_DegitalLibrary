@@ -73,7 +73,7 @@ def index2():
       for ca in v:
         g.write(',' + ca)
       g.write('\n')
-  
+
   g = open('./column_list.txt', 'w')
   column_list = []
   with open('./PDF_list_column.txt') as f:
@@ -89,6 +89,41 @@ def index2():
   response = make_response()
   response.headers["Content-Type"] = "application/json"
   return response
+
+@app.route('/upload/', methods=['POST'])
+def index3():
+  import subprocess
+  new = []
+  if request.files.getlist('upload_files')[0].filename:
+      upload_files = request.files.getlist('upload_files')
+      for upload_file in upload_files:
+          new.append(upload_file.filename)
+          upload_file.save("./dlPDF/" + upload_file.filename)
+          subprocess.call(["zip", '--junk-paths', 'file', './dlPDF/' + upload_file.filename, upload_file.filename, './dlPDF/' + upload_file.filename])
+          subprocess.call(["mv", 'file.zip', './dlPDF/' + upload_file.filename + '.zip'])
+  asd = []
+  asdd = []
+  with open('./PDF_list_column.txt') as g:
+      for lines in g:
+          asd.append(lines[:-1])
+  asd += new
+  with open('./PDF_list_column.txt', 'w') as g:
+      for name in asd:
+          g.write(name + '\n')
+
+  with open('./PDF_list.txt') as g:
+      for lines in g:
+          asdd.append(lines[:-1])
+  asdd += new
+  with open('./PDF_list.txt', 'w') as g:
+      for name in asdd:
+          g.write(name + '\n')
+
+
+  response = make_response()
+  response.headers["Content-Type"] = "application/json"
+  return response
+
 
 
 if __name__ == '__main__':
