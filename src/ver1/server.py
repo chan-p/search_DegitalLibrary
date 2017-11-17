@@ -123,7 +123,6 @@ def autodeploy():
         for line in pid.split('\\n'):
             if 'grep' in line:
                 print(line)
-        print('test')
     response = make_response()
     response.headers["Content-Type"] = "application/json"
     response.status_code = 200
