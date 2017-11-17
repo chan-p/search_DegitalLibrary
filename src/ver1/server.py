@@ -4,9 +4,8 @@ import codecs
 
 app = Flask(__name__)
 
-
 @app.route('/', methods=['GET'])
-def index():
+def update_PDFlist():
     title = request.args.get('title').encode('utf-8').decode('utf-8')
     column = request.args.get('column')
     line = []
