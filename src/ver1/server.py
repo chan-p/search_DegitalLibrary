@@ -46,7 +46,7 @@ def delete_cate():
     return response
 
 @app.route('/update/', methods=['GET'])
-def index2():
+def update_cate():
   dic = {}
   with open('./PDF_list_column.txt') as g:
     for lines in g:
