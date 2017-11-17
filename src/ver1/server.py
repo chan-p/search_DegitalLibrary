@@ -116,6 +116,7 @@ def index3():
 def autodeploy():
     print(request.headers)
     print(request.data)
+    print(request.data['ref'])
     print("test")
     response = make_response()
     response.headers["Content-Type"] = "application/json"
