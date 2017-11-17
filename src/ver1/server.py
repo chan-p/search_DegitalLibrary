@@ -121,6 +121,7 @@ def autodeploy():
         cmd = "ps aux | grep server.py"
         pid = subprocess.check_output(cmd , shell=True)
         print(pid)
+        print("testss")
     response = make_response()
     response.headers["Content-Type"] = "application/json"
     response.status_code = 200
