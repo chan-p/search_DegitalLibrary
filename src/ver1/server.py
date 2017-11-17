@@ -121,8 +121,8 @@ def autodeploy():
         cmd = "ps aux | grep server.py"
         pid = subprocess.check_output(cmd , shell=True)
         for line in str(pid).split('\\n'):
-            if 'grep' in line:
-                print(line)
+            if 'grep' not in line:
+                print(line.split('     '))
         print("test")
     response = make_response()
     response.headers["Content-Type"] = "application/json"
