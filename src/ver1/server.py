@@ -120,10 +120,11 @@ def autodeploy():
         subprocess.call(['git', 'merge', 'origin/master'])
         cmd = "ps aux | grep server.py"
         pid = subprocess.check_output(cmd , shell=True)
-        for line in str(pid).split('\\n'):
+        for line in str(pid).split('\\n')[:-1]:
             if 'grep' not in line:
                 print(line.split('     '))
                 print(line.split('     ')[1].split(' '))
+                print(line.split('     ')[1].split('    '))
     response = make_response()
     response.headers["Content-Type"] = "application/json"
     response.status_code = 200
