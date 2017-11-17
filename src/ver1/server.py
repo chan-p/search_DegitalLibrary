@@ -1,17 +1,12 @@
-
 from flask import Flask, render_template, request, redirect, url_for, jsonify, make_response
 import numpy as np
 import codecs
 
-# 自身の名称を app という名前でインスタンス化する
 app = Flask(__name__)
 
-# ここからウェブアプリケーション用のルーティングを記述
-# index にアクセスしたときの処理
 @app.route('/', methods=['GET'])
-def index():
+def update_PDFlist():
     title = request.args.get('title').encode('utf-8').decode('utf-8')
-    print(type(title))
     column = request.args.get('column')
     line = []
     flg = 0
@@ -20,7 +15,6 @@ def index():
             lis = li[:-1].split(',')
             rr = li[:-1]
             if title == lis[0]:
-                print('OK')
                 rr += ',' + column
             line.append(rr + '\n')
     with codecs.open('./PDF_list_column.txt', 'w', 'utf-8') as g:
@@ -31,9 +25,8 @@ def index():
     return response
 
 @app.route('/delete/', methods=['GET'])
-def index1():
+def delete_cate():
     title = request.args.get('title').encode('utf-8').decode('utf-8')
-    print(type(title))
     column = request.args.get('column')
     line = []
     flg = 0
@@ -42,22 +35,18 @@ def index1():
             lis = li[:-1].split(',')
             rr = li[:-1]
             if title == lis[0]:
-                print('OK')
-                print(lis)
                 lis.remove(column)
                 print(lis)
             line.append(",".join(lis) + '\n')
     with codecs.open('./PDF_list_column.txt', 'w', 'utf-8') as g:
         for jj in line:
-            print(jj)
             g.write(jj)
     response = make_response()
     response.headers["Content-Type"] = "application/json"
     return response
 
 @app.route('/update/', methods=['GET'])
-def index2():
-  print("update")
+def update_cate():
   dic = {}
   with open('./PDF_list_column.txt') as g:
     for lines in g:
@@ -91,7 +80,7 @@ def index2():
   return response
 
 @app.route('/upload/', methods=['POST'])
-def index3():
+def file_upload():
   import subprocess
   new = []
   if request.files.getlist('upload_files')[0].filename:
@@ -118,13 +107,23 @@ def index3():
   with open('./PDF_list.txt', 'w') as g:
       for name in asdd:
           g.write(name + '\n')
-
-
   response = make_response()
   response.headers["Content-Type"] = "application/json"
   return response
 
+@app.route('/autodeploy/', methods=['POST'])
+def autodeploy():
+    print(request.headers)
+    print(request.json)
+    print(request.json['ref'])
+    print("test")
+    response = make_response()
+    response.headers["Content-Type"] = "application/json"
+    response.status_code = 200
+    return response
+
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0') # どこからでもアクセス可能に
+    app.run(host='0.0.0.0', port=5001)
+
