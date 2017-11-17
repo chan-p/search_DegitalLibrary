@@ -121,6 +121,7 @@ def autodeploy():
         import os
         pid = os.getpid()
         print(pid)
+        print("test")
     response = make_response()
     response.headers["Content-Type"] = "application/json"
     response.status_code = 200
