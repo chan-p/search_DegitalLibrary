@@ -124,7 +124,6 @@ def autodeploy():
         print(pid)
         pid2 = subprocess.check_output(cmd1, shell=True)
         print(pid2)
-        print("testss")
     response = make_response()
     response.headers["Content-Type"] = "application/json"
     response.status_code = 200
