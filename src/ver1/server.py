@@ -118,11 +118,9 @@ def autodeploy():
         print(request.json['ref'])
         subprocess.call(['git', 'fetch', 'origin'])
         subprocess.call(['git', 'merge', 'origin/master'])
-        pid = subprocess.check_output(['ps', 'aux', '|', 'grep', 'server.py'])
-        pid1 = subprocess.check_output(['ps', 'aux', '|', 'grep', 'nohup python server.py'])
+        import os
+        pid = os.getpid()
         print(pid)
-        print(pid1)
-        print("test")
     response = make_response()
     response.headers["Content-Type"] = "application/json"
     response.status_code = 200
