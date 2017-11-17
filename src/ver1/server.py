@@ -113,10 +113,8 @@ def file_upload():
 
 @app.route('/autodeploy/', methods=['POST'])
 def autodeploy():
-    print(request.headers)
-    print(request.json)
-    print(request.json['ref'])
-    print("test")
+    if "master" in request.json['ref']:
+        print(request.json['ref'])
     response = make_response()
     response.headers["Content-Type"] = "application/json"
     response.status_code = 200
