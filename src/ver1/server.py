@@ -119,8 +119,11 @@ def autodeploy():
         subprocess.call(['git', 'fetch', 'origin'])
         subprocess.call(['git', 'merge', 'origin/master'])
         cmd = "ps aux | grep server.py"
+        cmd1 = "ps aux | grep 'python server.py'"
         pid = subprocess.check_output(cmd , shell=True)
         print(pid)
+        pid2 = subprocess.check_output(cmd1, shell=True)
+        print(pid2)
         print("testss")
     response = make_response()
     response.headers["Content-Type"] = "application/json"
