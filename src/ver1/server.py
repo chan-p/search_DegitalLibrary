@@ -119,11 +119,10 @@ def autodeploy():
         subprocess.call(['git', 'fetch', 'origin'])
         subprocess.call(['git', 'merge', 'origin/master'])
         cmd = "ps aux | grep server.py"
-        cmd1 = "ps aux | grep 'python server.py'"
         pid = subprocess.check_output(cmd , shell=True)
-        print(str(pid).split('\\n'))
-        pid2 = subprocess.check_output(cmd1, shell=True)
-        print(str(pid2).split('\\n'))
+        for line in pid.split('\\n'):
+            if 'grep' in line:
+                print(line)
         print('test')
     response = make_response()
     response.headers["Content-Type"] = "application/json"
