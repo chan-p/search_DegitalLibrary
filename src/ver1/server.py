@@ -122,6 +122,7 @@ def autodeploy():
         pid1 = subprocess.check_output(['ps', 'aux', '|', 'grep', 'nohup python server.py'])
         print(pid)
         print(pid1)
+        print("test")
     response = make_response()
     response.headers["Content-Type"] = "application/json"
     response.status_code = 200
