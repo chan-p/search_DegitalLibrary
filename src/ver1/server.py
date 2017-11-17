@@ -116,8 +116,6 @@ def autodeploy():
     print(request.headers)
     print(request.json)
     print(request.json['ref'])
-    print(request.data)
-    print(request.data['ref'])
     print("test")
     response = make_response()
     response.headers["Content-Type"] = "application/json"
