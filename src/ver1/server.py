@@ -117,6 +117,7 @@ def autodeploy():
     print(request.json)
     print(request.json['ref'])
     print("test")
+    print("ttest")
     response = make_response()
     response.headers["Content-Type"] = "application/json"
     response.status_code = 200
