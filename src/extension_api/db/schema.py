@@ -10,12 +10,13 @@ logger = getLogger(__name__)
 Base = declarative_base()
 
 class books(Base):
-  """ユーザ情報テーブル定義"""
+  """本テーブル"""
   __tablename__ = 'books'
   id = Column(Integer, primary_key=True)
   name = Column(String(100),unique=True)
   pages = relationship('pages')
   vectors = relationship('vectors')
+  categories = relationship('categories')
   created = Column('created', DATETIME, default=datetime.now, nullable=False)
   modified = Column('modified', DATETIME, default=datetime.now, nullable=False)
 
@@ -23,7 +24,7 @@ class books(Base):
     return '<books(%d)>' % (self.name)
 
 class pages(Base):
-  """DBテーブル定義"""
+  """ページテーブル"""
   __tablename__ = 'pages'
   id = Column(Integer, primary_key=True)
   book_id = Column(Integer, ForeignKey("books.id", onupdate='CASCADE', ondelete='CASCADE'), nullable=False)
@@ -37,7 +38,7 @@ class pages(Base):
     (self.book_id, self.number, self.text[:10])
 
 class vectors(Base):
-  """DBテーブル定義"""
+  """ベクトルテーブル"""
   __tablename__ = 'vectors'
   id = Column(Integer, primary_key=True)
   book_id = Column(Integer, ForeignKey("books.id", onupdate='CASCADE', ondelete='CASCADE'), nullable=False)
@@ -51,6 +52,20 @@ class vectors(Base):
   def __repr__(self):
     return '<vectors(book:%d, page:%d, type:%s, target:%s)>' % \
     (self.book_id, self.page_id, self.vec_type, self.vec_target)
+
+class categories(Base):
+  """ベクトルテーブル"""
+  __tablename__ = 'categories'
+  id = Column(Integer, primary_key=True)
+  name = Column(String(100))
+  book_id = Column(Integer, ForeignKey("books.id", onupdate='CASCADE', ondelete='CASCADE'), nullable=False)
+  created       = Column('created', DATETIME, default=datetime.now, nullable=False)
+  modified      = Column('modified', DATETIME, default=datetime.now, nullable=False)
+
+  def __repr__(self):
+    return '<categories(name:%s, book:%d)>' % \
+    (self.name, self.book_id)
+
 
 # SQLに接続。
 url = '{}://{}:{}@{}/{}?charset=utf8'.format(config['db']['DBMS'],config['db']['USER'],config['db']['PASS'],config['db']['HOST'],config['db']['DB'])
