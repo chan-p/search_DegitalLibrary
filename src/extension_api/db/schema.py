@@ -54,7 +54,7 @@ class vectors(Base):
     (self.book_id, self.page_id, self.vec_type, self.vec_target)
 
 class categories(Base):
-  """ベクトルテーブル"""
+  """カテゴリテーブル"""
   __tablename__ = 'categories'
   id = Column(Integer, primary_key=True)
   name = Column(String(100))
