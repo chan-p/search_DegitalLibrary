@@ -120,6 +120,7 @@ def autodeploy():
     print("test")
     response = make_response()
     response.headers["Content-Type"] = "application/json"
+    response.status_code = 200
     return response
 
 
