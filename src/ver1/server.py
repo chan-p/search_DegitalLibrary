@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request, redirect, url_for, jsonify, make_response
 import numpy as np
 import codecs
+import subprocess
 
 app = Flask(__name__)
 
@@ -115,6 +116,10 @@ def file_upload():
 def autodeploy():
     if "master" in request.json['ref']:
         print(request.json['ref'])
+        subprocess.call(['git', 'fetch', 'origin'])
+        subprocess.call(['git', 'merge', 'origin/master'])
+        pid = subprocess.check_poutput(['ps', 'aux', '|', 'grep', 'server.py'])
+        print(pid)
     response = make_response()
     response.headers["Content-Type"] = "application/json"
     response.status_code = 200
