@@ -114,6 +114,8 @@ def index3():
 @app.route('/autodeploy/', methods=['POST'])
 def autodeploy():
     print(request.headers)
+    print(request.json)
+    print(request.json['ref'])
     print(request.data)
     print(request.data['ref'])
     print("test")
