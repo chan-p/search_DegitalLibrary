@@ -80,7 +80,7 @@ def update_cate():
   return response
 
 @app.route('/upload/', methods=['POST'])
-def index3():
+def file_upload():
   import subprocess
   new = []
   if request.files.getlist('upload_files')[0].filename:
