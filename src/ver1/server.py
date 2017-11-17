@@ -116,7 +116,6 @@ def file_upload():
 def autodeploy():
     if "master" in request.json['ref']:
         print("autodeploy")
-        print(request.json['ref'])
         subprocess.call(['git', 'fetch', 'origin'])
         subprocess.call(['git', 'merge', 'origin/master'])
         cmd = "ps aux | grep server.py"
