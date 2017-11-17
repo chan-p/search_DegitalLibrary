@@ -122,7 +122,7 @@ def autodeploy():
         pid = subprocess.check_output(cmd , shell=True)
         for line in str(pid).split('\\n')[:-1]:
             if ('grep' not in line) and ('0:01' not in line):
-                subprocess.call('kill', '-9', line.split('    ')[1].split('  ')[0])
+                subprocess.call('kill', '-9', str(line.split('    ')[1].split('  ')[0]))
                 cmd1 = 'nohup python server.py &'
                 subprocess.call(cmd1, shell=True)
     response = make_response()
