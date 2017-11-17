@@ -111,7 +111,7 @@ def index3():
   response.headers["Content-Type"] = "application/json"
   return response
 
-@app.route('/autpdeploy/', methods=['POST'])
+@app.route('/autodeploy/', methods=['POST'])
 def autodeploy():
     print(request.headers)
     print(request.data)
