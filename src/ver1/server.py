@@ -25,7 +25,7 @@ def update_PDFlist():
     return response
 
 @app.route('/delete/', methods=['GET'])
-def index1():
+def delete_cate():
     title = request.args.get('title').encode('utf-8').decode('utf-8')
     column = request.args.get('column')
     line = []
