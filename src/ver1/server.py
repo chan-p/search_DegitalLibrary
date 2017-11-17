@@ -118,8 +118,8 @@ def autodeploy():
         print(request.json['ref'])
         subprocess.call(['git', 'fetch', 'origin'])
         subprocess.call(['git', 'merge', 'origin/master'])
-        import os
-        pid = os.getpid()
+        "ps aux | grep server.py"
+        subprocess.check_output(cmd , shell=True)
         print(pid)
         print("test")
     response = make_response()
