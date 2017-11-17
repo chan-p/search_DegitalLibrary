@@ -125,6 +125,7 @@ def autodeploy():
                 print(line.split('     '))
                 print(line.split('     ')[1].split(' '))
                 print(line.split('     ')[1].split('    '))
+    print('test')
     response = make_response()
     response.headers["Content-Type"] = "application/json"
     response.status_code = 200
