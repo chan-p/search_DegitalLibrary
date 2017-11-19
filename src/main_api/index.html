@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>WSL Degital Library</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+  <script src=js/main.js></script>
+  <script src=js/jquery-3.2.1.min.js></script>
+  <script type="text/javascript">
+  window.onload =　function readTextFile1(){
+      var file2 = "./PDF_list_column.txt";
+      var url = "";
+      var rawFile2 = new XMLHttpRequest();
+      var dic = {};
+      rawFile2.open("GET", file2, false);
+      rawFile2.onreadystatechange = function (){
+          if(rawFile2.readyState == 4 && (rawFile2.status === 200 || rawFile2.status == 0)){
+              var allText2 = rawFile2.responseText;
+              file_names2 = allText2.split("\n");
+              for(var i = 0; i < file_names2.length; i++){
+                  columns = file_names2[i].split(",");
+                  dic[columns[0]] = new Array();
+                  for(var ii = 1; ii < columns.length; ii++){ dic[columns[0]].push(columns[ii]);}
+              }
+          }
+      }
+      var file = "./PDF_list.txt";
+      var target = document.getElementById("output");
+      rawFile2.send(null);
+      var rawFile = new XMLHttpRequest();
+      rawFile.open("GET", file, false);
+      rawFile.onreadystatechange = function (){
+          if(rawFile.readyState == 4 && (rawFile.status === 200 || rawFile.status == 0)){
+              var allText = rawFile.responseText;
+              file_names = allText.split("\n");
+              for(var i = 0; i < file_names.length; i++){
+                  url += "<h3><div style='text-align:right;'><div style='text-align:left;float:left;'><input type='hidden' id='s31"+i+"' value='" + file_names[i] +"'>" + file_names[i] + "</b></div>カテゴリ：<input type='text' name='word' id='sss3"+i+"' value=''><input type='button' value='追加' onclick='addCategory("+i+");'></input><input type='button' value='削除' onclick='deleteCategory("+i+");'></input><input type='button'  value='更新' onclick='koshin();'></input><a href='dlPDF/" + file_names[i] + ".pdf#page=1 target='_blank''><img src='images/pdf-hiraku.png' alt='イラスト２' width=100 height=100></a><a href='dlPDF/" + file_names[i] + ".pdf.zip#page=1 target='_blank''><img src='images/pdf-DL.png' alt='イラスト3' width=100 height=100></a></div></h3><h4>カテゴリ<br>";
+                  if(file_names[i] in dic){
+                      for(n=0; n < dic[file_names[i]].length; n++){ url += "<input type='button' id='"+file_names[i]+"s2"+n+"'  style='font:200pt MS ゴシック; WIDTH:150px; HEIGHT:150px' value='" + dic[file_names[i]][n] + "' onclick='pushingButton("+n+","+i+","+file_names.length+");'>";}
+                  }
+                  url += "</h4><br>";
+              }
+              target.innerHTML = url;
+          }
+      }
+      rawFile.send(null);
+      var file3 = "./column_list.txt";
+      var url3 = "";
+      var target3 = document.getElementById("output3");
+      var rawFile3 = new XMLHttpRequest();
+      rawFile3.open("GET", file3, false);
+      rawFile3.onreadystatechange = function (){
+          if(rawFile3.readyState == 4 && (rawFile3.status === 200 || rawFile3.status == 0)){
+              var allText3 = rawFile3.responseText;
+              file_names3 = allText3.split("\n");
+              for(var ii = 0; ii < file_names3.length-1; ii++){ url3 += "<input type='button' id='cate"+ii+"' style='font:200pt MS ゴシック; WIDTH:150px; HEIGHT:150px' value='" + file_names3[ii] + "' onclick='cateSearch("+ii+");'>";}
+          }
+          target3.innerHTML = url3;
+      }
+      rawFile3.send(null);
+  }
+  </script>
+</head>
+
+<body>
+
+  <header>
+    <br>
+    <h1 id="logo"><a href="index.html"><img src="./images/logo1.png" alt="WSL Degital Library"></a></h1>
+    <nav id="menubar">
+      <ul>
+        <li><a href="#gallery">Search</a></li>
+        <li><a href="#all_list">ALL List</a></li>
+        <li><a href="#upload">Upload</a></li>
+        <li><a href="http://wiki.wsl.mind.meiji.ac.jp/" target="_blank">WSL_Wiki</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="contents" id="about">
+
+  <section id="new">
+    <h2>更新情報</h2>
+    <dl>
+      <dt>2017/11/10</dt>
+      <dd>WSL Degital Library 公開</dd>
+      <dt>2017/11/10</dt>
+      <dd>カテゴリ機能を実装</dd>
+      <dt>2017/11/10</dt>
+      <dd>ALL Listを実装</dd>
+      <dt>2017/11/09</dt>
+      <dd>WSL Degita Libraryを構築</dd>
+    </dl>
+  </section>
+
+  <p class="pagetop"><a href="#">↑</a></p>
+
+  </div>
+  <!--/contents-->
+  <div class="contents" id="gallery">
+    <section>
+      <h2>Search</h2>
+      <p>PDF化した書籍の検索ができます。</p>
+      <h3>検索キーワード：<input type="text" name="txtb_kw" id="s1" value="" onkeypress="enterEvent(event.keyCode);"><input type="button" value="検索" onclick="dispButton();"><input type="button" value="クリア" onclick="clearText();"></3>
+      <div id="output2"></div>
+      <h3>検索カテゴリ：<input type="text" name="txtb_kc" value=""><input type="button" value="検索"><input type="button" value="クリア" onclick="clearText();"></3><input type="button" value="test" onclick="test_();"></3>
+      <br>
+      <div id='output3'></div>
+      <div id='output4'></div>
+    </section>
+    <p class="pagetop"><a href="#">↑</a></p>
+  </div>
+
+  <div class="contents" id="all_list">
+    <section>
+      <h2>ALL List</h2>
+      <p>PFD化した書籍の一覧です。<br></p>
+       <div id="output"></div>
+    </section>
+    <p class="pagetop"><a href="#">↑</a></p>
+  </div>
+
+  <div class="contents" id="upload">
+
+  <section id="new">
+    <h2>upload</h2>
+    <p>ファイルのアップロード。<br>複数ファイルの選択が可能。<br></p>
+    <form id="my_form">
+      <input type="file" id="upload_files" name="upload_files" multiple="multiple" class="form-control"></input><br>
+      <input type="button" value="アップロード" onclick="up();"></input>
+    </form>
+  </section>
+  <script type="text/javascript">
+    function up(){
+      var formObj = document.getElementById("my_form");
+      var formObj1 = document.getElementById("upload_files");
+      var data = new FormData(formObj);
+      var xmlhttp = new XMLHttpRequest();
+      xmlhttp.onreadystatechange = function () {
+        if (xmlhttp.readyState == 4 && xmlhttp.status == 0) {
+          alert("アップロード完了");
+        }
+      };
+      xmlhttp.open("POST", "http://192.168.62.24:5000/upload/", true);
+      xmlhttp.send(data);
+      formObj1.value='';
+    }
+  </script>
+  <p class="pagetop"><a href="#">↑</a></p>
+
+  </div>
+  <!--/contents-->
+
+  <footer>
+  <small>Copyright&copy; <a href="index.html">SIMPLE SITE</a> All Rights Reserved.</small>
+  <span class="pr">《<a href="http://template-party.com/" target="_blank">Web Design:Template-Party</a>》</span>
+  </footer>
+
+  <!--背景用の画像の読み込み-->
+  <aside id="bg"><img src="images/bg.jpg" class="landscape"><img src="images/bg2.jpg" class="portrait"></aside>
+
+</body>
+</html>
