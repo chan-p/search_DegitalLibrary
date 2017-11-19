@@ -5,8 +5,8 @@ function addCategory(a) {
   var title = document.getElementById('s31' + tmp).value;
   var file = "./PDF_list_column.txt";
   var request = new XMLHttpRequest();
-  //request.open('GET', 'http://192.168.60.62:5000/?title=' + title + '&column=' + add_val);
-  request.open('GET', 'http://192.168.1.210:5000/?title=' + title + '&column=' + add_val);
+  request.open('GET', 'http://192.168.60.62:5000/?title=' + title + '&column=' + add_val);
+  // request.open('GET', 'http://192.168.1.210:5000/?title=' + title + '&column=' + add_val);
   request.onreadystatechange = function() {
     if (request.readyState != 4) {
       document.write("OK");
@@ -21,8 +21,8 @@ function addCategory(a) {
   document.getElementById('sss3' + tmp).value = '';
   readTextFile2();
   var request1 = new XMLHttpRequest();
-  // request1.open('GET', 'http://192.168.60.62:5000/update/');
-  request.open('GET', 'http://192.168.1.210:5000/update/');
+  request1.open('GET', 'http://192.168.60.62:5000/update/');
+  // request.open('GET', 'http://192.168.1.210:5000/update/');
   request1.onreadystatechange = function() {
     if (request1.readyState != 4) {
       document.write("OK");
@@ -43,8 +43,8 @@ function deleteCategory(a) {
   var title = document.getElementById('s31' + tmp).value;
   var file = "./PDF_list_column.txt";
   var request = new XMLHttpRequest();
-  //request.open('GET', 'http://192.168.60.62:5000/delete/?title=' + title + '&column=' + add_val);
-  request.open('GET', 'http://192.168.1.210:5000/delete/?title=' + title + '&column=' + add_val);
+  request.open('GET', 'http://192.168.60.62:5000/delete/?title=' + title + '&column=' + add_val);
+  // request.open('GET', 'http://192.168.1.210:5000/delete/?title=' + title + '&column=' + add_val);
   request.onreadystatechange = function() {
     if (request.readyState != 4) {
       document.write('OK');
@@ -59,8 +59,8 @@ function deleteCategory(a) {
   document.getElementById('sss3' + tmp).value = '';
   readTextFile2();
   var request1 = new XMLHttpRequest();
-  // request1.open('GET', 'http://192.168.60.62:5000/update/');
-  request1.open('GET', 'http://192.168.1.210:5000/update/');
+  request1.open('GET', 'http://192.168.60.62:5000/update/');
+  // request1.open('GET', 'http://192.168.1.210:5000/update/');
   request1.onreadystatechange = function() {
     if (request1.readyState != 4) {
       document.write('OK')
@@ -199,7 +199,8 @@ function dispButton() {
       }
     }
   }
-  req.open("GET", "http://192.168.1.210:5000/getlist/", true);
+  // req.open("GET", "http://192.168.1.210:5000/getlist/", true);
+  req.open("GET", "http://192.168.60.62:5000/getlist/", true);
   req.send(null);
 }
 
@@ -251,7 +252,8 @@ function readTextFile2() {
       target.innerHTML = url;
     }
   };
-  req.open("GET", "http://192.168.1.210:5000/getlist/", true);
+  // req.open("GET", "http://192.168.1.210:5000/getlist/", true);
+  req.open("GET", "http://192.168.60.62:5000/getlist/", true);
   req.send(null);
   var file3 = "./column_list.txt";
   var url3 = "";
