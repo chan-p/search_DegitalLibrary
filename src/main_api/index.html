@@ -21,7 +21,7 @@
       }
       target.innerHTML = url;
     };
-    req.open("GET", "http://192.168.1.210:5000/getlist/", true);
+    req.open("GET", "http://192.168.60.62:5000/getlist/", true);
     req.send(null);
     categoryButton();
   }
@@ -109,7 +109,7 @@
           alert("アップロード完了");
         }
       };
-      xmlhttp.open("POST", "http://192.168.1.210:5000/upload/", true);
+      xmlhttp.open("POST", "http://192.168.60.62:5000/upload/", true);
       xmlhttp.send(data);
       formObj1.value='';
     }

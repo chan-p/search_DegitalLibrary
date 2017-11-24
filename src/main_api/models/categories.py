@@ -27,7 +27,8 @@ class category:
         data = dict(name=self.name, created=date, modified=date)
         self.__table_categories.insert(data)
         id_ = self.get_id(True)
-        self.__es.index(index="search_degital_library", doc_type="categories", id=str(id_), body={"name":self.name, "created":date, "modified":date})
+        datel = self.__table_categories.find_one(id=id_)["created"]
+        self.__es.index(index="search_degital_library", doc_type="categories", id=str(id_), body={"name":self.name, "created":datel, "modified":datel})
 
     def get_book_ids(self):
         ids = []
