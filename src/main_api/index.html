@@ -21,7 +21,7 @@
       }
       target.innerHTML = url;
     };
-    req.open("GET", "http://192.168.62.24:5000/getlist/", true);
+    req.open("GET", "http://192.168.1.210:5000/getlist/", true);
     req.send(null);
     categoryButton();
   }
@@ -48,6 +48,8 @@
   <section id="new">
     <h2>更新情報</h2>
     <dl>
+      <dt>2017/11/15</dt>
+      <dd>データベース移行</dd>
       <dt>2017/11/10</dt>
       <dd>WSL Degital Library 公開</dd>
       <dt>2017/11/10</dt>
@@ -107,7 +109,7 @@
           alert("アップロード完了");
         }
       };
-      xmlhttp.open("POST", "http://192.168.62.24:5000/upload/", true);
+      xmlhttp.open("POST", "http://192.168.1.210:5000/upload/", true);
       xmlhttp.send(data);
       formObj1.value='';
     }

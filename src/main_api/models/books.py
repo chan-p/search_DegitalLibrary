@@ -2,6 +2,7 @@ import dataset
 from elasticsearch import Elasticsearch
 import os
 from . import elastic
+from datetime import datetime  as dt
 
 
 class book:
@@ -50,6 +51,13 @@ class book:
             title_list.append(record['id'])
         return title_list
 
+    def add_title(self):
+        print(self.title)
+        data = dict(name=self.title, created=self.__return_date(), modified=self.__return_date())
+        self.__table_books.insert(data)
+        date = self.__table_books.find_one(id=self.get_id(True))["created"]
+        self.__ES.add_record("books", self.get_id(True), {"name":self.title, "created":date, "modified":date})
+
     def add_related_category(self, category_id):
         data = dict(book_id=self.get_id(True), category_id=category_id)
         self.__table_books_categories.insert(data)
@@ -62,3 +70,7 @@ class book:
         id_ = self.__table_books_categories.find_one(book_id=self.id, category_id=category_id)['id']
         self.__table_books_categories.delete(id=id_)
         self.__ES.delete_record(books_categories, id_)
+
+    def __return_date(self):
+        da = dt.now()
+        return '{}-{}-{} {}:{}:{}'.format(da.year, da.month, da.day, da.hour, da.minute, da.second)

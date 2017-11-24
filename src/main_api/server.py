@@ -98,26 +98,11 @@ def file_upload():
       upload_files = request.files.getlist('upload_files')
       for upload_file in upload_files:
           new.append(upload_file.filename)
-          upload_file.save("./dlPDF/" + upload_file.filename)
-          subprocess.call(["zip", '--junk-paths', 'file', './dlPDF/' + upload_file.filename, upload_file.filename, './dlPDF/' + upload_file.filename])
-          subprocess.call(["mv", 'file.zip', './dlPDF/' + upload_file.filename + '.zip'])
-  asd = []
-  asdd = []
-  with open('./PDF_list_column.txt') as g:
-      for lines in g:
-          asd.append(lines[:-1])
-  asd += new
-  with open('./PDF_list_column.txt', 'w') as g:
-      for name in asd:
-          g.write(name + '\n')
+          upload_file.save("./test_dlPDF/" + upload_file.filename)
+          subprocess.call(["zip", '--junk-paths', 'file', './test_dlPDF/' + upload_file.filename, upload_file.filename, './test_dlPDF/' + upload_file.filename])
+          subprocess.call(["mv", 'file.zip', './test_dlPDF/' + upload_file.filename + '.zip'])
+          books.book(title=upload_file.filename[:-4]).add_title()
 
-  with open('./PDF_list.txt') as g:
-      for lines in g:
-          asdd.append(lines[:-1])
-  asdd += new
-  with open('./PDF_list.txt', 'w') as g:
-      for name in asdd:
-          g.write(name + '\n')
   return _make_response()
 
 def _make_response(json_data=None):

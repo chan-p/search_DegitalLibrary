@@ -1,7 +1,7 @@
 // api_url = "172.16.67.210"
-api_url = "192.168.62.24"
+// api_url = "192.168.62.24"
 // api_url = "192.168.60.62"
-// api_url = "192.168.1.210"
+api_url = "192.168.1.210"
 
 // カテゴリ追加
 function addCategory(a) {
@@ -111,7 +111,7 @@ function show(file_names){
   var url = "<br>";
   var ei = 0
   for (key in file_names) {
-    url += "<h3><div style='text-align:right;'><div style='text-align:left;float:left;'><input type='hidden' id='s31" + ei + "' value='" + key + "'>" + key + "</input></div>カテゴリ：<input type='text' name='word' id='sss3" + ei + "' value=''></input><input type='button' value='追加' onclick='addCategory(" + ei + ");'></input><input type='button' value='削除' onclick='deleteCategory(" + ei + ");'></input><input type='button'  value='更新' onclick='koshin();'><a href='../../../dlPDF/" + key + ".pdf#page=1 target='_blank''><img src='images/pdf-hiraku.png' alt='イラスト２' width=100 height=100></a><a href='../../../dlPDF/" + key + ".pdf.zip#page=1 target='_blank''><img src='images/pdf-DL.png' alt='イラスト3' width=100 height=100></a></div></h3><h4>カテゴリ<br>";
+    url += "<h3><div style='text-align:right;'><div style='text-align:left;float:left;'><input type='hidden' id='s31" + ei + "' value='" + key + "'>" + key + "</input></div>カテゴリ：<input type='text' name='word' id='sss3" + ei + "' value=''></input><input type='button' value='追加' onclick='addCategory(" + ei + ");'></input><input type='button' value='削除' onclick='deleteCategory(" + ei + ");'></input><input type='button'  value='更新' onclick='koshin();'><a href='./test_dlPDF/" + key + ".pdf#page=1 target='_blank''><img src='images/pdf-hiraku.png' alt='イラスト２' width=100 height=100></a><a href='./test_dlPDF/" + key + ".pdf.zip#page=1 target='_blank''><img src='images/pdf-DL.png' alt='イラスト3' width=100 height=100></a></div></h3><h4>カテゴリ<br>";
     for (n = 0; n < file_names[key].length; n++) {
       url += "<input type='button' id='" + key + "s2" + n + "' style='font:10pt MS ゴシック; WIDTH:150px; HEIGHT:70px' value='" + file_names[key][n] + "' onclick='pushingButton(" + n + ", " + ei + ", " + file_names[key].length + ");'>";
     }
@@ -125,7 +125,7 @@ function show_test(file_names, category_names){
   var url = "<br>";
   var ei = 0
   for (key in file_names) {
-    url += "<h3><div style='text-align:right;'><div style='text-align:left;float:left;'><input type='hidden' id='s31" + ei + "' value='" + file_names[key] + "'>" + file_names[key] + "</input></div>カテゴリ：<input type='text' name='word' id='sss3" + ei + "' value=''></input><input type='button' value='追加' onclick='addCategory(" + ei + ");'></input><input type='button' value='削除' onclick='deleteCategory(" + ei + ");'></input><input type='button'  value='更新' onclick='koshin();'><a href='../../../dlPDF/" + file_names[key] + ".pdf#page=1 target='_blank''><img src='images/pdf-hiraku.png' alt='イラスト２' width=100 height=100></a><a href='../../../dlPDF/" + file_names[key] + ".pdf.zip#page=1 target='_blank''><img src='images/pdf-DL.png' alt='イラスト3' width=100 height=100></a></div></h3><h4>カテゴリ<br>";
+    url += "<h3><div style='text-align:right;'><div style='text-align:left;float:left;'><input type='hidden' id='s31" + ei + "' value='" + file_names[key] + "'>" + file_names[key] + "</input></div>カテゴリ：<input type='text' name='word' id='sss3" + ei + "' value=''></input><input type='button' value='追加' onclick='addCategory(" + ei + ");'></input><input type='button' value='削除' onclick='deleteCategory(" + ei + ");'></input><input type='button'  value='更新' onclick='koshin();'><a href='./test_dlPDF/" + file_names[key] + ".pdf#page=1 target='_blank''><img src='images/pdf-hiraku.png' alt='イラスト２' width=100 height=100></a><a href='./test_dlPDF/" + file_names[key] + ".pdf.zip#page=1 target='_blank''><img src='images/pdf-DL.png' alt='イラスト3' width=100 height=100></a></div></h3><h4>カテゴリ<br>";
     for (n = 0; n < category_names[ei].length; n++) {
       url += "<input type='button' id='" + file_names[key] + "s2" + n + "' style='font:10pt MS ゴシック; WIDTH:150px; HEIGHT:70px' value='" +  category_names[ei][n] + "' onclick='pushingButton(" + n + ", " + ei + ", " +  file_names.length + ");'>";
     }
