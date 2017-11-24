@@ -1,82 +1,94 @@
 from flask import Flask, request, jsonify, make_response
-from models import books
+from models import books, categories
 import codecs
 import json
 import configparser
+import dataset
 
 app = Flask(__name__)
 config = configparser.ConfigParser()
 config.read('./setting.ini')
 ENV = config.items('LOCALTEST')
 
-@app.route('/', methods=['GET'])
-def update_PDFlist():
+@app.route('/addcate/', methods=['GET'])
+def add_category():
     title = request.args.get('title').encode('utf-8').decode('utf-8')
-    column = request.args.get('column')
-    line = []
-    flg = 0
-    with codecs.open('./PDF_list_column.txt', 'r', 'utf-8') as f:
-        for li in f:
-            lis = li[:-1].split(',')
-            rr = li[:-1]
-            if title == lis[0]:
-                rr += ',' + column
-            line.append(rr + '\n')
-    with codecs.open('./PDF_list_column.txt', 'w', 'utf-8') as g:
-        for jj in line:
-            g.write(jj)
+    category_name = request.args.get('column')
+    target_category = categories.category(category_name)
+    if target_category.get_id(True) == 'no_id':
+        target_category.add_id()
+    books.book(title).add_related_category(target_category.id)
     return _make_response()
 
-@app.route('/delete/', methods=['GET'])
+@app.route('/deletecate/', methods=['GET'])
 def delete_cate():
-    title = request.args.get('title').encode('utf-8').decode('utf-8')
-    column = request.args.get('column')
-    line = []
-    flg = 0
-    with codecs.open('./PDF_list_column.txt', 'r', 'utf-8') as f:
-        for li in f:
-            lis = li[:-1].split(',')
-            rr = li[:-1]
-            if title == lis[0]:
-                lis.remove(column)
-                print(lis)
-            line.append(",".join(lis) + '\n')
-    with codecs.open('./PDF_list_column.txt', 'w', 'utf-8') as g:
-        for jj in line:
-            g.write(jj)
+    book_title = request.args.get('title').encode('utf-8').decode('utf-8')
+    category_name = request.args.get('column')
+    target_category = categories.category(category_name)
+    books.book(book_title).delete_related_category(target_category.get_id(True))
     return _make_response()
 
-@app.route('/update/', methods=['GET'])
-def update_cate():
-  dic = {}
-  with open('./PDF_list_column.txt') as g:
-    for lines in g:
-      line = lines[:-1].split(',')
-      for cate in line[1:]:
-        if cate not in dic:
-          dic[cate] = []
-        dic[cate].append(line[0])
+@app.route('/searchcate/', methods=['GET'])
+def search_cate():
+    book_titles = {}
+    category_name = request.args.get('column')
+    book_ids = categories.category(category_name).get_book_ids()
+    for id_ in book_ids:
+        target_book = books.book(id_=id_)
+        book_titles[target_book.get_title(True)] = target_book.get_category()
+    return _make_response(json.dumps({
+                'titles': book_titles
+            }))
 
-  with open('./cate_search.txt', 'w') as g:
-    for i, v in dic.items():
-      g.write(i)
-      for ca in v:
-        g.write(',' + ca)
-      g.write('\n')
+@app.route('/searchword/', methods=['GET'])
+def search_keyword():
+    book_titles = {}
+    book_ids = books.book().search_ids(request.args.get('keyword'))
+    for id_ in book_ids:
+        target_book = books.book(id_=id_)
+        book_titles[target_book.get_title(True)] = target_book.get_categories()
+    return _make_response(json.dumps({
+                'titles': book_titles
+            }))
 
-  g = open('./column_list.txt', 'w')
-  column_list = []
-  with open('./PDF_list_column.txt') as f:
-    for lines in f:
-      line = lines[:-1].split(',')
-      for co in line[1:]:
-        if co not in column_list:
-          column_list.append(co)
+@app.route('/getlist/', methods=['GET'])
+def get_all():
+    book_titles = []
+    cate = []
+    ids_category = books.book().get_categories()
+    book_ids = books.book().get_all_ids()
+    for count, id_ in enumerate(book_ids):
+        book_titles.append(id_[1])
+        if int(id_[0]) not in ids_category:
+            cate.append([])
+            continue
+        cate.append(ids_category[int(id_[0])])
+    return _make_response(json.dumps({
+                'titles': book_titles,
+                'category': cate
+            }))
 
-  for ii in column_list:
-    g.write(ii + '\n')
-  g.close()
-  return _make_response()
+@app.route('/getlist_cate/', methods=['GET'])
+def get_allcategory():
+    return _make_response(json.dumps({
+                'categories': categories.category().get_all_name()
+            }))
+
+@app.route('/autodeploy/', methods=['POST'])
+def autodeploy():
+    import subprocess
+    if "master" in request.json['ref']:
+        subprocess.call(['git', 'fetch', 'origin'])
+        subprocess.call(['git', 'merge', 'origin/master'])
+        cmd = "ps aux | grep server.py"
+        pid = subprocess.check_output(cmd , shell=True)
+        for line in str(pid).split('\\n')[:-1]:
+            if ('grep' not in line) and ('0:01' not in line):
+                subprocess.call('kill', '-9', str(line.split('    ')[1].split('  ')[0]))
+                cmd1 = 'nohup python server.py &'
+                subprocess.call(cmd1, shell=True)
+    return _make_response()
+
 
 @app.route('/upload/', methods=['POST'])
 def file_upload():
@@ -107,28 +119,6 @@ def file_upload():
       for name in asdd:
           g.write(name + '\n')
   return _make_response()
-
-@app.route('/getlist/', methods=['GET'])
-def get_allPDF():
-    bks = books.books()
-    return _make_response(json.dumps({
-                'pdfs': bks.get_all_title()
-            }))
-
-@app.route('/autodeploy/', methods=['POST'])
-def autodeploy():
-    import subprocess
-    if "master" in request.json['ref']:
-        subprocess.call(['git', 'fetch', 'origin'])
-        subprocess.call(['git', 'merge', 'origin/master'])
-        cmd = "ps aux | grep server.py"
-        pid = subprocess.check_output(cmd , shell=True)
-        for line in str(pid).split('\\n')[:-1]:
-            if ('grep' not in line) and ('0:01' not in line):
-                subprocess.call('kill', '-9', str(line.split('    ')[1].split('  ')[0]))
-                cmd1 = 'nohup python server.py &'
-                subprocess.call(cmd1, shell=True)
-    return _make_response()
 
 def _make_response(json_data=None):
     response = make_response(json_data)
