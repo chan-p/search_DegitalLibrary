@@ -144,15 +144,18 @@ function clearText() {
 function readTextFile2() {
   var target = document.getElementById("output");
   var req = new XMLHttpRequest();
+  var url = "";
   req.onreadystatechange = function() {
     if(req.readyState == 4 && req.status == 200){
       var file_names = JSON.parse(req.response)['titles'];
-      url = show(file_names);
+      var category_names = JSON.parse(req.response)['category'];
+      url += show_test(file_names, category_names);
     }
     target.innerHTML = url;
   };
-  req.open("GET", "http://"+api_url+":5000/getlist/", true);
+  req.open("GET", "http://192.168.1.210:5000/getlist/", true);
   req.send(null);
+  categoryButton();
 }
 
 // カテゴリ -> テキストボックス入力
