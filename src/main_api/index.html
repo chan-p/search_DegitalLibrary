@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>WSL Degital Library</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+  <script src=js/main.js></script>
+  <script src=js/jquery-3.2.1.min.js></script>
+  <script type="text/javascript">
+  window.onload = function readTextFile2() {
+    var target = document.getElementById("output");
+    var req = new XMLHttpRequest();
+    var url = "";
+    req.onreadystatechange = function() {
+      if(req.readyState == 4 && req.status == 200){
+        var file_names = JSON.parse(req.response)['titles'];
+        var category_names = JSON.parse(req.response)['category'];
+        url += show_test(file_names, category_names);
+      }
+      target.innerHTML = url;
+    };
+    req.open("GET", "http://192.168.60.62:5000/getlist/", true);
+    req.send(null);
+    categoryButton();
+  }
+  </script>
+</head>
+
+<body>
+
+  <header>
+    <br>
+    <h1 id="logo"><a href="index.html"><img src="./images/logo1.png" alt="WSL Degital Library"></a></h1>
+    <nav id="menubar">
+      <ul>
+        <li><a href="#gallery">Search</a></li>
+        <li><a href="#all_list">ALL List</a></li>
+        <li><a href="#upload">Upload</a></li>
+        <li><a href="http://wiki.wsl.mind.meiji.ac.jp/" target="_blank">WSL_Wiki</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="contents" id="about">
+
+  <section id="new">
+    <h2>更新情報</h2>
+    <dl>
+      <dt>2017/11/15</dt>
+      <dd>データベース移行</dd>
+      <dt>2017/11/10</dt>
+      <dd>WSL Degital Library 公開</dd>
+      <dt>2017/11/10</dt>
+      <dd>カテゴリ機能を実装</dd>
+      <dt>2017/11/10</dt>
+      <dd>ALL Listを実装</dd>
+      <dt>2017/11/09</dt>
+      <dd>WSL Degita Libraryを構築</dd>
+    </dl>
+  </section>
+
+  <p class="pagetop"><a href="#">↑</a></p>
+
+  </div>
+  <!--/contents-->
+  <div class="contents" id="gallery">
+    <section>
+      <h2>Search</h2>
+      <p>PDF化した書籍の検索ができます。</p>
+      <h3>検索キーワード：<input type="text" name="txtb_kw" id="s1" value="" onkeypress="enterEvent(event.keyCode);"><input type="button" value="検索" onclick="dispButton();"><input type="button" value="クリア" onclick="clearText();"></3>
+      <div id="output2"></div>
+      <h3>検索カテゴリ：<input type="text" name="txtb_kc" value=""><input type="button" value="検索"><input type="button" value="クリア" onclick="clearText();"></3></3>
+      <br>
+      <div id='output3'></div>
+      <div id='output4'></div>
+    </section>
+    <p class="pagetop"><a href="#">↑</a></p>
+  </div>
+
+  <div class="contents" id="all_list">
+    <section>
+      <h2>ALL List</h2>
+      <p>PFD化した書籍の一覧です。<br></p>
+       <div id="output"></div>
+    </section>
+    <p class="pagetop"><a href="#">↑</a></p>
+  </div>
+
+  <div class="contents" id="upload">
+
+  <section id="new">
+    <h2>upload</h2>
+    <p>ファイルのアップロード。<br>複数ファイルの選択が可能。<br></p>
+    <form id="my_form">
+      <input type="file" id="upload_files" name="upload_files" multiple="multiple" class="form-control"></input><br>
+      <input type="button" value="アップロード" onclick="up();"></input>
+    </form>
+  </section>
+  <script type="text/javascript">
+    function up(){
+      var formObj = document.getElementById("my_form");
+      var formObj1 = document.getElementById("upload_files");
+      var data = new FormData(formObj);
+      var xmlhttp = new XMLHttpRequest();
+      xmlhttp.onreadystatechange = function () {
+        if (xmlhttp.readyState == 4 && xmlhttp.status == 0) {
+          alert("アップロード完了");
+        }
+      };
+      xmlhttp.open("POST", "http://192.168.60.62:5000/upload/", true);
+      xmlhttp.send(data);
+      formObj1.value='';
+    }
+  </script>
+  <p class="pagetop"><a href="#">↑</a></p>
+
+  </div>
+  <!--/contents-->
+
+  <footer>
+  <small>Copyright&copy; <a href="index.html">SIMPLE SITE</a> All Rights Reserved.</small>
+  <span class="pr">《<a href="http://template-party.com/" target="_blank">Web Design:Template-Party</a>》</span>
+  </footer>
+
+  <!--背景用の画像の読み込み-->
+  <aside id="bg"><img src="images/bg.jpg" class="landscape"><img src="images/bg2.jpg" class="portrait"></aside>
+
+</body>
+</html>

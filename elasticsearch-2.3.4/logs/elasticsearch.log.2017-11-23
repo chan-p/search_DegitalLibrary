@@ -1,0 +1,1501 @@
+[2017-11-23 11:42:04,024][INFO ][node                     ] [Flying Tiger] version[2.3.4], pid[86816], build[e455fd0/2016-06-30T11:24:31Z]
+[2017-11-23 11:42:04,027][INFO ][node                     ] [Flying Tiger] initializing ...
+[2017-11-23 11:42:04,585][INFO ][plugins                  ] [Flying Tiger] modules [reindex, lang-expression, lang-groovy], plugins [head], sites [head]
+[2017-11-23 11:42:04,616][INFO ][env                      ] [Flying Tiger] using [1] data paths, mounts [[/ (/dev/disk1)]], net usable_space [48.4gb], net total_space [232.5gb], spins? [unknown], types [hfs]
+[2017-11-23 11:42:04,616][INFO ][env                      ] [Flying Tiger] heap size [990.7mb], compressed ordinary object pointers [true]
+[2017-11-23 11:42:04,617][WARN ][env                      ] [Flying Tiger] max file descriptors [10240] for elasticsearch process likely too low, consider increasing to at least [65536]
+[2017-11-23 11:42:06,567][INFO ][node                     ] [Flying Tiger] initialized
+[2017-11-23 11:42:06,567][INFO ][node                     ] [Flying Tiger] starting ...
+[2017-11-23 11:42:06,677][INFO ][transport                ] [Flying Tiger] publish_address {127.0.0.1:9300}, bound_addresses {[fe80::1]:9300}, {[::1]:9300}, {127.0.0.1:9300}
+[2017-11-23 11:42:06,681][INFO ][discovery                ] [Flying Tiger] elasticsearch/ScyM4V12TOuoiwkke3xazw
+[2017-11-23 11:42:09,719][INFO ][cluster.service          ] [Flying Tiger] new_master {Flying Tiger}{ScyM4V12TOuoiwkke3xazw}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
+[2017-11-23 11:42:09,732][INFO ][http                     ] [Flying Tiger] publish_address {127.0.0.1:9200}, bound_addresses {[fe80::1]:9200}, {[::1]:9200}, {127.0.0.1:9200}
+[2017-11-23 11:42:09,732][INFO ][node                     ] [Flying Tiger] started
+[2017-11-23 11:42:09,827][INFO ][gateway                  ] [Flying Tiger] recovered [1] indices into cluster_state
+[2017-11-23 11:42:10,454][INFO ][cluster.routing.allocation] [Flying Tiger] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[search_degital_library][0]] ...]).
+[2017-11-23 12:10:04,333][INFO ][node                     ] [Flying Tiger] stopping ...
+[2017-11-23 12:10:04,373][INFO ][node                     ] [Flying Tiger] stopped
+[2017-11-23 12:10:04,373][INFO ][node                     ] [Flying Tiger] closing ...
+[2017-11-23 12:10:04,379][INFO ][node                     ] [Flying Tiger] closed
+[2017-11-23 12:10:06,700][INFO ][node                     ] [Khonshu] version[2.3.4], pid[88289], build[e455fd0/2016-06-30T11:24:31Z]
+[2017-11-23 12:10:06,701][INFO ][node                     ] [Khonshu] initializing ...
+[2017-11-23 12:10:07,209][INFO ][plugins                  ] [Khonshu] modules [reindex, lang-expression, lang-groovy], plugins [head], sites [head]
+[2017-11-23 12:10:07,229][INFO ][env                      ] [Khonshu] using [1] data paths, mounts [[/ (/dev/disk1)]], net usable_space [48.4gb], net total_space [232.5gb], spins? [unknown], types [hfs]
+[2017-11-23 12:10:07,229][INFO ][env                      ] [Khonshu] heap size [990.7mb], compressed ordinary object pointers [true]
+[2017-11-23 12:10:07,230][WARN ][env                      ] [Khonshu] max file descriptors [10240] for elasticsearch process likely too low, consider increasing to at least [65536]
+[2017-11-23 12:10:08,831][INFO ][node                     ] [Khonshu] initialized
+[2017-11-23 12:10:08,832][INFO ][node                     ] [Khonshu] starting ...
+[2017-11-23 12:10:08,928][INFO ][transport                ] [Khonshu] publish_address {127.0.0.1:9300}, bound_addresses {[fe80::1]:9300}, {[::1]:9300}, {127.0.0.1:9300}
+[2017-11-23 12:10:08,933][INFO ][discovery                ] [Khonshu] elasticsearch/UvSfO0drSkO2XH4aLB8CTw
+[2017-11-23 12:10:11,989][INFO ][cluster.service          ] [Khonshu] new_master {Khonshu}{UvSfO0drSkO2XH4aLB8CTw}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
+[2017-11-23 12:10:12,007][INFO ][http                     ] [Khonshu] publish_address {127.0.0.1:9200}, bound_addresses {[fe80::1]:9200}, {[::1]:9200}, {127.0.0.1:9200}
+[2017-11-23 12:10:12,007][INFO ][node                     ] [Khonshu] started
+[2017-11-23 12:10:12,097][INFO ][gateway                  ] [Khonshu] recovered [1] indices into cluster_state
+[2017-11-23 12:10:12,669][INFO ][cluster.routing.allocation] [Khonshu] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[search_degital_library][4], [search_degital_library][4], [search_degital_library][3]] ...]).
+[2017-11-23 12:59:01,179][DEBUG][action.index             ] [Khonshu] failed to execute [index {[search_degital_library][categories][44], source[{"created": "2017-11-23 12:59:1", "name": "アンサブル", "modified": "2017-11-23 12:59:1"}]}] on [[search_degital_library][0]]
+MapperParsingException[failed to parse [created]]; nested: IllegalArgumentException[Invalid format: "2017-11-23 12:59:1" is malformed at " 12:59:1"];
+	at org.elasticsearch.index.mapper.FieldMapper.parse(FieldMapper.java:329)
+	at org.elasticsearch.index.mapper.DocumentParser.parseObjectOrField(DocumentParser.java:309)
+	at org.elasticsearch.index.mapper.DocumentParser.parseValue(DocumentParser.java:436)
+	at org.elasticsearch.index.mapper.DocumentParser.parseObject(DocumentParser.java:262)
+	at org.elasticsearch.index.mapper.DocumentParser.parseDocument(DocumentParser.java:122)
+	at org.elasticsearch.index.mapper.DocumentMapper.parse(DocumentMapper.java:309)
+	at org.elasticsearch.index.shard.IndexShard.prepareIndex(IndexShard.java:580)
+	at org.elasticsearch.index.shard.IndexShard.prepareIndexOnPrimary(IndexShard.java:559)
+	at org.elasticsearch.action.index.TransportIndexAction.prepareIndexOperationOnPrimary(TransportIndexAction.java:212)
+	at org.elasticsearch.action.index.TransportIndexAction.executeIndexRequestOnPrimary(TransportIndexAction.java:224)
+	at org.elasticsearch.action.index.TransportIndexAction.shardOperationOnPrimary(TransportIndexAction.java:158)
+	at org.elasticsearch.action.index.TransportIndexAction.shardOperationOnPrimary(TransportIndexAction.java:66)
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$PrimaryPhase.doRun(TransportReplicationAction.java:639)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$PrimaryOperationTransportHandler.messageReceived(TransportReplicationAction.java:279)
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$PrimaryOperationTransportHandler.messageReceived(TransportReplicationAction.java:271)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1167)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:641)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+Caused by: java.lang.IllegalArgumentException: Invalid format: "2017-11-23 12:59:1" is malformed at " 12:59:1"
+	at org.joda.time.format.DateTimeParserBucket.doParseMillis(DateTimeParserBucket.java:187)
+	at org.joda.time.format.DateTimeFormatter.parseMillis(DateTimeFormatter.java:826)
+	at org.elasticsearch.index.mapper.core.DateFieldMapper$DateFieldType.parseStringValue(DateFieldMapper.java:362)
+	at org.elasticsearch.index.mapper.core.DateFieldMapper.innerParseCreateField(DateFieldMapper.java:528)
+	at org.elasticsearch.index.mapper.core.NumberFieldMapper.parseCreateField(NumberFieldMapper.java:241)
+	at org.elasticsearch.index.mapper.FieldMapper.parse(FieldMapper.java:321)
+	... 21 more
+[2017-11-23 13:03:25,541][DEBUG][action.index             ] [Khonshu] failed to execute [index {[search_degital_library][categories][45], source[{"name": "test", "modified": "2017-11-23 13:3:25", "created": "2017-11-23 13:3:25"}]}] on [[search_degital_library][4]]
+MapperParsingException[failed to parse [modified]]; nested: IllegalArgumentException[Invalid format: "2017-11-23 13:3:25" is malformed at " 13:3:25"];
+	at org.elasticsearch.index.mapper.FieldMapper.parse(FieldMapper.java:329)
+	at org.elasticsearch.index.mapper.DocumentParser.parseObjectOrField(DocumentParser.java:309)
+	at org.elasticsearch.index.mapper.DocumentParser.parseValue(DocumentParser.java:436)
+	at org.elasticsearch.index.mapper.DocumentParser.parseObject(DocumentParser.java:262)
+	at org.elasticsearch.index.mapper.DocumentParser.parseDocument(DocumentParser.java:122)
+	at org.elasticsearch.index.mapper.DocumentMapper.parse(DocumentMapper.java:309)
+	at org.elasticsearch.index.shard.IndexShard.prepareIndex(IndexShard.java:580)
+	at org.elasticsearch.index.shard.IndexShard.prepareIndexOnPrimary(IndexShard.java:559)
+	at org.elasticsearch.action.index.TransportIndexAction.prepareIndexOperationOnPrimary(TransportIndexAction.java:212)
+	at org.elasticsearch.action.index.TransportIndexAction.executeIndexRequestOnPrimary(TransportIndexAction.java:224)
+	at org.elasticsearch.action.index.TransportIndexAction.shardOperationOnPrimary(TransportIndexAction.java:158)
+	at org.elasticsearch.action.index.TransportIndexAction.shardOperationOnPrimary(TransportIndexAction.java:66)
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$PrimaryPhase.doRun(TransportReplicationAction.java:639)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$PrimaryOperationTransportHandler.messageReceived(TransportReplicationAction.java:279)
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$PrimaryOperationTransportHandler.messageReceived(TransportReplicationAction.java:271)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1167)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:641)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+Caused by: java.lang.IllegalArgumentException: Invalid format: "2017-11-23 13:3:25" is malformed at " 13:3:25"
+	at org.joda.time.format.DateTimeParserBucket.doParseMillis(DateTimeParserBucket.java:187)
+	at org.joda.time.format.DateTimeFormatter.parseMillis(DateTimeFormatter.java:826)
+	at org.elasticsearch.index.mapper.core.DateFieldMapper$DateFieldType.parseStringValue(DateFieldMapper.java:362)
+	at org.elasticsearch.index.mapper.core.DateFieldMapper.innerParseCreateField(DateFieldMapper.java:528)
+	at org.elasticsearch.index.mapper.core.NumberFieldMapper.parseCreateField(NumberFieldMapper.java:241)
+	at org.elasticsearch.index.mapper.FieldMapper.parse(FieldMapper.java:321)
+	... 21 more
+[2017-11-23 13:09:02,398][DEBUG][action.index             ] [Khonshu] failed to execute [index {[search_degital_library][categories][46], source[{"name": "dd", "modified": "2017-11-23 13:9:2", "created": "2017-11-23 13:9:2"}]}] on [[search_degital_library][3]]
+MapperParsingException[failed to parse [modified]]; nested: IllegalArgumentException[Invalid format: "2017-11-23 13:9:2" is malformed at " 13:9:2"];
+	at org.elasticsearch.index.mapper.FieldMapper.parse(FieldMapper.java:329)
+	at org.elasticsearch.index.mapper.DocumentParser.parseObjectOrField(DocumentParser.java:309)
+	at org.elasticsearch.index.mapper.DocumentParser.parseValue(DocumentParser.java:436)
+	at org.elasticsearch.index.mapper.DocumentParser.parseObject(DocumentParser.java:262)
+	at org.elasticsearch.index.mapper.DocumentParser.parseDocument(DocumentParser.java:122)
+	at org.elasticsearch.index.mapper.DocumentMapper.parse(DocumentMapper.java:309)
+	at org.elasticsearch.index.shard.IndexShard.prepareIndex(IndexShard.java:580)
+	at org.elasticsearch.index.shard.IndexShard.prepareIndexOnPrimary(IndexShard.java:559)
+	at org.elasticsearch.action.index.TransportIndexAction.prepareIndexOperationOnPrimary(TransportIndexAction.java:212)
+	at org.elasticsearch.action.index.TransportIndexAction.executeIndexRequestOnPrimary(TransportIndexAction.java:224)
+	at org.elasticsearch.action.index.TransportIndexAction.shardOperationOnPrimary(TransportIndexAction.java:158)
+	at org.elasticsearch.action.index.TransportIndexAction.shardOperationOnPrimary(TransportIndexAction.java:66)
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$PrimaryPhase.doRun(TransportReplicationAction.java:639)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$PrimaryOperationTransportHandler.messageReceived(TransportReplicationAction.java:279)
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$PrimaryOperationTransportHandler.messageReceived(TransportReplicationAction.java:271)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1167)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:641)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+Caused by: java.lang.IllegalArgumentException: Invalid format: "2017-11-23 13:9:2" is malformed at " 13:9:2"
+	at org.joda.time.format.DateTimeParserBucket.doParseMillis(DateTimeParserBucket.java:187)
+	at org.joda.time.format.DateTimeFormatter.parseMillis(DateTimeFormatter.java:826)
+	at org.elasticsearch.index.mapper.core.DateFieldMapper$DateFieldType.parseStringValue(DateFieldMapper.java:362)
+	at org.elasticsearch.index.mapper.core.DateFieldMapper.innerParseCreateField(DateFieldMapper.java:528)
+	at org.elasticsearch.index.mapper.core.NumberFieldMapper.parseCreateField(NumberFieldMapper.java:241)
+	at org.elasticsearch.index.mapper.FieldMapper.parse(FieldMapper.java:321)
+	... 21 more
+[2017-11-23 13:16:22,413][DEBUG][action.index             ] [Khonshu] failed to execute [index {[search_degital_library][categories][47], source[{"modified": "2017-11-23 13:16:22", "created": "2017-11-23 13:16:22", "name": "aa"}]}] on [[search_degital_library][4]]
+MapperParsingException[failed to parse [modified]]; nested: IllegalArgumentException[Invalid format: "2017-11-23 13:16:22" is malformed at " 13:16:22"];
+	at org.elasticsearch.index.mapper.FieldMapper.parse(FieldMapper.java:329)
+	at org.elasticsearch.index.mapper.DocumentParser.parseObjectOrField(DocumentParser.java:309)
+	at org.elasticsearch.index.mapper.DocumentParser.parseValue(DocumentParser.java:436)
+	at org.elasticsearch.index.mapper.DocumentParser.parseObject(DocumentParser.java:262)
+	at org.elasticsearch.index.mapper.DocumentParser.parseDocument(DocumentParser.java:122)
+	at org.elasticsearch.index.mapper.DocumentMapper.parse(DocumentMapper.java:309)
+	at org.elasticsearch.index.shard.IndexShard.prepareIndex(IndexShard.java:580)
+	at org.elasticsearch.index.shard.IndexShard.prepareIndexOnPrimary(IndexShard.java:559)
+	at org.elasticsearch.action.index.TransportIndexAction.prepareIndexOperationOnPrimary(TransportIndexAction.java:212)
+	at org.elasticsearch.action.index.TransportIndexAction.executeIndexRequestOnPrimary(TransportIndexAction.java:224)
+	at org.elasticsearch.action.index.TransportIndexAction.shardOperationOnPrimary(TransportIndexAction.java:158)
+	at org.elasticsearch.action.index.TransportIndexAction.shardOperationOnPrimary(TransportIndexAction.java:66)
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$PrimaryPhase.doRun(TransportReplicationAction.java:639)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$PrimaryOperationTransportHandler.messageReceived(TransportReplicationAction.java:279)
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$PrimaryOperationTransportHandler.messageReceived(TransportReplicationAction.java:271)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1167)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:641)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+Caused by: java.lang.IllegalArgumentException: Invalid format: "2017-11-23 13:16:22" is malformed at " 13:16:22"
+	at org.joda.time.format.DateTimeParserBucket.doParseMillis(DateTimeParserBucket.java:187)
+	at org.joda.time.format.DateTimeFormatter.parseMillis(DateTimeFormatter.java:826)
+	at org.elasticsearch.index.mapper.core.DateFieldMapper$DateFieldType.parseStringValue(DateFieldMapper.java:362)
+	at org.elasticsearch.index.mapper.core.DateFieldMapper.innerParseCreateField(DateFieldMapper.java:528)
+	at org.elasticsearch.index.mapper.core.NumberFieldMapper.parseCreateField(NumberFieldMapper.java:241)
+	at org.elasticsearch.index.mapper.FieldMapper.parse(FieldMapper.java:321)
+	... 21 more
+[2017-11-23 13:19:15,934][DEBUG][action.index             ] [Khonshu] failed to execute [index {[search_degital_library][categories][48], source[{"name": "ddd", "created": "2017-11-23 13:19:15"}]}] on [[search_degital_library][0]]
+MapperParsingException[failed to parse [created]]; nested: IllegalArgumentException[Invalid format: "2017-11-23 13:19:15" is malformed at " 13:19:15"];
+	at org.elasticsearch.index.mapper.FieldMapper.parse(FieldMapper.java:329)
+	at org.elasticsearch.index.mapper.DocumentParser.parseObjectOrField(DocumentParser.java:309)
+	at org.elasticsearch.index.mapper.DocumentParser.parseValue(DocumentParser.java:436)
+	at org.elasticsearch.index.mapper.DocumentParser.parseObject(DocumentParser.java:262)
+	at org.elasticsearch.index.mapper.DocumentParser.parseDocument(DocumentParser.java:122)
+	at org.elasticsearch.index.mapper.DocumentMapper.parse(DocumentMapper.java:309)
+	at org.elasticsearch.index.shard.IndexShard.prepareIndex(IndexShard.java:580)
+	at org.elasticsearch.index.shard.IndexShard.prepareIndexOnPrimary(IndexShard.java:559)
+	at org.elasticsearch.action.index.TransportIndexAction.prepareIndexOperationOnPrimary(TransportIndexAction.java:212)
+	at org.elasticsearch.action.index.TransportIndexAction.executeIndexRequestOnPrimary(TransportIndexAction.java:224)
+	at org.elasticsearch.action.index.TransportIndexAction.shardOperationOnPrimary(TransportIndexAction.java:158)
+	at org.elasticsearch.action.index.TransportIndexAction.shardOperationOnPrimary(TransportIndexAction.java:66)
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$PrimaryPhase.doRun(TransportReplicationAction.java:639)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$PrimaryOperationTransportHandler.messageReceived(TransportReplicationAction.java:279)
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$PrimaryOperationTransportHandler.messageReceived(TransportReplicationAction.java:271)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1167)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:641)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+Caused by: java.lang.IllegalArgumentException: Invalid format: "2017-11-23 13:19:15" is malformed at " 13:19:15"
+	at org.joda.time.format.DateTimeParserBucket.doParseMillis(DateTimeParserBucket.java:187)
+	at org.joda.time.format.DateTimeFormatter.parseMillis(DateTimeFormatter.java:826)
+	at org.elasticsearch.index.mapper.core.DateFieldMapper$DateFieldType.parseStringValue(DateFieldMapper.java:362)
+	at org.elasticsearch.index.mapper.core.DateFieldMapper.innerParseCreateField(DateFieldMapper.java:528)
+	at org.elasticsearch.index.mapper.core.NumberFieldMapper.parseCreateField(NumberFieldMapper.java:241)
+	at org.elasticsearch.index.mapper.FieldMapper.parse(FieldMapper.java:321)
+	... 21 more
+[2017-11-23 13:20:01,894][DEBUG][action.index             ] [Khonshu] failed to execute [index {[search_degital_library][categories][49], source[{"modified": "2017-11-23 13:20:1", "name": "vv", "created": "2017-11-23 13:20:1"}]}] on [[search_degital_library][3]]
+MapperParsingException[failed to parse [modified]]; nested: IllegalArgumentException[Invalid format: "2017-11-23 13:20:1" is malformed at " 13:20:1"];
+	at org.elasticsearch.index.mapper.FieldMapper.parse(FieldMapper.java:329)
+	at org.elasticsearch.index.mapper.DocumentParser.parseObjectOrField(DocumentParser.java:309)
+	at org.elasticsearch.index.mapper.DocumentParser.parseValue(DocumentParser.java:436)
+	at org.elasticsearch.index.mapper.DocumentParser.parseObject(DocumentParser.java:262)
+	at org.elasticsearch.index.mapper.DocumentParser.parseDocument(DocumentParser.java:122)
+	at org.elasticsearch.index.mapper.DocumentMapper.parse(DocumentMapper.java:309)
+	at org.elasticsearch.index.shard.IndexShard.prepareIndex(IndexShard.java:580)
+	at org.elasticsearch.index.shard.IndexShard.prepareIndexOnPrimary(IndexShard.java:559)
+	at org.elasticsearch.action.index.TransportIndexAction.prepareIndexOperationOnPrimary(TransportIndexAction.java:212)
+	at org.elasticsearch.action.index.TransportIndexAction.executeIndexRequestOnPrimary(TransportIndexAction.java:224)
+	at org.elasticsearch.action.index.TransportIndexAction.shardOperationOnPrimary(TransportIndexAction.java:158)
+	at org.elasticsearch.action.index.TransportIndexAction.shardOperationOnPrimary(TransportIndexAction.java:66)
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$PrimaryPhase.doRun(TransportReplicationAction.java:639)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$PrimaryOperationTransportHandler.messageReceived(TransportReplicationAction.java:279)
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$PrimaryOperationTransportHandler.messageReceived(TransportReplicationAction.java:271)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1167)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:641)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+Caused by: java.lang.IllegalArgumentException: Invalid format: "2017-11-23 13:20:1" is malformed at " 13:20:1"
+	at org.joda.time.format.DateTimeParserBucket.doParseMillis(DateTimeParserBucket.java:187)
+	at org.joda.time.format.DateTimeFormatter.parseMillis(DateTimeFormatter.java:826)
+	at org.elasticsearch.index.mapper.core.DateFieldMapper$DateFieldType.parseStringValue(DateFieldMapper.java:362)
+	at org.elasticsearch.index.mapper.core.DateFieldMapper.innerParseCreateField(DateFieldMapper.java:528)
+	at org.elasticsearch.index.mapper.core.NumberFieldMapper.parseCreateField(NumberFieldMapper.java:241)
+	at org.elasticsearch.index.mapper.FieldMapper.parse(FieldMapper.java:321)
+	... 21 more
+[2017-11-23 14:06:55,410][INFO ][node                     ] [Khonshu] stopping ...
+[2017-11-23 14:06:55,485][INFO ][node                     ] [Khonshu] stopped
+[2017-11-23 14:06:55,485][INFO ][node                     ] [Khonshu] closing ...
+[2017-11-23 14:06:55,490][INFO ][node                     ] [Khonshu] closed
+[2017-11-23 14:09:55,430][INFO ][node                     ] [Master of Vengeance] version[2.3.4], pid[95212], build[e455fd0/2016-06-30T11:24:31Z]
+[2017-11-23 14:09:55,431][INFO ][node                     ] [Master of Vengeance] initializing ...
+[2017-11-23 14:09:56,251][INFO ][plugins                  ] [Master of Vengeance] modules [reindex, lang-expression, lang-groovy], plugins [head], sites [head]
+[2017-11-23 14:09:56,284][INFO ][env                      ] [Master of Vengeance] using [1] data paths, mounts [[/ (/dev/disk1)]], net usable_space [48.4gb], net total_space [232.5gb], spins? [unknown], types [hfs]
+[2017-11-23 14:09:56,284][INFO ][env                      ] [Master of Vengeance] heap size [990.7mb], compressed ordinary object pointers [true]
+[2017-11-23 14:09:56,285][WARN ][env                      ] [Master of Vengeance] max file descriptors [10240] for elasticsearch process likely too low, consider increasing to at least [65536]
+[2017-11-23 14:09:58,504][INFO ][node                     ] [Master of Vengeance] initialized
+[2017-11-23 14:09:58,504][INFO ][node                     ] [Master of Vengeance] starting ...
+[2017-11-23 14:09:58,656][INFO ][transport                ] [Master of Vengeance] publish_address {127.0.0.1:9300}, bound_addresses {[fe80::1]:9300}, {[::1]:9300}, {127.0.0.1:9300}
+[2017-11-23 14:09:58,660][INFO ][discovery                ] [Master of Vengeance] elasticsearch/5C9NuNX9SiajP_UnVqCYRg
+[2017-11-23 14:10:01,745][INFO ][cluster.service          ] [Master of Vengeance] new_master {Master of Vengeance}{5C9NuNX9SiajP_UnVqCYRg}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
+[2017-11-23 14:10:01,765][INFO ][http                     ] [Master of Vengeance] publish_address {127.0.0.1:9200}, bound_addresses {[fe80::1]:9200}, {[::1]:9200}, {127.0.0.1:9200}
+[2017-11-23 14:10:01,766][INFO ][node                     ] [Master of Vengeance] started
+[2017-11-23 14:10:01,850][INFO ][gateway                  ] [Master of Vengeance] recovered [1] indices into cluster_state
+[2017-11-23 14:10:02,428][INFO ][cluster.routing.allocation] [Master of Vengeance] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[search_degital_library][2], [search_degital_library][2]] ...]).
+[2017-11-23 14:10:35,220][INFO ][node                     ] [Master of Vengeance] stopping ...
+[2017-11-23 14:10:35,271][INFO ][node                     ] [Master of Vengeance] stopped
+[2017-11-23 14:10:35,272][INFO ][node                     ] [Master of Vengeance] closing ...
+[2017-11-23 14:10:35,282][INFO ][node                     ] [Master of Vengeance] closed
+[2017-11-23 14:10:41,776][INFO ][node                     ] [Kiber the Cruel] version[2.3.4], pid[95268], build[e455fd0/2016-06-30T11:24:31Z]
+[2017-11-23 14:10:41,776][INFO ][node                     ] [Kiber the Cruel] initializing ...
+[2017-11-23 14:10:42,294][INFO ][plugins                  ] [Kiber the Cruel] modules [reindex, lang-expression, lang-groovy], plugins [head], sites [head]
+[2017-11-23 14:10:42,322][INFO ][env                      ] [Kiber the Cruel] using [1] data paths, mounts [[/ (/dev/disk1)]], net usable_space [48.4gb], net total_space [232.5gb], spins? [unknown], types [hfs]
+[2017-11-23 14:10:42,322][INFO ][env                      ] [Kiber the Cruel] heap size [990.7mb], compressed ordinary object pointers [true]
+[2017-11-23 14:10:42,323][WARN ][env                      ] [Kiber the Cruel] max file descriptors [10240] for elasticsearch process likely too low, consider increasing to at least [65536]
+[2017-11-23 14:10:44,256][INFO ][node                     ] [Kiber the Cruel] initialized
+[2017-11-23 14:10:44,257][INFO ][node                     ] [Kiber the Cruel] starting ...
+[2017-11-23 14:10:44,356][INFO ][transport                ] [Kiber the Cruel] publish_address {127.0.0.1:9300}, bound_addresses {[fe80::1]:9300}, {[::1]:9300}, {127.0.0.1:9300}
+[2017-11-23 14:10:44,359][INFO ][discovery                ] [Kiber the Cruel] elasticsearch/FXPZPi3cQ-CzO1pFw9QP7A
+[2017-11-23 14:10:47,415][INFO ][cluster.service          ] [Kiber the Cruel] new_master {Kiber the Cruel}{FXPZPi3cQ-CzO1pFw9QP7A}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
+[2017-11-23 14:10:47,496][INFO ][http                     ] [Kiber the Cruel] publish_address {127.0.0.1:9200}, bound_addresses {[fe80::1]:9200}, {[::1]:9200}, {127.0.0.1:9200}
+[2017-11-23 14:10:47,497][INFO ][node                     ] [Kiber the Cruel] started
+[2017-11-23 14:10:47,549][INFO ][gateway                  ] [Kiber the Cruel] recovered [1] indices into cluster_state
+[2017-11-23 14:10:48,237][INFO ][cluster.routing.allocation] [Kiber the Cruel] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[search_degital_library][2]] ...]).
+[2017-11-23 14:11:01,106][INFO ][node                     ] [Kiber the Cruel] stopping ...
+[2017-11-23 14:11:01,164][INFO ][node                     ] [Kiber the Cruel] stopped
+[2017-11-23 14:11:01,165][INFO ][node                     ] [Kiber the Cruel] closing ...
+[2017-11-23 14:11:01,178][INFO ][node                     ] [Kiber the Cruel] closed
+[2017-11-23 14:11:12,784][INFO ][node                     ] [Vulture] version[2.3.4], pid[95307], build[e455fd0/2016-06-30T11:24:31Z]
+[2017-11-23 14:11:12,785][INFO ][node                     ] [Vulture] initializing ...
+[2017-11-23 14:11:13,335][INFO ][plugins                  ] [Vulture] modules [reindex, lang-expression, lang-groovy], plugins [head], sites [head]
+[2017-11-23 14:11:13,358][INFO ][env                      ] [Vulture] using [1] data paths, mounts [[/ (/dev/disk1)]], net usable_space [48.4gb], net total_space [232.5gb], spins? [unknown], types [hfs]
+[2017-11-23 14:11:13,358][INFO ][env                      ] [Vulture] heap size [990.7mb], compressed ordinary object pointers [true]
+[2017-11-23 14:11:13,359][WARN ][env                      ] [Vulture] max file descriptors [10240] for elasticsearch process likely too low, consider increasing to at least [65536]
+[2017-11-23 14:11:15,276][INFO ][node                     ] [Vulture] initialized
+[2017-11-23 14:11:15,276][INFO ][node                     ] [Vulture] starting ...
+[2017-11-23 14:11:15,375][INFO ][transport                ] [Vulture] publish_address {127.0.0.1:9300}, bound_addresses {[fe80::1]:9300}, {[::1]:9300}, {127.0.0.1:9300}
+[2017-11-23 14:11:15,381][INFO ][discovery                ] [Vulture] elasticsearch/I1kLTcaCTve8HBkxZd2blg
+[2017-11-23 14:11:18,420][INFO ][cluster.service          ] [Vulture] new_master {Vulture}{I1kLTcaCTve8HBkxZd2blg}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
+[2017-11-23 14:11:18,434][INFO ][http                     ] [Vulture] publish_address {127.0.0.1:9200}, bound_addresses {[fe80::1]:9200}, {[::1]:9200}, {127.0.0.1:9200}
+[2017-11-23 14:11:18,434][INFO ][node                     ] [Vulture] started
+[2017-11-23 14:11:18,516][INFO ][gateway                  ] [Vulture] recovered [1] indices into cluster_state
+[2017-11-23 14:11:19,083][INFO ][cluster.routing.allocation] [Vulture] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[search_degital_library][2]] ...]).
+[2017-11-23 14:11:27,747][INFO ][node                     ] [Vulture] stopping ...
+[2017-11-23 14:11:27,818][INFO ][node                     ] [Vulture] stopped
+[2017-11-23 14:11:27,818][INFO ][node                     ] [Vulture] closing ...
+[2017-11-23 14:11:27,830][INFO ][node                     ] [Vulture] closed
+[2017-11-23 15:09:39,103][INFO ][node                     ] [Human Robot] version[2.3.4], pid[98183], build[e455fd0/2016-06-30T11:24:31Z]
+[2017-11-23 15:09:39,104][INFO ][node                     ] [Human Robot] initializing ...
+[2017-11-23 15:09:39,592][INFO ][plugins                  ] [Human Robot] modules [reindex, lang-expression, lang-groovy], plugins [head], sites [head]
+[2017-11-23 15:09:39,613][INFO ][env                      ] [Human Robot] using [1] data paths, mounts [[/ (/dev/disk1)]], net usable_space [48.4gb], net total_space [232.5gb], spins? [unknown], types [hfs]
+[2017-11-23 15:09:39,614][INFO ][env                      ] [Human Robot] heap size [990.7mb], compressed ordinary object pointers [true]
+[2017-11-23 15:09:39,615][WARN ][env                      ] [Human Robot] max file descriptors [10240] for elasticsearch process likely too low, consider increasing to at least [65536]
+[2017-11-23 15:09:41,260][INFO ][node                     ] [Human Robot] initialized
+[2017-11-23 15:09:41,260][INFO ][node                     ] [Human Robot] starting ...
+[2017-11-23 15:09:41,363][INFO ][transport                ] [Human Robot] publish_address {127.0.0.1:9300}, bound_addresses {[fe80::1]:9300}, {[::1]:9300}, {127.0.0.1:9300}
+[2017-11-23 15:09:41,368][INFO ][discovery                ] [Human Robot] elasticsearch/MGX20AfAT9mp-CULRvptEA
+[2017-11-23 15:09:44,420][INFO ][cluster.service          ] [Human Robot] new_master {Human Robot}{MGX20AfAT9mp-CULRvptEA}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
+[2017-11-23 15:09:44,435][INFO ][http                     ] [Human Robot] publish_address {127.0.0.1:9200}, bound_addresses {[fe80::1]:9200}, {[::1]:9200}, {127.0.0.1:9200}
+[2017-11-23 15:09:44,436][INFO ][node                     ] [Human Robot] started
+[2017-11-23 15:09:44,525][INFO ][gateway                  ] [Human Robot] recovered [1] indices into cluster_state
+[2017-11-23 15:09:45,138][INFO ][cluster.routing.allocation] [Human Robot] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[search_degital_library][1]] ...]).
+[2017-11-23 21:54:04,657][INFO ][node                     ] [Human Robot] stopping ...
+[2017-11-23 21:54:04,818][INFO ][node                     ] [Human Robot] stopped
+[2017-11-23 21:54:04,818][INFO ][node                     ] [Human Robot] closing ...
+[2017-11-23 21:54:04,829][INFO ][node                     ] [Human Robot] closed
+[2017-11-23 22:11:18,988][INFO ][node                     ] [Damballah] version[2.3.4], pid[4636], build[e455fd0/2016-06-30T11:24:31Z]
+[2017-11-23 22:11:18,988][INFO ][node                     ] [Damballah] initializing ...
+[2017-11-23 22:11:19,525][INFO ][plugins                  ] [Damballah] modules [reindex, lang-expression, lang-groovy], plugins [head], sites [head]
+[2017-11-23 22:11:19,555][INFO ][env                      ] [Damballah] using [1] data paths, mounts [[/ (/dev/disk1)]], net usable_space [47.3gb], net total_space [232.5gb], spins? [unknown], types [hfs]
+[2017-11-23 22:11:19,555][INFO ][env                      ] [Damballah] heap size [990.7mb], compressed ordinary object pointers [true]
+[2017-11-23 22:11:19,562][WARN ][env                      ] [Damballah] max file descriptors [10240] for elasticsearch process likely too low, consider increasing to at least [65536]
+[2017-11-23 22:11:21,718][INFO ][node                     ] [Damballah] initialized
+[2017-11-23 22:11:21,718][INFO ][node                     ] [Damballah] starting ...
+[2017-11-23 22:11:21,869][INFO ][transport                ] [Damballah] publish_address {127.0.0.1:9300}, bound_addresses {[fe80::1]:9300}, {[::1]:9300}, {127.0.0.1:9300}
+[2017-11-23 22:11:21,873][INFO ][discovery                ] [Damballah] elasticsearch/sUBLX8PNSJa6E3am-gQfaw
+[2017-11-23 22:11:24,914][INFO ][cluster.service          ] [Damballah] new_master {Damballah}{sUBLX8PNSJa6E3am-gQfaw}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
+[2017-11-23 22:11:24,929][INFO ][http                     ] [Damballah] publish_address {127.0.0.1:9200}, bound_addresses {[fe80::1]:9200}, {[::1]:9200}, {127.0.0.1:9200}
+[2017-11-23 22:11:24,929][INFO ][node                     ] [Damballah] started
+[2017-11-23 22:11:25,020][INFO ][gateway                  ] [Damballah] recovered [1] indices into cluster_state
+[2017-11-23 22:11:25,659][INFO ][cluster.routing.allocation] [Damballah] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[search_degital_library][4], [search_degital_library][4]] ...]).
+[2017-11-23 22:26:05,561][DEBUG][action.search            ] [Damballah] [search_degital_library][4], node[sUBLX8PNSJa6E3am-gQfaw], [P], v[20], s[STARTED], a[id=YzMca824R9ynWOAKn08t2A]: Failed to execute [org.elasticsearch.action.search.SearchRequest@18772475]
+RemoteTransportException[[Damballah][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"query": {"match": {"match_all": {}}}, "sort": [{"name": {"order": "desc"}}], "size": 200}]]; nested: QueryParsingException[No text specified for text query];
+Caused by: SearchParseException[failed to parse search source [{"query": {"match": {"match_all": {}}}, "sort": [{"name": {"order": "desc"}}], "size": 200}]]; nested: QueryParsingException[No text specified for text query];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:855)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:654)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:620)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:371)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1167)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:641)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+Caused by: [search_degital_library] QueryParsingException[No text specified for text query]
+	at org.elasticsearch.index.query.MatchQueryParser.parse(MatchQueryParser.java:162)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:250)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:320)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:223)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:218)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:838)
+	... 12 more
+[2017-11-23 22:26:05,565][DEBUG][action.search            ] [Damballah] All shards failed for phase: [query]
+RemoteTransportException[[Damballah][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"query": {"match": {"match_all": {}}}, "sort": [{"name": {"order": "desc"}}], "size": 200}]]; nested: QueryParsingException[No text specified for text query];
+Caused by: SearchParseException[failed to parse search source [{"query": {"match": {"match_all": {}}}, "sort": [{"name": {"order": "desc"}}], "size": 200}]]; nested: QueryParsingException[No text specified for text query];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:855)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:654)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:620)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:371)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1167)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:641)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+Caused by: [search_degital_library] QueryParsingException[No text specified for text query]
+	at org.elasticsearch.index.query.MatchQueryParser.parse(MatchQueryParser.java:162)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:250)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:320)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:223)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:218)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:838)
+	... 12 more
+[2017-11-23 22:26:05,561][DEBUG][action.search            ] [Damballah] [search_degital_library][2], node[sUBLX8PNSJa6E3am-gQfaw], [P], v[20], s[STARTED], a[id=5c9DR90FQc6A4PoGGKnEPQ]: Failed to execute [org.elasticsearch.action.search.SearchRequest@18772475] lastShard [true]
+RemoteTransportException[[Damballah][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"query": {"match": {"match_all": {}}}, "sort": [{"name": {"order": "desc"}}], "size": 200}]]; nested: QueryParsingException[No text specified for text query];
+Caused by: SearchParseException[failed to parse search source [{"query": {"match": {"match_all": {}}}, "sort": [{"name": {"order": "desc"}}], "size": 200}]]; nested: QueryParsingException[No text specified for text query];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:855)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:654)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:620)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:371)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1167)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:641)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+Caused by: [search_degital_library] QueryParsingException[No text specified for text query]
+	at org.elasticsearch.index.query.MatchQueryParser.parse(MatchQueryParser.java:162)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:250)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:320)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:223)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:218)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:838)
+	... 12 more
+[2017-11-23 22:26:05,561][DEBUG][action.search            ] [Damballah] [search_degital_library][3], node[sUBLX8PNSJa6E3am-gQfaw], [P], v[20], s[STARTED], a[id=eyMZQuKbQbWvMflhCUPZrQ]: Failed to execute [org.elasticsearch.action.search.SearchRequest@18772475] lastShard [true]
+RemoteTransportException[[Damballah][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"query": {"match": {"match_all": {}}}, "sort": [{"name": {"order": "desc"}}], "size": 200}]]; nested: QueryParsingException[No text specified for text query];
+Caused by: SearchParseException[failed to parse search source [{"query": {"match": {"match_all": {}}}, "sort": [{"name": {"order": "desc"}}], "size": 200}]]; nested: QueryParsingException[No text specified for text query];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:855)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:654)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:620)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:371)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1167)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:641)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+Caused by: [search_degital_library] QueryParsingException[No text specified for text query]
+	at org.elasticsearch.index.query.MatchQueryParser.parse(MatchQueryParser.java:162)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:250)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:320)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:223)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:218)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:838)
+	... 12 more
+[2017-11-23 22:26:05,561][DEBUG][action.search            ] [Damballah] [search_degital_library][1], node[sUBLX8PNSJa6E3am-gQfaw], [P], v[20], s[STARTED], a[id=lHgB08h5TNacVIHBZeOUpg]: Failed to execute [org.elasticsearch.action.search.SearchRequest@18772475] lastShard [true]
+RemoteTransportException[[Damballah][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"query": {"match": {"match_all": {}}}, "sort": [{"name": {"order": "desc"}}], "size": 200}]]; nested: QueryParsingException[No text specified for text query];
+Caused by: SearchParseException[failed to parse search source [{"query": {"match": {"match_all": {}}}, "sort": [{"name": {"order": "desc"}}], "size": 200}]]; nested: QueryParsingException[No text specified for text query];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:855)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:654)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:620)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:371)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1167)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:641)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+Caused by: [search_degital_library] QueryParsingException[No text specified for text query]
+	at org.elasticsearch.index.query.MatchQueryParser.parse(MatchQueryParser.java:162)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:250)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:320)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:223)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:218)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:838)
+	... 12 more
+[2017-11-23 22:26:05,561][DEBUG][action.search            ] [Damballah] [search_degital_library][0], node[sUBLX8PNSJa6E3am-gQfaw], [P], v[20], s[STARTED], a[id=u1MfbHtRTJ2jYFzcX_SevQ]: Failed to execute [org.elasticsearch.action.search.SearchRequest@18772475] lastShard [true]
+RemoteTransportException[[Damballah][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"query": {"match": {"match_all": {}}}, "sort": [{"name": {"order": "desc"}}], "size": 200}]]; nested: QueryParsingException[No text specified for text query];
+Caused by: SearchParseException[failed to parse search source [{"query": {"match": {"match_all": {}}}, "sort": [{"name": {"order": "desc"}}], "size": 200}]]; nested: QueryParsingException[No text specified for text query];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:855)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:654)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:620)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:371)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1167)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:641)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+Caused by: [search_degital_library] QueryParsingException[No text specified for text query]
+	at org.elasticsearch.index.query.MatchQueryParser.parse(MatchQueryParser.java:162)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:250)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:320)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:223)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:218)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:838)
+	... 12 more
+[2017-11-23 22:26:05,774][DEBUG][action.search            ] [Damballah] [search_degital_library][0], node[sUBLX8PNSJa6E3am-gQfaw], [P], v[20], s[STARTED], a[id=u1MfbHtRTJ2jYFzcX_SevQ]: Failed to execute [org.elasticsearch.action.search.SearchRequest@1e51d22d] lastShard [true]
+RemoteTransportException[[Damballah][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"query": {"match": {"match_all": {}}}, "sort": [{"name": {"order": "desc"}}], "size": 200}]]; nested: QueryParsingException[No text specified for text query];
+Caused by: SearchParseException[failed to parse search source [{"query": {"match": {"match_all": {}}}, "sort": [{"name": {"order": "desc"}}], "size": 200}]]; nested: QueryParsingException[No text specified for text query];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:855)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:654)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:620)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:371)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1167)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:641)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+Caused by: [search_degital_library] QueryParsingException[No text specified for text query]
+	at org.elasticsearch.index.query.MatchQueryParser.parse(MatchQueryParser.java:162)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:250)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:320)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:223)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:218)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:838)
+	... 12 more
+[2017-11-23 22:26:05,774][DEBUG][action.search            ] [Damballah] [search_degital_library][2], node[sUBLX8PNSJa6E3am-gQfaw], [P], v[20], s[STARTED], a[id=5c9DR90FQc6A4PoGGKnEPQ]: Failed to execute [org.elasticsearch.action.search.SearchRequest@1e51d22d] lastShard [true]
+RemoteTransportException[[Damballah][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"query": {"match": {"match_all": {}}}, "sort": [{"name": {"order": "desc"}}], "size": 200}]]; nested: QueryParsingException[No text specified for text query];
+Caused by: SearchParseException[failed to parse search source [{"query": {"match": {"match_all": {}}}, "sort": [{"name": {"order": "desc"}}], "size": 200}]]; nested: QueryParsingException[No text specified for text query];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:855)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:654)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:620)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:371)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1167)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:641)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+Caused by: [search_degital_library] QueryParsingException[No text specified for text query]
+	at org.elasticsearch.index.query.MatchQueryParser.parse(MatchQueryParser.java:162)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:250)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:320)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:223)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:218)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:838)
+	... 12 more
+[2017-11-23 22:26:05,774][DEBUG][action.search            ] [Damballah] [search_degital_library][4], node[sUBLX8PNSJa6E3am-gQfaw], [P], v[20], s[STARTED], a[id=YzMca824R9ynWOAKn08t2A]: Failed to execute [org.elasticsearch.action.search.SearchRequest@1e51d22d]
+RemoteTransportException[[Damballah][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"query": {"match": {"match_all": {}}}, "sort": [{"name": {"order": "desc"}}], "size": 200}]]; nested: QueryParsingException[No text specified for text query];
+Caused by: SearchParseException[failed to parse search source [{"query": {"match": {"match_all": {}}}, "sort": [{"name": {"order": "desc"}}], "size": 200}]]; nested: QueryParsingException[No text specified for text query];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:855)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:654)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:620)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:371)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1167)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:641)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+Caused by: [search_degital_library] QueryParsingException[No text specified for text query]
+	at org.elasticsearch.index.query.MatchQueryParser.parse(MatchQueryParser.java:162)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:250)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:320)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:223)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:218)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:838)
+	... 12 more
+[2017-11-23 22:26:05,774][DEBUG][action.search            ] [Damballah] [search_degital_library][1], node[sUBLX8PNSJa6E3am-gQfaw], [P], v[20], s[STARTED], a[id=lHgB08h5TNacVIHBZeOUpg]: Failed to execute [org.elasticsearch.action.search.SearchRequest@1e51d22d] lastShard [true]
+RemoteTransportException[[Damballah][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"query": {"match": {"match_all": {}}}, "sort": [{"name": {"order": "desc"}}], "size": 200}]]; nested: QueryParsingException[No text specified for text query];
+Caused by: SearchParseException[failed to parse search source [{"query": {"match": {"match_all": {}}}, "sort": [{"name": {"order": "desc"}}], "size": 200}]]; nested: QueryParsingException[No text specified for text query];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:855)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:654)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:620)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:371)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1167)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:641)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+Caused by: [search_degital_library] QueryParsingException[No text specified for text query]
+	at org.elasticsearch.index.query.MatchQueryParser.parse(MatchQueryParser.java:162)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:250)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:320)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:223)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:218)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:838)
+	... 12 more
+[2017-11-23 22:26:05,774][DEBUG][action.search            ] [Damballah] [search_degital_library][3], node[sUBLX8PNSJa6E3am-gQfaw], [P], v[20], s[STARTED], a[id=eyMZQuKbQbWvMflhCUPZrQ]: Failed to execute [org.elasticsearch.action.search.SearchRequest@1e51d22d] lastShard [true]
+RemoteTransportException[[Damballah][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"query": {"match": {"match_all": {}}}, "sort": [{"name": {"order": "desc"}}], "size": 200}]]; nested: QueryParsingException[No text specified for text query];
+Caused by: SearchParseException[failed to parse search source [{"query": {"match": {"match_all": {}}}, "sort": [{"name": {"order": "desc"}}], "size": 200}]]; nested: QueryParsingException[No text specified for text query];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:855)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:654)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:620)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:371)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1167)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:641)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+Caused by: [search_degital_library] QueryParsingException[No text specified for text query]
+	at org.elasticsearch.index.query.MatchQueryParser.parse(MatchQueryParser.java:162)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:250)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:320)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:223)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:218)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:838)
+	... 12 more
+[2017-11-23 22:26:05,775][DEBUG][action.search            ] [Damballah] All shards failed for phase: [query]
+RemoteTransportException[[Damballah][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"query": {"match": {"match_all": {}}}, "sort": [{"name": {"order": "desc"}}], "size": 200}]]; nested: QueryParsingException[No text specified for text query];
+Caused by: SearchParseException[failed to parse search source [{"query": {"match": {"match_all": {}}}, "sort": [{"name": {"order": "desc"}}], "size": 200}]]; nested: QueryParsingException[No text specified for text query];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:855)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:654)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:620)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:371)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1167)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:641)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+Caused by: [search_degital_library] QueryParsingException[No text specified for text query]
+	at org.elasticsearch.index.query.MatchQueryParser.parse(MatchQueryParser.java:162)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:250)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:320)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:223)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:218)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:838)
+	... 12 more
+[2017-11-23 23:05:12,117][DEBUG][action.search            ] [Damballah] [search_degital_library][4], node[sUBLX8PNSJa6E3am-gQfaw], [P], v[20], s[STARTED], a[id=YzMca824R9ynWOAKn08t2A]: Failed to execute [org.elasticsearch.action.search.SearchRequest@73468dd] lastShard [true]
+RemoteTransportException[[Damballah][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"query": {"match": "{\"book_id\": 17}"}, "sort": [{"name": {"order": "desc"}}], "size": 200}]]; nested: QueryParsingException[[_na] query malformed, no field after start_object];
+Caused by: SearchParseException[failed to parse search source [{"query": {"match": "{\"book_id\": 17}"}, "sort": [{"name": {"order": "desc"}}], "size": 200}]]; nested: QueryParsingException[[_na] query malformed, no field after start_object];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:855)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:654)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:620)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:371)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1167)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:641)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+Caused by: [search_degital_library] QueryParsingException[[_na] query malformed, no field after start_object]
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:243)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:320)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:223)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:218)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:838)
+	... 12 more
+[2017-11-23 23:05:12,117][DEBUG][action.search            ] [Damballah] [search_degital_library][0], node[sUBLX8PNSJa6E3am-gQfaw], [P], v[20], s[STARTED], a[id=u1MfbHtRTJ2jYFzcX_SevQ]: Failed to execute [org.elasticsearch.action.search.SearchRequest@73468dd] lastShard [true]
+RemoteTransportException[[Damballah][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"query": {"match": "{\"book_id\": 17}"}, "sort": [{"name": {"order": "desc"}}], "size": 200}]]; nested: QueryParsingException[[_na] query malformed, no field after start_object];
+Caused by: SearchParseException[failed to parse search source [{"query": {"match": "{\"book_id\": 17}"}, "sort": [{"name": {"order": "desc"}}], "size": 200}]]; nested: QueryParsingException[[_na] query malformed, no field after start_object];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:855)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:654)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:620)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:371)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1167)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:641)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+Caused by: [search_degital_library] QueryParsingException[[_na] query malformed, no field after start_object]
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:243)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:320)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:223)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:218)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:838)
+	... 12 more
+[2017-11-23 23:05:12,117][DEBUG][action.search            ] [Damballah] [search_degital_library][1], node[sUBLX8PNSJa6E3am-gQfaw], [P], v[20], s[STARTED], a[id=lHgB08h5TNacVIHBZeOUpg]: Failed to execute [org.elasticsearch.action.search.SearchRequest@73468dd]
+RemoteTransportException[[Damballah][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"query": {"match": "{\"book_id\": 17}"}, "sort": [{"name": {"order": "desc"}}], "size": 200}]]; nested: QueryParsingException[[_na] query malformed, no field after start_object];
+Caused by: SearchParseException[failed to parse search source [{"query": {"match": "{\"book_id\": 17}"}, "sort": [{"name": {"order": "desc"}}], "size": 200}]]; nested: QueryParsingException[[_na] query malformed, no field after start_object];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:855)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:654)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:620)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:371)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1167)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:641)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+Caused by: [search_degital_library] QueryParsingException[[_na] query malformed, no field after start_object]
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:243)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:320)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:223)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:218)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:838)
+	... 12 more
+[2017-11-23 23:05:12,117][DEBUG][action.search            ] [Damballah] [search_degital_library][3], node[sUBLX8PNSJa6E3am-gQfaw], [P], v[20], s[STARTED], a[id=eyMZQuKbQbWvMflhCUPZrQ]: Failed to execute [org.elasticsearch.action.search.SearchRequest@73468dd] lastShard [true]
+RemoteTransportException[[Damballah][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"query": {"match": "{\"book_id\": 17}"}, "sort": [{"name": {"order": "desc"}}], "size": 200}]]; nested: QueryParsingException[[_na] query malformed, no field after start_object];
+Caused by: SearchParseException[failed to parse search source [{"query": {"match": "{\"book_id\": 17}"}, "sort": [{"name": {"order": "desc"}}], "size": 200}]]; nested: QueryParsingException[[_na] query malformed, no field after start_object];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:855)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:654)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:620)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:371)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1167)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:641)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+Caused by: [search_degital_library] QueryParsingException[[_na] query malformed, no field after start_object]
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:243)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:320)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:223)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:218)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:838)
+	... 12 more
+[2017-11-23 23:05:12,117][DEBUG][action.search            ] [Damballah] [search_degital_library][2], node[sUBLX8PNSJa6E3am-gQfaw], [P], v[20], s[STARTED], a[id=5c9DR90FQc6A4PoGGKnEPQ]: Failed to execute [org.elasticsearch.action.search.SearchRequest@73468dd] lastShard [true]
+RemoteTransportException[[Damballah][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"query": {"match": "{\"book_id\": 17}"}, "sort": [{"name": {"order": "desc"}}], "size": 200}]]; nested: QueryParsingException[[_na] query malformed, no field after start_object];
+Caused by: SearchParseException[failed to parse search source [{"query": {"match": "{\"book_id\": 17}"}, "sort": [{"name": {"order": "desc"}}], "size": 200}]]; nested: QueryParsingException[[_na] query malformed, no field after start_object];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:855)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:654)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:620)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:371)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1167)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:641)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+Caused by: [search_degital_library] QueryParsingException[[_na] query malformed, no field after start_object]
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:243)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:320)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:223)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:218)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:838)
+	... 12 more
+[2017-11-23 23:05:12,119][DEBUG][action.search            ] [Damballah] All shards failed for phase: [query]
+RemoteTransportException[[Damballah][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"query": {"match": "{\"book_id\": 17}"}, "sort": [{"name": {"order": "desc"}}], "size": 200}]]; nested: QueryParsingException[[_na] query malformed, no field after start_object];
+Caused by: SearchParseException[failed to parse search source [{"query": {"match": "{\"book_id\": 17}"}, "sort": [{"name": {"order": "desc"}}], "size": 200}]]; nested: QueryParsingException[[_na] query malformed, no field after start_object];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:855)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:654)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:620)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:371)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1167)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:641)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+Caused by: [search_degital_library] QueryParsingException[[_na] query malformed, no field after start_object]
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:243)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:320)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:223)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:218)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:838)
+	... 12 more
+[2017-11-23 23:06:15,183][DEBUG][action.search            ] [Damballah] [search_degital_library][0], node[sUBLX8PNSJa6E3am-gQfaw], [P], v[20], s[STARTED], a[id=u1MfbHtRTJ2jYFzcX_SevQ]: Failed to execute [org.elasticsearch.action.search.SearchRequest@2729a164] lastShard [true]
+RemoteTransportException[[Damballah][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"query": {"match": "{\"book_id\": 17}"}, "size": 200, "sort": [{"name": {"order": "desc"}}]}]]; nested: QueryParsingException[[_na] query malformed, no field after start_object];
+Caused by: SearchParseException[failed to parse search source [{"query": {"match": "{\"book_id\": 17}"}, "size": 200, "sort": [{"name": {"order": "desc"}}]}]]; nested: QueryParsingException[[_na] query malformed, no field after start_object];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:855)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:654)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:620)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:371)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1167)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:641)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+Caused by: [search_degital_library] QueryParsingException[[_na] query malformed, no field after start_object]
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:243)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:320)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:223)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:218)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:838)
+	... 12 more
+[2017-11-23 23:06:15,183][DEBUG][action.search            ] [Damballah] [search_degital_library][4], node[sUBLX8PNSJa6E3am-gQfaw], [P], v[20], s[STARTED], a[id=YzMca824R9ynWOAKn08t2A]: Failed to execute [org.elasticsearch.action.search.SearchRequest@2729a164]
+RemoteTransportException[[Damballah][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"query": {"match": "{\"book_id\": 17}"}, "size": 200, "sort": [{"name": {"order": "desc"}}]}]]; nested: QueryParsingException[[_na] query malformed, no field after start_object];
+Caused by: SearchParseException[failed to parse search source [{"query": {"match": "{\"book_id\": 17}"}, "size": 200, "sort": [{"name": {"order": "desc"}}]}]]; nested: QueryParsingException[[_na] query malformed, no field after start_object];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:855)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:654)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:620)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:371)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1167)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:641)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+Caused by: [search_degital_library] QueryParsingException[[_na] query malformed, no field after start_object]
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:243)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:320)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:223)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:218)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:838)
+	... 12 more
+[2017-11-23 23:06:15,183][DEBUG][action.search            ] [Damballah] [search_degital_library][3], node[sUBLX8PNSJa6E3am-gQfaw], [P], v[20], s[STARTED], a[id=eyMZQuKbQbWvMflhCUPZrQ]: Failed to execute [org.elasticsearch.action.search.SearchRequest@2729a164] lastShard [true]
+RemoteTransportException[[Damballah][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"query": {"match": "{\"book_id\": 17}"}, "size": 200, "sort": [{"name": {"order": "desc"}}]}]]; nested: QueryParsingException[[_na] query malformed, no field after start_object];
+Caused by: SearchParseException[failed to parse search source [{"query": {"match": "{\"book_id\": 17}"}, "size": 200, "sort": [{"name": {"order": "desc"}}]}]]; nested: QueryParsingException[[_na] query malformed, no field after start_object];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:855)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:654)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:620)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:371)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1167)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:641)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+Caused by: [search_degital_library] QueryParsingException[[_na] query malformed, no field after start_object]
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:243)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:320)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:223)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:218)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:838)
+	... 12 more
+[2017-11-23 23:06:15,183][DEBUG][action.search            ] [Damballah] [search_degital_library][2], node[sUBLX8PNSJa6E3am-gQfaw], [P], v[20], s[STARTED], a[id=5c9DR90FQc6A4PoGGKnEPQ]: Failed to execute [org.elasticsearch.action.search.SearchRequest@2729a164] lastShard [true]
+RemoteTransportException[[Damballah][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"query": {"match": "{\"book_id\": 17}"}, "size": 200, "sort": [{"name": {"order": "desc"}}]}]]; nested: QueryParsingException[[_na] query malformed, no field after start_object];
+Caused by: SearchParseException[failed to parse search source [{"query": {"match": "{\"book_id\": 17}"}, "size": 200, "sort": [{"name": {"order": "desc"}}]}]]; nested: QueryParsingException[[_na] query malformed, no field after start_object];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:855)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:654)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:620)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:371)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1167)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:641)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+Caused by: [search_degital_library] QueryParsingException[[_na] query malformed, no field after start_object]
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:243)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:320)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:223)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:218)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:838)
+	... 12 more
+[2017-11-23 23:06:15,183][DEBUG][action.search            ] [Damballah] [search_degital_library][1], node[sUBLX8PNSJa6E3am-gQfaw], [P], v[20], s[STARTED], a[id=lHgB08h5TNacVIHBZeOUpg]: Failed to execute [org.elasticsearch.action.search.SearchRequest@2729a164] lastShard [true]
+RemoteTransportException[[Damballah][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"query": {"match": "{\"book_id\": 17}"}, "size": 200, "sort": [{"name": {"order": "desc"}}]}]]; nested: QueryParsingException[[_na] query malformed, no field after start_object];
+Caused by: SearchParseException[failed to parse search source [{"query": {"match": "{\"book_id\": 17}"}, "size": 200, "sort": [{"name": {"order": "desc"}}]}]]; nested: QueryParsingException[[_na] query malformed, no field after start_object];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:855)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:654)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:620)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:371)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1167)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:641)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+Caused by: [search_degital_library] QueryParsingException[[_na] query malformed, no field after start_object]
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:243)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:320)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:223)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:218)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:838)
+	... 12 more
+[2017-11-23 23:06:15,184][DEBUG][action.search            ] [Damballah] All shards failed for phase: [query]
+RemoteTransportException[[Damballah][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"query": {"match": "{\"book_id\": 17}"}, "size": 200, "sort": [{"name": {"order": "desc"}}]}]]; nested: QueryParsingException[[_na] query malformed, no field after start_object];
+Caused by: SearchParseException[failed to parse search source [{"query": {"match": "{\"book_id\": 17}"}, "size": 200, "sort": [{"name": {"order": "desc"}}]}]]; nested: QueryParsingException[[_na] query malformed, no field after start_object];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:855)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:654)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:620)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:371)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1167)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:641)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+Caused by: [search_degital_library] QueryParsingException[[_na] query malformed, no field after start_object]
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:243)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:320)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:223)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:218)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:838)
+	... 12 more
+[2017-11-23 23:14:56,106][DEBUG][action.search            ] [Damballah] [search_degital_library][1], node[sUBLX8PNSJa6E3am-gQfaw], [P], v[20], s[STARTED], a[id=lHgB08h5TNacVIHBZeOUpg]: Failed to execute [org.elasticsearch.action.search.SearchRequest@14f6b2ba] lastShard [true]
+RemoteTransportException[[Damballah][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"size": 200, "sort": [{"name": {"order": "desc"}}], "query": {"match": ["book_id", 4]}}]]; nested: QueryParsingException[[match] query malformed, no field];
+Caused by: SearchParseException[failed to parse search source [{"size": 200, "sort": [{"name": {"order": "desc"}}], "query": {"match": ["book_id", 4]}}]]; nested: QueryParsingException[[match] query malformed, no field];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:855)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:654)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:620)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:371)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1167)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:641)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+Caused by: [search_degital_library] QueryParsingException[[match] query malformed, no field]
+	at org.elasticsearch.index.query.MatchQueryParser.parse(MatchQueryParser.java:68)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:250)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:320)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:223)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:218)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:838)
+	... 12 more
+[2017-11-23 23:14:56,106][DEBUG][action.search            ] [Damballah] [search_degital_library][4], node[sUBLX8PNSJa6E3am-gQfaw], [P], v[20], s[STARTED], a[id=YzMca824R9ynWOAKn08t2A]: Failed to execute [org.elasticsearch.action.search.SearchRequest@14f6b2ba]
+RemoteTransportException[[Damballah][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"size": 200, "sort": [{"name": {"order": "desc"}}], "query": {"match": ["book_id", 4]}}]]; nested: QueryParsingException[[match] query malformed, no field];
+Caused by: SearchParseException[failed to parse search source [{"size": 200, "sort": [{"name": {"order": "desc"}}], "query": {"match": ["book_id", 4]}}]]; nested: QueryParsingException[[match] query malformed, no field];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:855)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:654)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:620)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:371)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1167)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:641)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+Caused by: [search_degital_library] QueryParsingException[[match] query malformed, no field]
+	at org.elasticsearch.index.query.MatchQueryParser.parse(MatchQueryParser.java:68)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:250)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:320)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:223)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:218)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:838)
+	... 12 more
+[2017-11-23 23:14:56,106][DEBUG][action.search            ] [Damballah] [search_degital_library][3], node[sUBLX8PNSJa6E3am-gQfaw], [P], v[20], s[STARTED], a[id=eyMZQuKbQbWvMflhCUPZrQ]: Failed to execute [org.elasticsearch.action.search.SearchRequest@14f6b2ba] lastShard [true]
+RemoteTransportException[[Damballah][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"size": 200, "sort": [{"name": {"order": "desc"}}], "query": {"match": ["book_id", 4]}}]]; nested: QueryParsingException[[match] query malformed, no field];
+Caused by: SearchParseException[failed to parse search source [{"size": 200, "sort": [{"name": {"order": "desc"}}], "query": {"match": ["book_id", 4]}}]]; nested: QueryParsingException[[match] query malformed, no field];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:855)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:654)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:620)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:371)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1167)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:641)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+Caused by: [search_degital_library] QueryParsingException[[match] query malformed, no field]
+	at org.elasticsearch.index.query.MatchQueryParser.parse(MatchQueryParser.java:68)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:250)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:320)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:223)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:218)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:838)
+	... 12 more
+[2017-11-23 23:14:56,106][DEBUG][action.search            ] [Damballah] [search_degital_library][2], node[sUBLX8PNSJa6E3am-gQfaw], [P], v[20], s[STARTED], a[id=5c9DR90FQc6A4PoGGKnEPQ]: Failed to execute [org.elasticsearch.action.search.SearchRequest@14f6b2ba] lastShard [true]
+RemoteTransportException[[Damballah][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"size": 200, "sort": [{"name": {"order": "desc"}}], "query": {"match": ["book_id", 4]}}]]; nested: QueryParsingException[[match] query malformed, no field];
+Caused by: SearchParseException[failed to parse search source [{"size": 200, "sort": [{"name": {"order": "desc"}}], "query": {"match": ["book_id", 4]}}]]; nested: QueryParsingException[[match] query malformed, no field];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:855)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:654)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:620)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:371)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1167)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:641)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+Caused by: [search_degital_library] QueryParsingException[[match] query malformed, no field]
+	at org.elasticsearch.index.query.MatchQueryParser.parse(MatchQueryParser.java:68)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:250)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:320)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:223)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:218)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:838)
+	... 12 more
+[2017-11-23 23:14:56,106][DEBUG][action.search            ] [Damballah] [search_degital_library][0], node[sUBLX8PNSJa6E3am-gQfaw], [P], v[20], s[STARTED], a[id=u1MfbHtRTJ2jYFzcX_SevQ]: Failed to execute [org.elasticsearch.action.search.SearchRequest@14f6b2ba] lastShard [true]
+RemoteTransportException[[Damballah][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"size": 200, "sort": [{"name": {"order": "desc"}}], "query": {"match": ["book_id", 4]}}]]; nested: QueryParsingException[[match] query malformed, no field];
+Caused by: SearchParseException[failed to parse search source [{"size": 200, "sort": [{"name": {"order": "desc"}}], "query": {"match": ["book_id", 4]}}]]; nested: QueryParsingException[[match] query malformed, no field];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:855)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:654)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:620)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:371)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1167)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:641)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+Caused by: [search_degital_library] QueryParsingException[[match] query malformed, no field]
+	at org.elasticsearch.index.query.MatchQueryParser.parse(MatchQueryParser.java:68)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:250)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:320)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:223)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:218)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:838)
+	... 12 more
+[2017-11-23 23:14:56,107][DEBUG][action.search            ] [Damballah] All shards failed for phase: [query]
+RemoteTransportException[[Damballah][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"size": 200, "sort": [{"name": {"order": "desc"}}], "query": {"match": ["book_id", 4]}}]]; nested: QueryParsingException[[match] query malformed, no field];
+Caused by: SearchParseException[failed to parse search source [{"size": 200, "sort": [{"name": {"order": "desc"}}], "query": {"match": ["book_id", 4]}}]]; nested: QueryParsingException[[match] query malformed, no field];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:855)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:654)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:620)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:371)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1167)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:641)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+Caused by: [search_degital_library] QueryParsingException[[match] query malformed, no field]
+	at org.elasticsearch.index.query.MatchQueryParser.parse(MatchQueryParser.java:68)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:250)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:320)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:223)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:218)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:838)
+	... 12 more
+[2017-11-23 23:14:58,101][DEBUG][action.search            ] [Damballah] [search_degital_library][2], node[sUBLX8PNSJa6E3am-gQfaw], [P], v[20], s[STARTED], a[id=5c9DR90FQc6A4PoGGKnEPQ]: Failed to execute [org.elasticsearch.action.search.SearchRequest@7d3299e5] lastShard [true]
+RemoteTransportException[[Damballah][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"size": 200, "sort": [{"name": {"order": "desc"}}], "query": {"match": ["book_id", 17]}}]]; nested: QueryParsingException[[match] query malformed, no field];
+Caused by: SearchParseException[failed to parse search source [{"size": 200, "sort": [{"name": {"order": "desc"}}], "query": {"match": ["book_id", 17]}}]]; nested: QueryParsingException[[match] query malformed, no field];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:855)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:654)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:620)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:371)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1167)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:641)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+Caused by: [search_degital_library] QueryParsingException[[match] query malformed, no field]
+	at org.elasticsearch.index.query.MatchQueryParser.parse(MatchQueryParser.java:68)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:250)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:320)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:223)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:218)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:838)
+	... 12 more
+[2017-11-23 23:14:58,101][DEBUG][action.search            ] [Damballah] [search_degital_library][4], node[sUBLX8PNSJa6E3am-gQfaw], [P], v[20], s[STARTED], a[id=YzMca824R9ynWOAKn08t2A]: Failed to execute [org.elasticsearch.action.search.SearchRequest@7d3299e5]
+RemoteTransportException[[Damballah][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"size": 200, "sort": [{"name": {"order": "desc"}}], "query": {"match": ["book_id", 17]}}]]; nested: QueryParsingException[[match] query malformed, no field];
+Caused by: SearchParseException[failed to parse search source [{"size": 200, "sort": [{"name": {"order": "desc"}}], "query": {"match": ["book_id", 17]}}]]; nested: QueryParsingException[[match] query malformed, no field];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:855)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:654)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:620)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:371)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1167)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:641)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+Caused by: [search_degital_library] QueryParsingException[[match] query malformed, no field]
+	at org.elasticsearch.index.query.MatchQueryParser.parse(MatchQueryParser.java:68)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:250)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:320)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:223)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:218)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:838)
+	... 12 more
+[2017-11-23 23:14:58,101][DEBUG][action.search            ] [Damballah] [search_degital_library][1], node[sUBLX8PNSJa6E3am-gQfaw], [P], v[20], s[STARTED], a[id=lHgB08h5TNacVIHBZeOUpg]: Failed to execute [org.elasticsearch.action.search.SearchRequest@7d3299e5] lastShard [true]
+RemoteTransportException[[Damballah][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"size": 200, "sort": [{"name": {"order": "desc"}}], "query": {"match": ["book_id", 17]}}]]; nested: QueryParsingException[[match] query malformed, no field];
+Caused by: SearchParseException[failed to parse search source [{"size": 200, "sort": [{"name": {"order": "desc"}}], "query": {"match": ["book_id", 17]}}]]; nested: QueryParsingException[[match] query malformed, no field];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:855)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:654)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:620)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:371)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1167)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:641)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+Caused by: [search_degital_library] QueryParsingException[[match] query malformed, no field]
+	at org.elasticsearch.index.query.MatchQueryParser.parse(MatchQueryParser.java:68)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:250)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:320)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:223)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:218)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:838)
+	... 12 more
+[2017-11-23 23:14:58,101][DEBUG][action.search            ] [Damballah] [search_degital_library][0], node[sUBLX8PNSJa6E3am-gQfaw], [P], v[20], s[STARTED], a[id=u1MfbHtRTJ2jYFzcX_SevQ]: Failed to execute [org.elasticsearch.action.search.SearchRequest@7d3299e5] lastShard [true]
+RemoteTransportException[[Damballah][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"size": 200, "sort": [{"name": {"order": "desc"}}], "query": {"match": ["book_id", 17]}}]]; nested: QueryParsingException[[match] query malformed, no field];
+Caused by: SearchParseException[failed to parse search source [{"size": 200, "sort": [{"name": {"order": "desc"}}], "query": {"match": ["book_id", 17]}}]]; nested: QueryParsingException[[match] query malformed, no field];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:855)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:654)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:620)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:371)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1167)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:641)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+Caused by: [search_degital_library] QueryParsingException[[match] query malformed, no field]
+	at org.elasticsearch.index.query.MatchQueryParser.parse(MatchQueryParser.java:68)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:250)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:320)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:223)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:218)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:838)
+	... 12 more
+[2017-11-23 23:14:58,101][DEBUG][action.search            ] [Damballah] [search_degital_library][3], node[sUBLX8PNSJa6E3am-gQfaw], [P], v[20], s[STARTED], a[id=eyMZQuKbQbWvMflhCUPZrQ]: Failed to execute [org.elasticsearch.action.search.SearchRequest@7d3299e5] lastShard [true]
+RemoteTransportException[[Damballah][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"size": 200, "sort": [{"name": {"order": "desc"}}], "query": {"match": ["book_id", 17]}}]]; nested: QueryParsingException[[match] query malformed, no field];
+Caused by: SearchParseException[failed to parse search source [{"size": 200, "sort": [{"name": {"order": "desc"}}], "query": {"match": ["book_id", 17]}}]]; nested: QueryParsingException[[match] query malformed, no field];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:855)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:654)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:620)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:371)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1167)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:641)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+Caused by: [search_degital_library] QueryParsingException[[match] query malformed, no field]
+	at org.elasticsearch.index.query.MatchQueryParser.parse(MatchQueryParser.java:68)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:250)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:320)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:223)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:218)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:838)
+	... 12 more
+[2017-11-23 23:14:58,102][DEBUG][action.search            ] [Damballah] All shards failed for phase: [query]
+RemoteTransportException[[Damballah][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"size": 200, "sort": [{"name": {"order": "desc"}}], "query": {"match": ["book_id", 17]}}]]; nested: QueryParsingException[[match] query malformed, no field];
+Caused by: SearchParseException[failed to parse search source [{"size": 200, "sort": [{"name": {"order": "desc"}}], "query": {"match": ["book_id", 17]}}]]; nested: QueryParsingException[[match] query malformed, no field];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:855)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:654)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:620)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:371)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1167)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:641)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+Caused by: [search_degital_library] QueryParsingException[[match] query malformed, no field]
+	at org.elasticsearch.index.query.MatchQueryParser.parse(MatchQueryParser.java:68)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:250)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:320)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:223)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:218)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:838)
+	... 12 more
+[2017-11-23 23:15:51,833][DEBUG][action.search            ] [Damballah] [search_degital_library][2], node[sUBLX8PNSJa6E3am-gQfaw], [P], v[20], s[STARTED], a[id=5c9DR90FQc6A4PoGGKnEPQ]: Failed to execute [org.elasticsearch.action.search.SearchRequest@3e5bb112] lastShard [true]
+RemoteTransportException[[Damballah][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"sort": [{"name": {"order": "desc"}}], "size": 200, "query": {"book_id": 4}}]]; nested: QueryParsingException[[_na] query malformed, no field after start_object];
+Caused by: SearchParseException[failed to parse search source [{"sort": [{"name": {"order": "desc"}}], "size": 200, "query": {"book_id": 4}}]]; nested: QueryParsingException[[_na] query malformed, no field after start_object];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:855)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:654)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:620)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:371)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1167)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:641)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+Caused by: [search_degital_library] QueryParsingException[[_na] query malformed, no field after start_object]
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:243)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:320)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:223)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:218)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:838)
+	... 12 more
+[2017-11-23 23:15:51,833][DEBUG][action.search            ] [Damballah] [search_degital_library][3], node[sUBLX8PNSJa6E3am-gQfaw], [P], v[20], s[STARTED], a[id=eyMZQuKbQbWvMflhCUPZrQ]: Failed to execute [org.elasticsearch.action.search.SearchRequest@3e5bb112] lastShard [true]
+RemoteTransportException[[Damballah][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"sort": [{"name": {"order": "desc"}}], "size": 200, "query": {"book_id": 4}}]]; nested: QueryParsingException[[_na] query malformed, no field after start_object];
+Caused by: SearchParseException[failed to parse search source [{"sort": [{"name": {"order": "desc"}}], "size": 200, "query": {"book_id": 4}}]]; nested: QueryParsingException[[_na] query malformed, no field after start_object];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:855)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:654)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:620)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:371)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1167)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:641)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+Caused by: [search_degital_library] QueryParsingException[[_na] query malformed, no field after start_object]
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:243)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:320)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:223)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:218)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:838)
+	... 12 more
+[2017-11-23 23:15:51,833][DEBUG][action.search            ] [Damballah] [search_degital_library][1], node[sUBLX8PNSJa6E3am-gQfaw], [P], v[20], s[STARTED], a[id=lHgB08h5TNacVIHBZeOUpg]: Failed to execute [org.elasticsearch.action.search.SearchRequest@3e5bb112] lastShard [true]
+RemoteTransportException[[Damballah][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"sort": [{"name": {"order": "desc"}}], "size": 200, "query": {"book_id": 4}}]]; nested: QueryParsingException[[_na] query malformed, no field after start_object];
+Caused by: SearchParseException[failed to parse search source [{"sort": [{"name": {"order": "desc"}}], "size": 200, "query": {"book_id": 4}}]]; nested: QueryParsingException[[_na] query malformed, no field after start_object];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:855)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:654)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:620)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:371)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1167)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:641)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+Caused by: [search_degital_library] QueryParsingException[[_na] query malformed, no field after start_object]
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:243)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:320)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:223)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:218)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:838)
+	... 12 more
+[2017-11-23 23:15:51,833][DEBUG][action.search            ] [Damballah] [search_degital_library][0], node[sUBLX8PNSJa6E3am-gQfaw], [P], v[20], s[STARTED], a[id=u1MfbHtRTJ2jYFzcX_SevQ]: Failed to execute [org.elasticsearch.action.search.SearchRequest@3e5bb112] lastShard [true]
+RemoteTransportException[[Damballah][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"sort": [{"name": {"order": "desc"}}], "size": 200, "query": {"book_id": 4}}]]; nested: QueryParsingException[[_na] query malformed, no field after start_object];
+Caused by: SearchParseException[failed to parse search source [{"sort": [{"name": {"order": "desc"}}], "size": 200, "query": {"book_id": 4}}]]; nested: QueryParsingException[[_na] query malformed, no field after start_object];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:855)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:654)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:620)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:371)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1167)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:641)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+Caused by: [search_degital_library] QueryParsingException[[_na] query malformed, no field after start_object]
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:243)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:320)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:223)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:218)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:838)
+	... 12 more
+[2017-11-23 23:15:51,833][DEBUG][action.search            ] [Damballah] [search_degital_library][4], node[sUBLX8PNSJa6E3am-gQfaw], [P], v[20], s[STARTED], a[id=YzMca824R9ynWOAKn08t2A]: Failed to execute [org.elasticsearch.action.search.SearchRequest@3e5bb112]
+RemoteTransportException[[Damballah][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"sort": [{"name": {"order": "desc"}}], "size": 200, "query": {"book_id": 4}}]]; nested: QueryParsingException[[_na] query malformed, no field after start_object];
+Caused by: SearchParseException[failed to parse search source [{"sort": [{"name": {"order": "desc"}}], "size": 200, "query": {"book_id": 4}}]]; nested: QueryParsingException[[_na] query malformed, no field after start_object];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:855)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:654)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:620)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:371)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1167)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:641)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+Caused by: [search_degital_library] QueryParsingException[[_na] query malformed, no field after start_object]
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:243)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:320)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:223)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:218)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:838)
+	... 12 more
+[2017-11-23 23:15:51,837][DEBUG][action.search            ] [Damballah] All shards failed for phase: [query]
+RemoteTransportException[[Damballah][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"sort": [{"name": {"order": "desc"}}], "size": 200, "query": {"book_id": 4}}]]; nested: QueryParsingException[[_na] query malformed, no field after start_object];
+Caused by: SearchParseException[failed to parse search source [{"sort": [{"name": {"order": "desc"}}], "size": 200, "query": {"book_id": 4}}]]; nested: QueryParsingException[[_na] query malformed, no field after start_object];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:855)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:654)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:620)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:371)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1167)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:641)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+Caused by: [search_degital_library] QueryParsingException[[_na] query malformed, no field after start_object]
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:243)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:320)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:223)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:218)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:838)
+	... 12 more
+[2017-11-23 23:18:43,879][DEBUG][action.search            ] [Damballah] [search_degital_library][0], node[sUBLX8PNSJa6E3am-gQfaw], [P], v[20], s[STARTED], a[id=u1MfbHtRTJ2jYFzcX_SevQ]: Failed to execute [org.elasticsearch.action.search.SearchRequest@7ce091e2] lastShard [true]
+RemoteTransportException[[Damballah][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"sort": [{"name": {"order": "desc"}}], "size": 200, "query": {"book_id": 5}}]]; nested: QueryParsingException[[_na] query malformed, no field after start_object];
+Caused by: SearchParseException[failed to parse search source [{"sort": [{"name": {"order": "desc"}}], "size": 200, "query": {"book_id": 5}}]]; nested: QueryParsingException[[_na] query malformed, no field after start_object];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:855)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:654)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:620)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:371)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1167)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:641)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+Caused by: [search_degital_library] QueryParsingException[[_na] query malformed, no field after start_object]
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:243)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:320)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:223)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:218)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:838)
+	... 12 more
+[2017-11-23 23:18:43,879][DEBUG][action.search            ] [Damballah] [search_degital_library][4], node[sUBLX8PNSJa6E3am-gQfaw], [P], v[20], s[STARTED], a[id=YzMca824R9ynWOAKn08t2A]: Failed to execute [org.elasticsearch.action.search.SearchRequest@7ce091e2]
+RemoteTransportException[[Damballah][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"sort": [{"name": {"order": "desc"}}], "size": 200, "query": {"book_id": 5}}]]; nested: QueryParsingException[[_na] query malformed, no field after start_object];
+Caused by: SearchParseException[failed to parse search source [{"sort": [{"name": {"order": "desc"}}], "size": 200, "query": {"book_id": 5}}]]; nested: QueryParsingException[[_na] query malformed, no field after start_object];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:855)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:654)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:620)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:371)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1167)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:641)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+Caused by: [search_degital_library] QueryParsingException[[_na] query malformed, no field after start_object]
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:243)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:320)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:223)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:218)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:838)
+	... 12 more
+[2017-11-23 23:18:43,879][DEBUG][action.search            ] [Damballah] [search_degital_library][1], node[sUBLX8PNSJa6E3am-gQfaw], [P], v[20], s[STARTED], a[id=lHgB08h5TNacVIHBZeOUpg]: Failed to execute [org.elasticsearch.action.search.SearchRequest@7ce091e2] lastShard [true]
+RemoteTransportException[[Damballah][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"sort": [{"name": {"order": "desc"}}], "size": 200, "query": {"book_id": 5}}]]; nested: QueryParsingException[[_na] query malformed, no field after start_object];
+Caused by: SearchParseException[failed to parse search source [{"sort": [{"name": {"order": "desc"}}], "size": 200, "query": {"book_id": 5}}]]; nested: QueryParsingException[[_na] query malformed, no field after start_object];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:855)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:654)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:620)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:371)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1167)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:641)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+Caused by: [search_degital_library] QueryParsingException[[_na] query malformed, no field after start_object]
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:243)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:320)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:223)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:218)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:838)
+	... 12 more
+[2017-11-23 23:18:43,879][DEBUG][action.search            ] [Damballah] [search_degital_library][3], node[sUBLX8PNSJa6E3am-gQfaw], [P], v[20], s[STARTED], a[id=eyMZQuKbQbWvMflhCUPZrQ]: Failed to execute [org.elasticsearch.action.search.SearchRequest@7ce091e2] lastShard [true]
+RemoteTransportException[[Damballah][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"sort": [{"name": {"order": "desc"}}], "size": 200, "query": {"book_id": 5}}]]; nested: QueryParsingException[[_na] query malformed, no field after start_object];
+Caused by: SearchParseException[failed to parse search source [{"sort": [{"name": {"order": "desc"}}], "size": 200, "query": {"book_id": 5}}]]; nested: QueryParsingException[[_na] query malformed, no field after start_object];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:855)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:654)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:620)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:371)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1167)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:641)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+Caused by: [search_degital_library] QueryParsingException[[_na] query malformed, no field after start_object]
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:243)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:320)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:223)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:218)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:838)
+	... 12 more
+[2017-11-23 23:18:43,879][DEBUG][action.search            ] [Damballah] [search_degital_library][2], node[sUBLX8PNSJa6E3am-gQfaw], [P], v[20], s[STARTED], a[id=5c9DR90FQc6A4PoGGKnEPQ]: Failed to execute [org.elasticsearch.action.search.SearchRequest@7ce091e2] lastShard [true]
+RemoteTransportException[[Damballah][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"sort": [{"name": {"order": "desc"}}], "size": 200, "query": {"book_id": 5}}]]; nested: QueryParsingException[[_na] query malformed, no field after start_object];
+Caused by: SearchParseException[failed to parse search source [{"sort": [{"name": {"order": "desc"}}], "size": 200, "query": {"book_id": 5}}]]; nested: QueryParsingException[[_na] query malformed, no field after start_object];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:855)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:654)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:620)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:371)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1167)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:641)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+Caused by: [search_degital_library] QueryParsingException[[_na] query malformed, no field after start_object]
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:243)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:320)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:223)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:218)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:838)
+	... 12 more
+[2017-11-23 23:18:43,880][DEBUG][action.search            ] [Damballah] All shards failed for phase: [query]
+RemoteTransportException[[Damballah][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"sort": [{"name": {"order": "desc"}}], "size": 200, "query": {"book_id": 5}}]]; nested: QueryParsingException[[_na] query malformed, no field after start_object];
+Caused by: SearchParseException[failed to parse search source [{"sort": [{"name": {"order": "desc"}}], "size": 200, "query": {"book_id": 5}}]]; nested: QueryParsingException[[_na] query malformed, no field after start_object];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:855)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:654)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:620)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:371)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1167)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:641)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+Caused by: [search_degital_library] QueryParsingException[[_na] query malformed, no field after start_object]
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:243)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:320)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:223)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:218)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:838)
+	... 12 more
+[2017-11-23 23:38:34,682][INFO ][node                     ] [Damballah] stopping ...
+[2017-11-23 23:38:34,776][INFO ][node                     ] [Damballah] stopped
+[2017-11-23 23:38:34,776][INFO ][node                     ] [Damballah] closing ...
+[2017-11-23 23:38:34,780][INFO ][node                     ] [Damballah] closed

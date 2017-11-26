@@ -1,0 +1,527 @@
+[2017-11-22 10:44:15,923][INFO ][node                     ] [Harold H. Harold] version[2.3.4], pid[63956], build[e455fd0/2016-06-30T11:24:31Z]
+[2017-11-22 10:44:15,923][INFO ][node                     ] [Harold H. Harold] initializing ...
+[2017-11-22 10:44:16,475][INFO ][plugins                  ] [Harold H. Harold] modules [reindex, lang-expression, lang-groovy], plugins [], sites []
+[2017-11-22 10:44:16,503][INFO ][env                      ] [Harold H. Harold] using [1] data paths, mounts [[/ (/dev/disk1)]], net usable_space [47.5gb], net total_space [232.5gb], spins? [unknown], types [hfs]
+[2017-11-22 10:44:16,504][INFO ][env                      ] [Harold H. Harold] heap size [990.7mb], compressed ordinary object pointers [true]
+[2017-11-22 10:44:16,504][WARN ][env                      ] [Harold H. Harold] max file descriptors [10240] for elasticsearch process likely too low, consider increasing to at least [65536]
+[2017-11-22 10:44:18,303][INFO ][node                     ] [Harold H. Harold] initialized
+[2017-11-22 10:44:18,303][INFO ][node                     ] [Harold H. Harold] starting ...
+[2017-11-22 10:44:18,387][INFO ][transport                ] [Harold H. Harold] publish_address {127.0.0.1:9300}, bound_addresses {[fe80::1]:9300}, {[::1]:9300}, {127.0.0.1:9300}
+[2017-11-22 10:44:18,392][INFO ][discovery                ] [Harold H. Harold] elasticsearch/ECfa5M8LRTKCJOhXxRQsEA
+[2017-11-22 10:44:21,431][INFO ][cluster.service          ] [Harold H. Harold] new_master {Harold H. Harold}{ECfa5M8LRTKCJOhXxRQsEA}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
+[2017-11-22 10:44:21,444][INFO ][http                     ] [Harold H. Harold] publish_address {127.0.0.1:9200}, bound_addresses {[fe80::1]:9200}, {[::1]:9200}, {127.0.0.1:9200}
+[2017-11-22 10:44:21,445][INFO ][node                     ] [Harold H. Harold] started
+[2017-11-22 10:44:21,488][INFO ][gateway                  ] [Harold H. Harold] recovered [0] indices into cluster_state
+[2017-11-22 10:44:28,665][INFO ][cluster.metadata         ] [Harold H. Harold] [jdbc] creating index, cause [auto(bulk api)], templates [], shards [5]/[1], mappings [jdbc]
+[2017-11-22 10:44:29,143][INFO ][cluster.routing.allocation] [Harold H. Harold] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[jdbc][4]] ...]).
+[2017-11-22 10:44:29,170][INFO ][cluster.metadata         ] [Harold H. Harold] [jdbc] update_mapping [jdbc]
+[2017-11-22 10:53:55,235][INFO ][node                     ] [Harold H. Harold] stopping ...
+[2017-11-22 10:53:55,263][INFO ][node                     ] [Harold H. Harold] stopped
+[2017-11-22 10:53:55,263][INFO ][node                     ] [Harold H. Harold] closing ...
+[2017-11-22 10:53:55,279][INFO ][node                     ] [Harold H. Harold] closed
+[2017-11-22 10:54:33,531][INFO ][node                     ] [Dementia] version[2.3.4], pid[64625], build[e455fd0/2016-06-30T11:24:31Z]
+[2017-11-22 10:54:33,531][INFO ][node                     ] [Dementia] initializing ...
+[2017-11-22 10:54:34,110][INFO ][plugins                  ] [Dementia] modules [reindex, lang-expression, lang-groovy], plugins [head], sites [head]
+[2017-11-22 10:54:34,133][INFO ][env                      ] [Dementia] using [1] data paths, mounts [[/ (/dev/disk1)]], net usable_space [47.5gb], net total_space [232.5gb], spins? [unknown], types [hfs]
+[2017-11-22 10:54:34,134][INFO ][env                      ] [Dementia] heap size [990.7mb], compressed ordinary object pointers [true]
+[2017-11-22 10:54:34,135][WARN ][env                      ] [Dementia] max file descriptors [10240] for elasticsearch process likely too low, consider increasing to at least [65536]
+[2017-11-22 10:54:36,275][INFO ][node                     ] [Dementia] initialized
+[2017-11-22 10:54:36,275][INFO ][node                     ] [Dementia] starting ...
+[2017-11-22 10:54:36,396][INFO ][transport                ] [Dementia] publish_address {127.0.0.1:9300}, bound_addresses {[fe80::1]:9300}, {[::1]:9300}, {127.0.0.1:9300}
+[2017-11-22 10:54:36,401][INFO ][discovery                ] [Dementia] elasticsearch/YeDs4l_RQvqzw1chk5qB3Q
+[2017-11-22 10:54:39,436][INFO ][cluster.service          ] [Dementia] new_master {Dementia}{YeDs4l_RQvqzw1chk5qB3Q}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
+[2017-11-22 10:54:39,506][INFO ][http                     ] [Dementia] publish_address {127.0.0.1:9200}, bound_addresses {[fe80::1]:9200}, {[::1]:9200}, {127.0.0.1:9200}
+[2017-11-22 10:54:39,511][INFO ][node                     ] [Dementia] started
+[2017-11-22 10:54:39,566][INFO ][gateway                  ] [Dementia] recovered [1] indices into cluster_state
+[2017-11-22 10:54:40,133][INFO ][cluster.routing.allocation] [Dementia] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[jdbc][1]] ...]).
+[2017-11-22 13:23:28,459][INFO ][cluster.metadata         ] [Dementia] [jdbc] creating index, cause [auto(bulk api)], templates [], shards [5]/[1], mappings [jdbc]
+[2017-11-22 13:23:28,765][INFO ][cluster.routing.allocation] [Dementia] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[jdbc][0], [jdbc][4], [jdbc][0]] ...]).
+[2017-11-22 13:23:28,810][INFO ][cluster.metadata         ] [Dementia] [jdbc] update_mapping [jdbc]
+[2017-11-22 13:28:03,851][INFO ][node                     ] [Dementia] stopping ...
+[2017-11-22 13:28:04,147][INFO ][node                     ] [Dementia] stopped
+[2017-11-22 13:28:04,148][INFO ][node                     ] [Dementia] closing ...
+[2017-11-22 13:28:04,153][INFO ][node                     ] [Dementia] closed
+[2017-11-22 13:35:43,444][INFO ][node                     ] [Raman] version[2.3.4], pid[68071], build[e455fd0/2016-06-30T11:24:31Z]
+[2017-11-22 13:35:43,445][INFO ][node                     ] [Raman] initializing ...
+[2017-11-22 13:35:44,011][INFO ][plugins                  ] [Raman] modules [reindex, lang-expression, lang-groovy], plugins [head], sites [head]
+[2017-11-22 13:35:44,041][INFO ][env                      ] [Raman] using [1] data paths, mounts [[/ (/dev/disk1)]], net usable_space [47.4gb], net total_space [232.5gb], spins? [unknown], types [hfs]
+[2017-11-22 13:35:44,042][INFO ][env                      ] [Raman] heap size [990.7mb], compressed ordinary object pointers [true]
+[2017-11-22 13:35:44,043][WARN ][env                      ] [Raman] max file descriptors [10240] for elasticsearch process likely too low, consider increasing to at least [65536]
+[2017-11-22 13:35:46,107][INFO ][node                     ] [Raman] initialized
+[2017-11-22 13:35:46,107][INFO ][node                     ] [Raman] starting ...
+[2017-11-22 13:35:46,254][INFO ][transport                ] [Raman] publish_address {127.0.0.1:9300}, bound_addresses {[fe80::1]:9300}, {[::1]:9300}, {127.0.0.1:9300}
+[2017-11-22 13:35:46,259][INFO ][discovery                ] [Raman] elasticsearch/lbLDZG_ZQEWWbf2PD51nEA
+[2017-11-22 13:35:49,312][INFO ][cluster.service          ] [Raman] new_master {Raman}{lbLDZG_ZQEWWbf2PD51nEA}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
+[2017-11-22 13:35:49,332][INFO ][http                     ] [Raman] publish_address {127.0.0.1:9200}, bound_addresses {[fe80::1]:9200}, {[::1]:9200}, {127.0.0.1:9200}
+[2017-11-22 13:35:49,333][INFO ][node                     ] [Raman] started
+[2017-11-22 13:35:49,429][INFO ][gateway                  ] [Raman] recovered [1] indices into cluster_state
+[2017-11-22 13:35:50,173][INFO ][cluster.routing.allocation] [Raman] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[jdbc][4], [jdbc][1], [jdbc][3]] ...]).
+[2017-11-22 13:35:51,699][INFO ][cluster.metadata         ] [Raman] [search_degital_library] creating index, cause [auto(index api)], templates [], shards [5]/[1], mappings [books]
+[2017-11-22 13:35:52,046][INFO ][cluster.routing.allocation] [Raman] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[search_degital_library][4]] ...]).
+[2017-11-22 13:35:52,097][INFO ][cluster.metadata         ] [Raman] [search_degital_library] update_mapping [books]
+[2017-11-22 13:37:49,587][INFO ][cluster.metadata         ] [Raman] [search_degital_library] create_mapping [categories]
+[2017-11-22 13:39:55,700][INFO ][cluster.metadata         ] [Raman] [search_degital_library] create_mapping [books_categories]
+[2017-11-22 14:10:14,760][DEBUG][action.search            ] [Raman] [search_degital_library][3], node[lbLDZG_ZQEWWbf2PD51nEA], [P], v[2], s[STARTED], a[id=hv1d2Dk4TZKULLkP7iWJvw]: Failed to execute [org.elasticsearch.action.search.SearchRequest@450f62a2] lastShard [true]
+RemoteTransportException[[Raman][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"query": {"match_all": {"fields": ["id"]}}}]]; nested: QueryParsingException[[match_all] query does not support [fields]];
+Caused by: SearchParseException[failed to parse search source [{"query": {"match_all": {"fields": ["id"]}}}]]; nested: QueryParsingException[[match_all] query does not support [fields]];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:855)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:654)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:620)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:371)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1167)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:641)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+Caused by: [search_degital_library] QueryParsingException[[match_all] query does not support [fields]]
+	at org.elasticsearch.index.query.MatchAllQueryParser.parse(MatchAllQueryParser.java:62)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:250)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:320)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:223)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:218)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:838)
+	... 12 more
+[2017-11-22 14:10:14,760][DEBUG][action.search            ] [Raman] [search_degital_library][0], node[lbLDZG_ZQEWWbf2PD51nEA], [P], v[2], s[STARTED], a[id=D0CVxXuiSWq91WZE0jvqvg]: Failed to execute [org.elasticsearch.action.search.SearchRequest@450f62a2]
+RemoteTransportException[[Raman][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"query": {"match_all": {"fields": ["id"]}}}]]; nested: QueryParsingException[[match_all] query does not support [fields]];
+Caused by: SearchParseException[failed to parse search source [{"query": {"match_all": {"fields": ["id"]}}}]]; nested: QueryParsingException[[match_all] query does not support [fields]];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:855)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:654)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:620)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:371)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1167)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:641)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+Caused by: [search_degital_library] QueryParsingException[[match_all] query does not support [fields]]
+	at org.elasticsearch.index.query.MatchAllQueryParser.parse(MatchAllQueryParser.java:62)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:250)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:320)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:223)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:218)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:838)
+	... 12 more
+[2017-11-22 14:10:14,764][DEBUG][action.search            ] [Raman] All shards failed for phase: [query]
+RemoteTransportException[[Raman][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"query": {"match_all": {"fields": ["id"]}}}]]; nested: QueryParsingException[[match_all] query does not support [fields]];
+Caused by: SearchParseException[failed to parse search source [{"query": {"match_all": {"fields": ["id"]}}}]]; nested: QueryParsingException[[match_all] query does not support [fields]];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:855)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:654)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:620)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:371)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1167)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:641)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+Caused by: [search_degital_library] QueryParsingException[[match_all] query does not support [fields]]
+	at org.elasticsearch.index.query.MatchAllQueryParser.parse(MatchAllQueryParser.java:62)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:250)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:320)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:223)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:218)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:838)
+	... 12 more
+[2017-11-22 14:10:14,760][DEBUG][action.search            ] [Raman] [search_degital_library][4], node[lbLDZG_ZQEWWbf2PD51nEA], [P], v[2], s[STARTED], a[id=zBNFPDmMRLiucBKju5K72A]: Failed to execute [org.elasticsearch.action.search.SearchRequest@450f62a2] lastShard [true]
+RemoteTransportException[[Raman][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"query": {"match_all": {"fields": ["id"]}}}]]; nested: QueryParsingException[[match_all] query does not support [fields]];
+Caused by: SearchParseException[failed to parse search source [{"query": {"match_all": {"fields": ["id"]}}}]]; nested: QueryParsingException[[match_all] query does not support [fields]];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:855)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:654)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:620)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:371)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1167)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:641)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+Caused by: [search_degital_library] QueryParsingException[[match_all] query does not support [fields]]
+	at org.elasticsearch.index.query.MatchAllQueryParser.parse(MatchAllQueryParser.java:62)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:250)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:320)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:223)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:218)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:838)
+	... 12 more
+[2017-11-22 14:10:14,760][DEBUG][action.search            ] [Raman] [search_degital_library][2], node[lbLDZG_ZQEWWbf2PD51nEA], [P], v[2], s[STARTED], a[id=ZzrDoDO7SPGbOZbHgGuRag]: Failed to execute [org.elasticsearch.action.search.SearchRequest@450f62a2] lastShard [true]
+RemoteTransportException[[Raman][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"query": {"match_all": {"fields": ["id"]}}}]]; nested: QueryParsingException[[match_all] query does not support [fields]];
+Caused by: SearchParseException[failed to parse search source [{"query": {"match_all": {"fields": ["id"]}}}]]; nested: QueryParsingException[[match_all] query does not support [fields]];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:855)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:654)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:620)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:371)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1167)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:641)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+Caused by: [search_degital_library] QueryParsingException[[match_all] query does not support [fields]]
+	at org.elasticsearch.index.query.MatchAllQueryParser.parse(MatchAllQueryParser.java:62)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:250)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:320)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:223)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:218)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:838)
+	... 12 more
+[2017-11-22 14:10:14,760][DEBUG][action.search            ] [Raman] [search_degital_library][1], node[lbLDZG_ZQEWWbf2PD51nEA], [P], v[2], s[STARTED], a[id=gwWcXXqKQSOPXTnFiUWyDw]: Failed to execute [org.elasticsearch.action.search.SearchRequest@450f62a2] lastShard [true]
+RemoteTransportException[[Raman][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"query": {"match_all": {"fields": ["id"]}}}]]; nested: QueryParsingException[[match_all] query does not support [fields]];
+Caused by: SearchParseException[failed to parse search source [{"query": {"match_all": {"fields": ["id"]}}}]]; nested: QueryParsingException[[match_all] query does not support [fields]];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:855)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:654)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:620)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:371)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1167)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:641)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+Caused by: [search_degital_library] QueryParsingException[[match_all] query does not support [fields]]
+	at org.elasticsearch.index.query.MatchAllQueryParser.parse(MatchAllQueryParser.java:62)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:250)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:320)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:223)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:218)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:838)
+	... 12 more
+[2017-11-22 15:25:02,840][INFO ][node                     ] [Raman] stopping ...
+[2017-11-22 15:25:02,896][INFO ][node                     ] [Raman] stopped
+[2017-11-22 15:25:02,896][INFO ][node                     ] [Raman] closing ...
+[2017-11-22 15:25:02,905][INFO ][node                     ] [Raman] closed
+[2017-11-22 15:25:05,778][INFO ][node                     ] [Hulkling] version[2.3.4], pid[74391], build[e455fd0/2016-06-30T11:24:31Z]
+[2017-11-22 15:25:05,779][INFO ][node                     ] [Hulkling] initializing ...
+[2017-11-22 15:25:06,313][INFO ][plugins                  ] [Hulkling] modules [reindex, lang-expression, lang-groovy], plugins [head], sites [head]
+[2017-11-22 15:25:06,335][INFO ][env                      ] [Hulkling] using [1] data paths, mounts [[/ (/dev/disk1)]], net usable_space [48.4gb], net total_space [232.5gb], spins? [unknown], types [hfs]
+[2017-11-22 15:25:06,335][INFO ][env                      ] [Hulkling] heap size [990.7mb], compressed ordinary object pointers [true]
+[2017-11-22 15:25:06,336][WARN ][env                      ] [Hulkling] max file descriptors [10240] for elasticsearch process likely too low, consider increasing to at least [65536]
+[2017-11-22 15:25:08,121][INFO ][node                     ] [Hulkling] initialized
+[2017-11-22 15:25:08,121][INFO ][node                     ] [Hulkling] starting ...
+[2017-11-22 15:25:08,213][INFO ][transport                ] [Hulkling] publish_address {127.0.0.1:9300}, bound_addresses {[fe80::1]:9300}, {[::1]:9300}, {127.0.0.1:9300}
+[2017-11-22 15:25:08,218][INFO ][discovery                ] [Hulkling] elasticsearch/3HnWVzbYT6qucsralm_A6g
+[2017-11-22 15:25:11,258][INFO ][cluster.service          ] [Hulkling] new_master {Hulkling}{3HnWVzbYT6qucsralm_A6g}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
+[2017-11-22 15:25:11,285][INFO ][http                     ] [Hulkling] publish_address {127.0.0.1:9200}, bound_addresses {[fe80::1]:9200}, {[::1]:9200}, {127.0.0.1:9200}
+[2017-11-22 15:25:11,285][INFO ][node                     ] [Hulkling] started
+[2017-11-22 15:25:11,478][INFO ][gateway                  ] [Hulkling] recovered [1] indices into cluster_state
+[2017-11-22 15:25:12,210][INFO ][cluster.routing.allocation] [Hulkling] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[search_degital_library][3]] ...]).
+[2017-11-22 15:55:48,727][DEBUG][action.search            ] [Hulkling] [search_degital_library][1], node[3HnWVzbYT6qucsralm_A6g], [P], v[4], s[STARTED], a[id=cYAnJzfjRsGgDhzSw0Uk4g]: Failed to execute [org.elasticsearch.action.search.SearchRequest@1f056857] lastShard [true]
+RemoteTransportException[[Hulkling][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"query": {"match_all": {}}, "sort": [{"@name": {"order": "desc"}}], "size": 200}]]; nested: SearchParseException[No mapping found for [@name] in order to sort on];
+Caused by: SearchParseException[failed to parse search source [{"query": {"match_all": {}}, "sort": [{"@name": {"order": "desc"}}], "size": 200}]]; nested: SearchParseException[No mapping found for [@name] in order to sort on];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:855)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:654)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:620)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:371)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1167)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:641)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+Caused by: SearchParseException[No mapping found for [@name] in order to sort on]
+	at org.elasticsearch.search.sort.SortParseElement.addSortField(SortParseElement.java:213)
+	at org.elasticsearch.search.sort.SortParseElement.addCompoundSortField(SortParseElement.java:187)
+	at org.elasticsearch.search.sort.SortParseElement.parse(SortParseElement.java:85)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:838)
+	... 12 more
+[2017-11-22 15:55:48,727][DEBUG][action.search            ] [Hulkling] [search_degital_library][3], node[3HnWVzbYT6qucsralm_A6g], [P], v[4], s[STARTED], a[id=kocevvVCQ6SpvqlASszgqQ]: Failed to execute [org.elasticsearch.action.search.SearchRequest@1f056857] lastShard [true]
+RemoteTransportException[[Hulkling][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"query": {"match_all": {}}, "sort": [{"@name": {"order": "desc"}}], "size": 200}]]; nested: SearchParseException[No mapping found for [@name] in order to sort on];
+Caused by: SearchParseException[failed to parse search source [{"query": {"match_all": {}}, "sort": [{"@name": {"order": "desc"}}], "size": 200}]]; nested: SearchParseException[No mapping found for [@name] in order to sort on];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:855)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:654)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:620)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:371)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1167)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:641)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+Caused by: SearchParseException[No mapping found for [@name] in order to sort on]
+	at org.elasticsearch.search.sort.SortParseElement.addSortField(SortParseElement.java:213)
+	at org.elasticsearch.search.sort.SortParseElement.addCompoundSortField(SortParseElement.java:187)
+	at org.elasticsearch.search.sort.SortParseElement.parse(SortParseElement.java:85)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:838)
+	... 12 more
+[2017-11-22 15:55:48,727][DEBUG][action.search            ] [Hulkling] [search_degital_library][0], node[3HnWVzbYT6qucsralm_A6g], [P], v[4], s[STARTED], a[id=9RfmPx0rSyuToxRmT4WtnA]: Failed to execute [org.elasticsearch.action.search.SearchRequest@1f056857]
+RemoteTransportException[[Hulkling][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"query": {"match_all": {}}, "sort": [{"@name": {"order": "desc"}}], "size": 200}]]; nested: SearchParseException[No mapping found for [@name] in order to sort on];
+Caused by: SearchParseException[failed to parse search source [{"query": {"match_all": {}}, "sort": [{"@name": {"order": "desc"}}], "size": 200}]]; nested: SearchParseException[No mapping found for [@name] in order to sort on];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:855)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:654)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:620)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:371)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1167)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:641)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+Caused by: SearchParseException[No mapping found for [@name] in order to sort on]
+	at org.elasticsearch.search.sort.SortParseElement.addSortField(SortParseElement.java:213)
+	at org.elasticsearch.search.sort.SortParseElement.addCompoundSortField(SortParseElement.java:187)
+	at org.elasticsearch.search.sort.SortParseElement.parse(SortParseElement.java:85)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:838)
+	... 12 more
+[2017-11-22 15:55:48,727][DEBUG][action.search            ] [Hulkling] [search_degital_library][2], node[3HnWVzbYT6qucsralm_A6g], [P], v[4], s[STARTED], a[id=CXXVSrsARiynyUKZOuwcJQ]: Failed to execute [org.elasticsearch.action.search.SearchRequest@1f056857] lastShard [true]
+RemoteTransportException[[Hulkling][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"query": {"match_all": {}}, "sort": [{"@name": {"order": "desc"}}], "size": 200}]]; nested: SearchParseException[No mapping found for [@name] in order to sort on];
+Caused by: SearchParseException[failed to parse search source [{"query": {"match_all": {}}, "sort": [{"@name": {"order": "desc"}}], "size": 200}]]; nested: SearchParseException[No mapping found for [@name] in order to sort on];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:855)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:654)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:620)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:371)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1167)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:641)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+Caused by: SearchParseException[No mapping found for [@name] in order to sort on]
+	at org.elasticsearch.search.sort.SortParseElement.addSortField(SortParseElement.java:213)
+	at org.elasticsearch.search.sort.SortParseElement.addCompoundSortField(SortParseElement.java:187)
+	at org.elasticsearch.search.sort.SortParseElement.parse(SortParseElement.java:85)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:838)
+	... 12 more
+[2017-11-22 15:55:48,727][DEBUG][action.search            ] [Hulkling] [search_degital_library][4], node[3HnWVzbYT6qucsralm_A6g], [P], v[4], s[STARTED], a[id=3K3tR6L2TTmYQKKQUzZXUw]: Failed to execute [org.elasticsearch.action.search.SearchRequest@1f056857] lastShard [true]
+RemoteTransportException[[Hulkling][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"query": {"match_all": {}}, "sort": [{"@name": {"order": "desc"}}], "size": 200}]]; nested: SearchParseException[No mapping found for [@name] in order to sort on];
+Caused by: SearchParseException[failed to parse search source [{"query": {"match_all": {}}, "sort": [{"@name": {"order": "desc"}}], "size": 200}]]; nested: SearchParseException[No mapping found for [@name] in order to sort on];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:855)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:654)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:620)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:371)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1167)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:641)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+Caused by: SearchParseException[No mapping found for [@name] in order to sort on]
+	at org.elasticsearch.search.sort.SortParseElement.addSortField(SortParseElement.java:213)
+	at org.elasticsearch.search.sort.SortParseElement.addCompoundSortField(SortParseElement.java:187)
+	at org.elasticsearch.search.sort.SortParseElement.parse(SortParseElement.java:85)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:838)
+	... 12 more
+[2017-11-22 15:55:48,732][DEBUG][action.search            ] [Hulkling] All shards failed for phase: [query]
+RemoteTransportException[[Hulkling][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"query": {"match_all": {}}, "sort": [{"@name": {"order": "desc"}}], "size": 200}]]; nested: SearchParseException[No mapping found for [@name] in order to sort on];
+Caused by: SearchParseException[failed to parse search source [{"query": {"match_all": {}}, "sort": [{"@name": {"order": "desc"}}], "size": 200}]]; nested: SearchParseException[No mapping found for [@name] in order to sort on];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:855)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:654)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:620)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:371)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1167)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:641)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+Caused by: SearchParseException[No mapping found for [@name] in order to sort on]
+	at org.elasticsearch.search.sort.SortParseElement.addSortField(SortParseElement.java:213)
+	at org.elasticsearch.search.sort.SortParseElement.addCompoundSortField(SortParseElement.java:187)
+	at org.elasticsearch.search.sort.SortParseElement.parse(SortParseElement.java:85)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:838)
+	... 12 more
+[2017-11-22 15:55:49,301][DEBUG][action.search            ] [Hulkling] [search_degital_library][3], node[3HnWVzbYT6qucsralm_A6g], [P], v[4], s[STARTED], a[id=kocevvVCQ6SpvqlASszgqQ]: Failed to execute [org.elasticsearch.action.search.SearchRequest@16df660a] lastShard [true]
+RemoteTransportException[[Hulkling][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"query": {"match_all": {}}, "sort": [{"@name": {"order": "desc"}}], "size": 200}]]; nested: SearchParseException[No mapping found for [@name] in order to sort on];
+Caused by: SearchParseException[failed to parse search source [{"query": {"match_all": {}}, "sort": [{"@name": {"order": "desc"}}], "size": 200}]]; nested: SearchParseException[No mapping found for [@name] in order to sort on];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:855)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:654)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:620)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:371)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1167)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:641)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+Caused by: SearchParseException[No mapping found for [@name] in order to sort on]
+	at org.elasticsearch.search.sort.SortParseElement.addSortField(SortParseElement.java:213)
+	at org.elasticsearch.search.sort.SortParseElement.addCompoundSortField(SortParseElement.java:187)
+	at org.elasticsearch.search.sort.SortParseElement.parse(SortParseElement.java:85)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:838)
+	... 12 more
+[2017-11-22 15:55:49,301][DEBUG][action.search            ] [Hulkling] [search_degital_library][2], node[3HnWVzbYT6qucsralm_A6g], [P], v[4], s[STARTED], a[id=CXXVSrsARiynyUKZOuwcJQ]: Failed to execute [org.elasticsearch.action.search.SearchRequest@16df660a]
+RemoteTransportException[[Hulkling][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"query": {"match_all": {}}, "sort": [{"@name": {"order": "desc"}}], "size": 200}]]; nested: SearchParseException[No mapping found for [@name] in order to sort on];
+Caused by: SearchParseException[failed to parse search source [{"query": {"match_all": {}}, "sort": [{"@name": {"order": "desc"}}], "size": 200}]]; nested: SearchParseException[No mapping found for [@name] in order to sort on];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:855)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:654)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:620)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:371)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1167)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:641)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+Caused by: SearchParseException[No mapping found for [@name] in order to sort on]
+	at org.elasticsearch.search.sort.SortParseElement.addSortField(SortParseElement.java:213)
+	at org.elasticsearch.search.sort.SortParseElement.addCompoundSortField(SortParseElement.java:187)
+	at org.elasticsearch.search.sort.SortParseElement.parse(SortParseElement.java:85)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:838)
+	... 12 more
+[2017-11-22 15:55:49,301][DEBUG][action.search            ] [Hulkling] [search_degital_library][0], node[3HnWVzbYT6qucsralm_A6g], [P], v[4], s[STARTED], a[id=9RfmPx0rSyuToxRmT4WtnA]: Failed to execute [org.elasticsearch.action.search.SearchRequest@16df660a] lastShard [true]
+RemoteTransportException[[Hulkling][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"query": {"match_all": {}}, "sort": [{"@name": {"order": "desc"}}], "size": 200}]]; nested: SearchParseException[No mapping found for [@name] in order to sort on];
+Caused by: SearchParseException[failed to parse search source [{"query": {"match_all": {}}, "sort": [{"@name": {"order": "desc"}}], "size": 200}]]; nested: SearchParseException[No mapping found for [@name] in order to sort on];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:855)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:654)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:620)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:371)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1167)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:641)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+Caused by: SearchParseException[No mapping found for [@name] in order to sort on]
+	at org.elasticsearch.search.sort.SortParseElement.addSortField(SortParseElement.java:213)
+	at org.elasticsearch.search.sort.SortParseElement.addCompoundSortField(SortParseElement.java:187)
+	at org.elasticsearch.search.sort.SortParseElement.parse(SortParseElement.java:85)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:838)
+	... 12 more
+[2017-11-22 15:55:49,301][DEBUG][action.search            ] [Hulkling] [search_degital_library][1], node[3HnWVzbYT6qucsralm_A6g], [P], v[4], s[STARTED], a[id=cYAnJzfjRsGgDhzSw0Uk4g]: Failed to execute [org.elasticsearch.action.search.SearchRequest@16df660a] lastShard [true]
+RemoteTransportException[[Hulkling][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"query": {"match_all": {}}, "sort": [{"@name": {"order": "desc"}}], "size": 200}]]; nested: SearchParseException[No mapping found for [@name] in order to sort on];
+Caused by: SearchParseException[failed to parse search source [{"query": {"match_all": {}}, "sort": [{"@name": {"order": "desc"}}], "size": 200}]]; nested: SearchParseException[No mapping found for [@name] in order to sort on];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:855)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:654)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:620)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:371)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1167)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:641)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+Caused by: SearchParseException[No mapping found for [@name] in order to sort on]
+	at org.elasticsearch.search.sort.SortParseElement.addSortField(SortParseElement.java:213)
+	at org.elasticsearch.search.sort.SortParseElement.addCompoundSortField(SortParseElement.java:187)
+	at org.elasticsearch.search.sort.SortParseElement.parse(SortParseElement.java:85)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:838)
+	... 12 more
+[2017-11-22 15:55:49,301][DEBUG][action.search            ] [Hulkling] [search_degital_library][4], node[3HnWVzbYT6qucsralm_A6g], [P], v[4], s[STARTED], a[id=3K3tR6L2TTmYQKKQUzZXUw]: Failed to execute [org.elasticsearch.action.search.SearchRequest@16df660a] lastShard [true]
+RemoteTransportException[[Hulkling][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"query": {"match_all": {}}, "sort": [{"@name": {"order": "desc"}}], "size": 200}]]; nested: SearchParseException[No mapping found for [@name] in order to sort on];
+Caused by: SearchParseException[failed to parse search source [{"query": {"match_all": {}}, "sort": [{"@name": {"order": "desc"}}], "size": 200}]]; nested: SearchParseException[No mapping found for [@name] in order to sort on];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:855)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:654)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:620)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:371)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1167)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:641)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+Caused by: SearchParseException[No mapping found for [@name] in order to sort on]
+	at org.elasticsearch.search.sort.SortParseElement.addSortField(SortParseElement.java:213)
+	at org.elasticsearch.search.sort.SortParseElement.addCompoundSortField(SortParseElement.java:187)
+	at org.elasticsearch.search.sort.SortParseElement.parse(SortParseElement.java:85)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:838)
+	... 12 more
+[2017-11-22 15:55:49,302][DEBUG][action.search            ] [Hulkling] All shards failed for phase: [query]
+RemoteTransportException[[Hulkling][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"query": {"match_all": {}}, "sort": [{"@name": {"order": "desc"}}], "size": 200}]]; nested: SearchParseException[No mapping found for [@name] in order to sort on];
+Caused by: SearchParseException[failed to parse search source [{"query": {"match_all": {}}, "sort": [{"@name": {"order": "desc"}}], "size": 200}]]; nested: SearchParseException[No mapping found for [@name] in order to sort on];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:855)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:654)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:620)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:371)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1167)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:641)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+Caused by: SearchParseException[No mapping found for [@name] in order to sort on]
+	at org.elasticsearch.search.sort.SortParseElement.addSortField(SortParseElement.java:213)
+	at org.elasticsearch.search.sort.SortParseElement.addCompoundSortField(SortParseElement.java:187)
+	at org.elasticsearch.search.sort.SortParseElement.parse(SortParseElement.java:85)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:838)
+	... 12 more
+[2017-11-22 16:01:50,708][INFO ][node                     ] [Hulkling] stopping ...
+[2017-11-22 16:01:50,776][INFO ][node                     ] [Hulkling] stopped
+[2017-11-22 16:01:50,776][INFO ][node                     ] [Hulkling] closing ...
+[2017-11-22 16:01:50,786][INFO ][node                     ] [Hulkling] closed
+[2017-11-22 16:05:34,227][INFO ][node                     ] [Elektro] version[2.3.4], pid[77118], build[e455fd0/2016-06-30T11:24:31Z]
+[2017-11-22 16:05:34,227][INFO ][node                     ] [Elektro] initializing ...
+[2017-11-22 16:05:59,308][INFO ][node                     ] [Indech] version[2.3.4], pid[77163], build[e455fd0/2016-06-30T11:24:31Z]
+[2017-11-22 16:05:59,308][INFO ][node                     ] [Indech] initializing ...
+[2017-11-22 16:05:59,815][INFO ][plugins                  ] [Indech] modules [reindex, lang-expression, lang-groovy], plugins [head], sites [head]
+[2017-11-22 16:05:59,838][INFO ][env                      ] [Indech] using [1] data paths, mounts [[/ (/dev/disk1)]], net usable_space [48.4gb], net total_space [232.5gb], spins? [unknown], types [hfs]
+[2017-11-22 16:05:59,838][INFO ][env                      ] [Indech] heap size [990.7mb], compressed ordinary object pointers [true]
+[2017-11-22 16:05:59,839][WARN ][env                      ] [Indech] max file descriptors [10240] for elasticsearch process likely too low, consider increasing to at least [65536]
+[2017-11-22 19:44:08,232][INFO ][node                     ] [Proctor] version[2.3.4], pid[82328], build[e455fd0/2016-06-30T11:24:31Z]
+[2017-11-22 19:44:08,233][INFO ][node                     ] [Proctor] initializing ...
+[2017-11-22 19:44:08,784][INFO ][plugins                  ] [Proctor] modules [reindex, lang-expression, lang-groovy], plugins [head], sites [head]
+[2017-11-22 19:44:08,811][INFO ][env                      ] [Proctor] using [1] data paths, mounts [[/ (/dev/disk1)]], net usable_space [48.3gb], net total_space [232.5gb], spins? [unknown], types [hfs]
+[2017-11-22 19:44:08,811][INFO ][env                      ] [Proctor] heap size [990.7mb], compressed ordinary object pointers [true]
+[2017-11-22 19:44:08,812][WARN ][env                      ] [Proctor] max file descriptors [10240] for elasticsearch process likely too low, consider increasing to at least [65536]
+[2017-11-22 19:44:10,793][INFO ][node                     ] [Proctor] initialized
+[2017-11-22 19:44:10,794][INFO ][node                     ] [Proctor] starting ...
+[2017-11-22 19:44:10,887][INFO ][transport                ] [Proctor] publish_address {127.0.0.1:9300}, bound_addresses {[fe80::1]:9300}, {[::1]:9300}, {127.0.0.1:9300}
+[2017-11-22 19:44:10,891][INFO ][discovery                ] [Proctor] elasticsearch/Hmp29sKxT82N7x_tAHwF0w
+[2017-11-22 19:44:13,960][INFO ][cluster.service          ] [Proctor] new_master {Proctor}{Hmp29sKxT82N7x_tAHwF0w}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
+[2017-11-22 19:44:13,997][INFO ][http                     ] [Proctor] publish_address {127.0.0.1:9200}, bound_addresses {[fe80::1]:9200}, {[::1]:9200}, {127.0.0.1:9200}
+[2017-11-22 19:44:13,998][INFO ][node                     ] [Proctor] started
+[2017-11-22 19:44:14,103][INFO ][gateway                  ] [Proctor] recovered [1] indices into cluster_state
+[2017-11-22 19:44:14,854][INFO ][cluster.routing.allocation] [Proctor] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[search_degital_library][4], [search_degital_library][3], [search_degital_library][4]] ...]).
+[2017-11-22 20:04:19,830][INFO ][node                     ] [Proctor] stopping ...
+[2017-11-22 20:04:19,909][INFO ][node                     ] [Proctor] stopped
+[2017-11-22 20:04:19,909][INFO ][node                     ] [Proctor] closing ...
+[2017-11-22 20:04:19,917][INFO ][node                     ] [Proctor] closed
