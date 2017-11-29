@@ -1,0 +1,57 @@
+version: '2'
+# 基本的にいじるところはポート設定(外から接続するデバッグ用)の箇所で良い
+# docker同士はservice名で参照し合うので、ポートは関係ない。
+services:
+  # ファイルデータを一元的に管理するもの。
+  # 基本アプリ、拡張API側ではこれを共有する。
+  data:
+    image: busybox
+    stdin_open: true
+    tty: false
+    volumes:
+      # mysql設定
+      - ./mysql/my.cnf:/etc/my.cnf
+      # ホストと共有するフォルダ設定
+      # search_DegitalLibrary内のフォルダが/home/pythonにマウントされる
+      - ../:${PROJECT_DIR}
+    command: /bin/sh
+  # DB。
+  db:
+    image: mysql
+    ports:
+      - "3300:3306"
+    environment:
+      MYSQL_DATABASE: search_degital_library
+      MYSQL_USER: spark
+      MYSQL_PASSWORD: wsl-slave
+      MYSQL_ROOT_PASSWORD: wsl-slave
+    volumes_from:
+      - data
+  # 基本アプリ
+  app:
+    # restart: always
+    build: ./app
+    # docker run -tオプションに相当
+    tty: true
+    volumes_from:
+      - data
+    ports:
+      - "10081:80"
+    links:
+      - db
+      - extension_api
+    working_dir: ${MAIN_APP}
+    command: bash -c "sudo service nginx restart && python3 ${MAIN_APP}/server.py"
+  # 拡張用
+  extension_api:
+    # restart: always
+    build: ./extension_api
+    tty: true
+    volumes_from:
+      - data
+    ports:
+      - "13000:3000"
+    links:
+      - db
+    working_dir: ${EXTENTION_APP}
+    command: python3 ${EXTENTION_APP}/api.py --config-path ${PROJECT_DIR}/docker/extension_api/config.ini
