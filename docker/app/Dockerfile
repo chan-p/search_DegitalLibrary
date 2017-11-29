@@ -1,6 +1,17 @@
 FROM ubuntu:16.04
 MAINTAINER syunyooo
 
+# nginx
+RUN apt-get update
+RUN apt-get install -y vim
+RUN apt-get install -y curl
+RUN touch /etc/apt/sources.list.d/nginx.list
+RUN echo "deb http://nginx.org/packages/ubuntu/ precise nginx" >> /etc/apt/sources.list.d/nginx.list
+RUN echo "deb-src http://nginx.org/packages/ubuntu/ precise nginx" >> /etc/apt/sources.list.d/nginx.list
+RUN curl http://nginx.org/keys/nginx_signing.key | apt-key add -
+RUN apt-get update
+RUN apt-get install -y nginx
+
 RUN apt-get update && apt-get install -y --no-install-recommends apt-utils
 # Python3 と pip3, 日本語パッケージ
 RUN apt-get update \
@@ -9,14 +20,17 @@ RUN apt-get update \
                         language-pack-ja \
                         vim \
                         python-dev \
-                        libmysqlclient-dev
+                        libmysqlclient-dev \
+                        sudo \
+                        iputils-ping \
+                        net-tools \
+                        dnsutils
 
 # mysqlのinstall
 # そのままapt-getでインストールするとパスワードを聞かれる箇所で止まってしまうので、予め設定しておく。この例ではパスワードは「root」。
 RUN echo "mysql-server mysql-server/root_password password root" | debconf-set-selections && \
     echo "mysql-server mysql-server/root_password_again password root" | debconf-set-selections && \
     apt-get -y install mysql-server
-
 
 # BeautifulSoup4 など
 COPY requirements.txt /usr/src/app/
@@ -36,13 +50,11 @@ ENV PYTHONIOENCODING utf_8
 #    dpkg-reconfigure --frontend noninteractive tzdata
 ENV TZ Asia/Tokyo
 
-# 開発用
-# ENV PYTHONPATH=/Users/syunyo/Desktop/MyDev/python_dev/slack_fitness/python_app/src/
-# WORKDIR $PYTHONPATH
+# 起動時のアプリの設定
+ADD setting.ini /home/python/src/main_api/setting.ini
+# nginxの設定
+ADD default.conf /etc/nginx/conf.d/
 
-# 実行用ではgit cloneして、パス通し、WORKDIRを設定。
-# ENV PYTHONPATH=/Users/syunyo/Desktop/MyDev/python_dev/slack_fitness/python_app/src/
-# WORKDIR /Users/syunyo/Desktop/MyDev/python_dev/slack_fitness/python_app/src/
-
+# EXPOSE 80
+# RUN sudo service nginx start
 CMD ["/bin/bash"]
-
