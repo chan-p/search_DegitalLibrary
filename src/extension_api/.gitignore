@@ -1,0 +1,7 @@
+log
+*.pyc
+*.ipynb_checkpoints
+*.txt
+*.model
+*.out
+__trash__
