@@ -129,7 +129,7 @@ function show_test(file_names, category_names){
     for (n = 0; n < category_names[ei].length; n++) {
       url += "<input type='button' id='" + file_names[key] + "s2" + n + "' style='font:10pt MS ゴシック; WIDTH:150px; HEIGHT:70px' value='" +  category_names[ei][n] + "' onclick='pushingButton(" + n + ", " + ei + ", " +  file_names.length + ");'>";
     }
-    url += "</h4><div align='center'><img border='0' src='../test_dlPDF/pdfFront/"+file_names[key]+".jpg' width='256' height='256'></div><br>";
+    url += "</h4><div align='center'><img border='0' data-original='../test_dlPDF/pdfFront/"+file_names[key]+".jpg' width='256' height='256' class='lazy'><img data-original='../test_dlPDF/pdfFront/"+key+".jpg' class='lazy'></div><br>";
     ei += 1;
   }
   return url;
