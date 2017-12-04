@@ -26,10 +26,6 @@
     req.send(null);
     categoryButton();
   }
-
-  echo.init({
-    offset: 100  // px 画像読み込み開始のオフセット
-  });
   </script>
 </head>
 
@@ -122,6 +118,12 @@
       xmlhttp.send(data);
       formObj1.value='';
     }
+
+    echo.init({
+      throttle: 500 ,
+      offset: 100  // px 画像読み込み開始のオフセット
+    });
+
   </script>
   <p class="pagetop"><a href="#">↑</a></p>
 
