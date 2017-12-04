@@ -141,7 +141,7 @@ function take_image(file_name){
   if(img.width == 0){
     return '../test_dlPDF/pdfFront/no-photo.jpg';
   }
-  return '../test_dlPDF/pdfFront/'+file_name+'.jpg';
+  return "'../test_dlPDF/pdfFront/"+file_name+".jpg'";
 }
 
 // テキストボックスクリア
