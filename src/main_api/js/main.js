@@ -115,7 +115,7 @@ function show(file_names){
     for (n = 0; n < file_names[key].length; n++) {
       url += "<input type='button' id='" + key + "s2" + n + "' style='font:10pt MS ゴシック; WIDTH:150px; HEIGHT:70px' value='" + file_names[key][n] + "' onclick='pushingButton(" + n + ", " + ei + ", " + file_names[key].length + ");'>";
     }
-    url += "</h4><div align='center'><img border='0' data-echo='../test_dlPDF/pdfFront/"+key+".jpg' width='256' height='256'></div><br>";
+    url += "</h4><div align='center'><img　 data-echo='../test_dlPDF/pdfFront/"+key+".jpg' width='256' height='256'></div><br>";
     ei += 1;
   }
   return url;
@@ -129,10 +129,19 @@ function show_test(file_names, category_names){
     for (n = 0; n < category_names[ei].length; n++) {
       url += "<input type='button' id='" + file_names[key] + "s2" + n + "' style='font:10pt MS ゴシック; WIDTH:150px; HEIGHT:70px' value='" +  category_names[ei][n] + "' onclick='pushingButton(" + n + ", " + ei + ", " +  file_names.length + ");'>";
     }
-    url += "</h4><div align='center'><img data-echo='../test_dlPDF/pdfFront/"+file_names[key]+".jpg' width='256' height='256'></div><br>";
+    url += "</h4><div align='center'><img src='../test_dlPDF/pdfFront/no-photo.jpg' data-echo="+take_image(file_names[key])+" width='256' height='256'></div><br>";
     ei += 1;
   }
   return url;
+}
+
+function take_image(file_name){
+  var img = new Image();
+  img.src = '../test_dlPDF/pdfFront/'+file_name+'.jpg';
+  if(img.width == 0){
+    return '../test_dlPDF/pdfFront/no-photo.jpg';
+  }
+  return '../test_dlPDF/pdfFront/'+file_name+'.jpg';
 }
 
 // テキストボックスクリア
