@@ -6,9 +6,9 @@
   <title>WSL Degital Library</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="css/style.css">
-  <script src=js/main.js></script>
+  <script src=./js/main.js></script>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-　<script src="js/lazyload.js"></script>
+　<script src=./js/echo.js></script>
   <script type="text/javascript">
   window.onload = function readTextFile2() {
     var target = document.getElementById("output");
@@ -26,11 +26,10 @@
     req.send(null);
     categoryButton();
   }
-  // Lazy Loadを起動する
-  $( function()
-    {
-	     $( 'img.lazy' ).lazyload() ;
-    } ) ;
+
+  echo.init({
+    offset: 100  // px 画像読み込み開始のオフセット
+  });
   </script>
 </head>
 
