@@ -134,7 +134,7 @@ def file_download():
                 conn.retrieveFile('PUBLIC', 'scansnap/' + name, file)
             subprocess.call(["zip", '--junk-paths', 'file', './test_dlPDF/' + name, name, './test_dlPDF/' + name])
             subprocess.call(["mv", 'file.zip', './test_dlPDF/' + name + '.zip'])
-            books.book(title=upload_file.filename[:-4]).add_title()
+            books.book(title=name[:-4]).add_title()
     with open('./yellow_filenames.csv', 'w') as f:
         for name in yellow_num:
             f.write(name + '\n')
