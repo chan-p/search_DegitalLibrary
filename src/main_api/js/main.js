@@ -1,15 +1,10 @@
-// api_url = "172.16.67.210"
-// api_url = "192.168.62.24"
-api_url = "192.168.60.62"
-// api_url = "192.168.1.210"
-
 // カテゴリ追加
 function addCategory(a) {
   tmp = String(a)
   var add_val = document.getElementById('sss3' + tmp).value;
   var title = document.getElementById('s31' + tmp).value;
   var request = new XMLHttpRequest();
-  request.open('GET', 'http://'+api_url+':5000/addcate/?title=' + title + '&column=' + add_val);
+  request.open('GET', getAPI() + 'addcate/?title=' + title + '&column=' + add_val);
   request.onreadystatechange = function() {
     if (request.readyState != 4) {
       document.write("OK");
@@ -30,7 +25,7 @@ function deleteCategory(a) {
   var add_val = document.getElementById('sss3' + tmp).value;
   var title = document.getElementById('s31' + tmp).value;
   var request = new XMLHttpRequest();
-  request.open('GET', 'http://'+api_url+':5000/deletecate/?title=' + title + '&column=' + add_val);
+  request.open('GET', getAPI() + '/deletecate/?title=' + title + '&column=' + add_val);
   request.onreadystatechange = function() {
     if (request.readyState != 4) {
       document.write('OK');
@@ -79,7 +74,7 @@ function dispButton() {
   var request = new XMLHttpRequest();
   var target = document.getElementById('output2');
   var url = "<br>";
-  request.open("GET", "http://"+api_url+":5000/searchword/?keyword=" + word, true);
+  request.open("GET", getAPI() + "/searchword/?keyword=" + word, true);
   request.onreadystatechange = function() {
     if(request.readyState == 4 && request.status == 200){
       var file_names = JSON.parse(request.response)['titles'];
@@ -103,7 +98,7 @@ function categoryButton() {
     }
     target.innerHTML = url + "<br>";
   }
-  request.open("GET", "http://"+api_url+":5000/getlist_cate/", true);
+  request.open("GET", getAPI() + "/getlist_cate/", true);
   request.send(null);
 }
 
@@ -278,7 +273,7 @@ function readTextFile2() {
     }
     target.innerHTML = url;
   };
-  req.open("GET", "http://192.168.1.210:5000/getlist/", true);
+  req.open("GET", getAPI() + "/getlist/", true);
   req.send(null);
   categoryButton();
 }
