@@ -210,7 +210,7 @@ function addInputButtonAdd(key, val){
   elementInp = document.createElement('input');
   elementInp.type = 'button';
   elementInp.value = val;
-  elementInp.onClick = addWrap(key);
+  elementInp.setAttribute('onclick', addWrap(key));
   return elementInp;
 }
 
@@ -218,7 +218,7 @@ function addInputButtonDel(key, val){
   elementInp = document.createElement('input');
   elementInp.type = 'button';
   elementInp.value = val;
-  elementInp.onClick = deleteWrap(key);
+  elementInp.setAttribute('onclick', deleteWrap(key));
   return elementInp;
 }
 
@@ -226,7 +226,7 @@ function addInputButtonKousin(key, val){
   elementInp = document.createElement('input');
   elementInp.type = 'button';
   elementInp.value = val;
-  elementInp.onClick = reloadWrap();
+  elementInp.setAttribute('onclick', reloadWrap());
   return elementInp;
 }
 
