@@ -52,7 +52,6 @@ class book:
         return title_list
 
     def add_title(self):
-        print(self.title)
         data = dict(name=self.title, created=self.__return_date(), modified=self.__return_date())
         self.__table_books.insert(data)
         date = self.__table_books.find_one(id=self.get_id(True))["created"]
@@ -70,6 +69,9 @@ class book:
         id_ = self.__table_books_categories.find_one(book_id=self.id, category_id=category_id)['id']
         self.__table_books_categories.delete(id=id_)
         self.__ES.delete_record(books_categories, id_)
+
+    def get_all_titles(self):
+        return [record["name"] + '.pdf' for record in self.__table_books.find()]
 
     def __return_date(self):
         da = dt.now()
