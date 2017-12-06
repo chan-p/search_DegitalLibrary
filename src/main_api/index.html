@@ -13,14 +13,12 @@
   window.onload = function readTextFile2() {
     var target = document.getElementById("output");
     var req = new XMLHttpRequest();
-    var url = "";
     req.onreadystatechange = function() {
       if(req.readyState == 4 && req.status == 200){
         var file_names = JSON.parse(req.response)['titles'];
         var category_names = JSON.parse(req.response)['category'];
-        url += show_test(file_names, category_names);
+        generateElement(file_names, category_names);
       }
-      target.innerHTML = url;
     };
     req.open("GET", "http://192.168.60.62:5000/getlist/", true);
     req.send(null);
@@ -28,7 +26,6 @@
   }
 
   echo.init({
-    throttle: 500 ,
     offset: 100  // px 画像読み込み開始のオフセット
   });
 
@@ -49,6 +46,8 @@
       </ul>
     </nav>
   </header>
+
+  </div>
 
   <div class="contents" id="about">
 
@@ -109,6 +108,7 @@
       <input type="button" value="アップロード" onclick="up();"></input>
     </form>
   </section>
+
   <script type="text/javascript">
     function up(){
       var formObj = document.getElementById("my_form");
@@ -128,6 +128,7 @@
   <p class="pagetop"><a href="#">↑</a></p>
 
   </div>
+
   <!--/contents-->
 
   <footer>
