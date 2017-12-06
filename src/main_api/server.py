@@ -155,4 +155,4 @@ def _make_response(json_data=None):
 
 
 if __name__ == '__main__':
-    app.run(host=ENV[0][1], port=int(ENV[1][1], processes=6)
+    app.run(host=ENV[0][1], port=int(ENV[1][1]), processes=6)
