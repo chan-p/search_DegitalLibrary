@@ -57,7 +57,7 @@ function cateSearch(cate_num) {
   var category = document.getElementById('cate' + String(cate_num)).value;
   var request = new XMLHttpRequest();
   var target = document.getElementById('output4');
-  request.open('GET', 'http://'+api_url+':5000/searchcate/?column=' + category);
+  request.open('GET', getAPI() +'/searchcate/?column=' + category);
   request.onreadystatechange = function() {
     if(request.readyState == 4 && request.status == 200){
       var file_names = JSON.parse(request.response)['titles'];
