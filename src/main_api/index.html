@@ -41,14 +41,14 @@
     req.open("GET", getAPI() + "/getlist/", true);
     req.send(null);
     categoryButton();
-    req = new XMLHttpRequest();
-    req.onreadystatechange = function() {
-      if(req.readyState == 4 && req.status == 200){
+    var req1 = new XMLHttpRequest();
+    req1.onreadystatechange = function() {
+      if(req1.readyState == 4 && req1.status == 200){
          console.log('check');
       }
     };
-    req.open("GET", getAPI() + "/download/", true);
-    req.send(null);
+    req1.open("GET", getAPI() + "/download/", true);
+    req1.send(null);
   }
 
   echo.init({
