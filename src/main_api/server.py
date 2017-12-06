@@ -105,6 +105,41 @@ def file_upload():
 
   return _make_response()
 
+@app.route('/download/', methods=['GET'])
+def file_download():
+    import platform
+    import subprocess
+    from smb.SMBConnection import SMBConnection
+    user = 't-hayashi'
+    password = 'tomonori'
+    conn = SMBConnection(
+        user,
+        password,
+        platform.uname().node,
+        'yellow',
+        domain='wsl',
+        use_ntlm_v2=True
+    )
+    conn.connect('192.168.60.10', 139)
+    items = conn.listPath('PUBLIC', 'scansnap')
+    yellow_num = list(filter(lambda x: '.pdf' in x, [item.filename for item in items]))
+    db_num = []
+    with open('yellow_filenames.csv') as f:
+        for name in f:
+            db_num.append(name[:-1])
+    if len(yellow_num) > len(db_num):
+        dif_names = list(set(yellow_num).difference(set(db_num)))
+        for name in dif_names:
+            with open('./test_dlPDF/' + name, 'wb') as file:
+                conn.retrieveFile('PUBLIC', 'scansnap/' + name, file)
+            subprocess.call(["zip", '--junk-paths', 'file', './test_dlPDF/' + name, name, './test_dlPDF/' + name])
+            subprocess.call(["mv", 'file.zip', './test_dlPDF/' + name + '.zip'])
+            books.book(title=upload_file.filename[:-4]).add_title()
+    with open('./yellow_filenames', 'w') as f:
+        for name in yellow_num:
+            f.write(name + '\n')
+    return _make_response()
+
 def _make_response(json_data=None):
     response = make_response(json_data)
     response.headers["Content-Type"] = "application/json"
