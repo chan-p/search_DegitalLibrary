@@ -44,7 +44,11 @@
     var req1 = new XMLHttpRequest();
     req1.onreadystatechange = function() {
       if(req1.readyState == 4 && req1.status == 200){
-         console.log('check');
+         var message = JSON.parse(req.response)['message'];
+         if(message != ''){
+           alert(message);
+           kousin();
+         }
       }
     };
     req1.open("GET", getAPI() + "/download/", true);

@@ -124,21 +124,28 @@ def file_download():
     items = conn.listPath('PUBLIC', 'scansnap')
     yellow_num = list(filter(lambda x: '.pdf' in x, [item.filename for item in items]))
     db_num = []
+    mes = ''
     with open('yellow_filenames.csv') as f:
         for name in f:
             db_num.append(name[:-1])
+    with open('./yellow_filenames.csv', 'w') as f:
+        for name in yellow_num:
+            f.write(name + '\n')
     if len(yellow_num) > len(db_num):
         dif_names = list(set(yellow_num).difference(set(db_num)))
         for name in dif_names:
+            mes += name[:-4] + '\n'
             with open('./test_dlPDF/' + name, 'wb') as file:
                 conn.retrieveFile('PUBLIC', 'scansnap/' + name, file)
             subprocess.call(["zip", '--junk-paths', 'file', './test_dlPDF/' + name, name, './test_dlPDF/' + name])
             subprocess.call(["mv", 'file.zip', './test_dlPDF/' + name + '.zip'])
             books.book(title=name[:-4]).add_title()
-    with open('./yellow_filenames.csv', 'w') as f:
-        for name in yellow_num:
-            f.write(name + '\n')
-    return _make_response()
+        return _make_response(json.dumps({
+                    'message': mes + 'のアップロードが完了しました'
+                }))
+    return  _make_response(json.dumps({
+                'message': ''
+            }))
 
 def _make_response(json_data=None):
     response = make_response(json_data)
