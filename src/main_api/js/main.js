@@ -143,9 +143,9 @@ function generateElement(file_names, category_names){
     element.appendChild(addInputHidden(file_names[key], key));
     elementDiv.appendChild(addInputText(key));
 
-    elementDiv.appendChild(addInputButton(key, '追加'));
-    elementDiv.appendChild(addInputButton(key, '削除'));
-    elementDiv.appendChild(addInputButton(key, '更新'));
+    elementDiv.appendChild(addInputButtonAdd(key, '追加'));
+    elementDiv.appendChild(addInputButtonDel(key, '削除'));
+    elementDiv.appendChild(addInputButtonKousin(key, '更新'));
 
     elementA = document.createElement('a');
     elementA.href = '../test_dlPDF/' + file_names[key] + '.pdf#page=1 target="_blank"';
@@ -206,19 +206,27 @@ function addImage(path, wid, hei){
   return elementImg;
 }
 
-function addInputButton(key, val){
+function addInputButtonAdd(key, val){
   elementInp = document.createElement('input');
   elementInp.type = 'button';
   elementInp.value = val;
-  if(val == '追加'){
-    elementInp.onClick = addWrap(key);
-  }
-  if(val == '削除'){
-    elementInp.onClick = deleteWrap(key);
-  }
-  if(val == '更新'){
-    elementInp.onClick = reloadWrap();
-  }
+  elementInp.onClick = addWrap(key);
+  return elementInp;
+}
+
+function addInputButtonDel(key, val){
+  elementInp = document.createElement('input');
+  elementInp.type = 'button';
+  elementInp.value = val;
+  elementInp.onClick = deleteWrap(key);
+  return elementInp;
+}
+
+function addInputButtonKousin(key, val){
+  elementInp = document.createElement('input');
+  elementInp.type = 'button';
+  elementInp.value = val;
+  elementInp.onClick = reloadWrap();
   return elementInp;
 }
 
