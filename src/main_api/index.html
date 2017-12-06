@@ -44,7 +44,7 @@
     var req1 = new XMLHttpRequest();
     req1.onreadystatechange = function() {
       if(req1.readyState == 4 && req1.status == 200){
-         var message = JSON.parse(req.response)['message'];
+         var message = JSON.parse(req1.response)['message'];
          if(message != ''){
            alert(message);
            kousin();
