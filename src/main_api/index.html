@@ -41,18 +41,6 @@
     req.open("GET", getAPI() + "/getlist/", true);
     req.send(null);
     categoryButton();
-    var req1 = new XMLHttpRequest();
-    req1.onreadystatechange = function() {
-      if(req1.readyState == 4 && req1.status == 200){
-         var message = JSON.parse(req1.response)['message'];
-         if(message != ''){
-           alert(message);
-           kousin();
-         }
-      }
-    };
-    req1.open("GET", getAPI() + "/download/", true);
-    req1.send(null);
   }
 
   echo.init({
