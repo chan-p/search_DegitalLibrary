@@ -9,7 +9,25 @@
   <script src=./js/main.js></script>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 　<script src=./js/echo.js></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/js-yaml/3.4.2/js-yaml.min.js'></script>
   <script type="text/javascript">
+  function getAPI(){
+    var rawFile = new XMLHttpRequest();
+    var IP = '';
+    var PORT = '';
+    rawFile.open("GET", './config/enviroment.yml', false);
+    rawFile.onreadystatechange = function (){
+      if(rawFile.readyState === 4 || (rawFile.status === 200 || rawFile.status == 0)){
+        var allText = rawFile.responseText;
+        doc = JSON.parse(JSON.stringify(jsyaml.load(allText)));
+        IP = String(doc.apiInfo.IP);
+        PORT = String(doc.apiInfo.PORT);
+      }
+    }
+    rawFile.send(null);
+    return 'http://' + IP + ':' + PORT;
+  }
+
   window.onload = function readTextFile2() {
     var target = document.getElementById("output");
     var req = new XMLHttpRequest();
@@ -20,13 +38,13 @@
         generateElement(file_names, category_names);
       }
     };
-    req.open("GET", "http://192.168.60.62:5000/getlist/", true);
+    req.open("GET", getAPI() + "/getlist/", true);
     req.send(null);
     categoryButton();
   }
 
   echo.init({
-    offset: 100  // px 画像読み込み開始のオフセット
+    offset: 200  // px 画像読み込み開始のオフセット
   });
 
   </script>
