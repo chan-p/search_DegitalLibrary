@@ -3,20 +3,26 @@ function addCategory(a) {
   tmp = String(a)
   var add_val = document.getElementById('sss3' + tmp).value;
   var title = document.getElementById('s31' + tmp).value;
-  var request = new XMLHttpRequest();
-  request.open('GET', getAPI() + 'addcate/?title=' + title + '&column=' + add_val);
-  request.onreadystatechange = function() {
-    if (request.readyState != 4) {
-      document.write("OK");
-    } else if (request.status != 0) {
-      document.write(request.status);
-      document.write('失敗');
-    } else {
-      var result = request.responseText;
+  var huga = 0;
+  var hoge = setInterval(function() {
+    var request = new XMLHttpRequest();
+    request.open('GET', getAPI() + '/addcate/?title=' + title + '&column=' + add_val);
+    request.onreadystatechange = function() {
+      if (request.readyState != 4) {
+        document.write("OK");
+      } else if (request.status != 0) {
+        document.write(request.status);
+        document.write('失敗');
+      } else {
+        var result = request.responseText;
+      }
     }
-  }
-  request.send(null);
-  readTextFile2();
+    request.send(null);
+    huga++;
+    if (huga == 1) {
+      location.reload();
+    }
+  }, 2000);
 }
 
 //カテゴリ削除
@@ -25,19 +31,25 @@ function deleteCategory(a) {
   var add_val = document.getElementById('sss3' + tmp).value;
   var title = document.getElementById('s31' + tmp).value;
   var request = new XMLHttpRequest();
-  request.open('GET', getAPI() + '/deletecate/?title=' + title + '&column=' + add_val);
-  request.onreadystatechange = function() {
-    if (request.readyState != 4) {
-      document.write('OK');
-    } else if (request.status != 0) {
-      document.write(request.status);
-      document.write('失敗');
-    } else {
-      var result = request.responseText;
+  var huga = 0;
+  var hoge = setInterval(function() {
+    request.open('GET', getAPI() + '/deletecate/?title=' + title + '&column=' + add_val);
+    request.onreadystatechange = function() {
+      if (request.readyState != 4) {
+        document.write('OK');
+      } else if (request.status != 0) {
+        document.write(request.status);
+        document.write('失敗');
+      } else {
+        var result = request.responseText;
+      }
     }
-  }
-  request.send(null);
-  location.reload();
+    request.send(null);
+    huga++;
+    if (huga == 1) {
+      location.reload();
+    }
+  }, 2000);
 }
 
 // 更新
@@ -166,11 +178,11 @@ function generateElement(file_names, category_names){
     for (n = 0; n < category_names[key].length; n++) {
       elementIn = document.createElement('input');
       elementIn.type = 'button';
-      elementIn.id = category_names[key][n] + 's2' + String(n);
+      elementIn.id = file_names[key] + 's2' + String(n);
       elementIn.style='font:10pt MS ゴシック; WIDTH:150px; HEIGHT:70px';
-      elementIn.value = category_names[key][n];
+      elementIn.setAttribute('value', category_names[key][n]);
       elementIn.innerHTML = category_names[key][n];
-      elementIn.onclick = pushingWrap(n, key, file_names.length);
+      elementIn.setAttribute('onclick', 'pushingButton('+n+','+key+','+file_names.length+');');
       elementCa.appendChild(elementIn);
     }
     elementDi = document.createElement('div');
@@ -210,9 +222,6 @@ function addInputButtonAdd(key, val){
   elementInp = document.createElement('input');
   elementInp.type = 'button';
   elementInp.value = val;
-  var addwrap = function(){
-    addCategory(key);
-  }
   elementInp.setAttribute("onclick", "addCategory("+key+");");
   return elementInp;
 }
