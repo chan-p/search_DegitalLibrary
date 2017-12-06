@@ -210,7 +210,10 @@ function addInputButtonAdd(key, val){
   elementInp = document.createElement('input');
   elementInp.type = 'button';
   elementInp.value = val;
-  elementInp.setAttribute('onclick', addWrap(key));
+  var addwrap = function(){
+    addCategory(key);
+  }
+  elementInp.setAttribute("onclick", "addCategory("+key+");");
   return elementInp;
 }
 
@@ -218,7 +221,7 @@ function addInputButtonDel(key, val){
   elementInp = document.createElement('input');
   elementInp.type = 'button';
   elementInp.value = val;
-  elementInp.setAttribute('onclick', deleteWrap(key));
+  elementInp.setAttribute('onclick', 'deleteWrap('+key+');');
   return elementInp;
 }
 
@@ -226,7 +229,7 @@ function addInputButtonKousin(key, val){
   elementInp = document.createElement('input');
   elementInp.type = 'button';
   elementInp.value = val;
-  elementInp.setAttribute('onclick', reloadWrap());
+  elementInp.setAttribute('onclick', 'reloadWrap();');
   return elementInp;
 }
 
@@ -237,9 +240,7 @@ function pushingWrap(n, key, fileNamesLength){
 }
 
 function addWrap(key){
-  return function(){
-    addCategory(key);
-  };
+  return addCategory(key);
 }
 
 function deleteWrap(key){
