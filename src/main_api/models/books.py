@@ -70,6 +70,7 @@ class book:
         self.__table_books_categories.delete(id=id_)
         self.__ES.delete_record(books_categories, id_)
 
+
     def __return_date(self):
         da = dt.now()
         return '{}-{}-{} {}:{}:{}'.format(da.year, da.month, da.day, da.hour, da.minute, da.second)
