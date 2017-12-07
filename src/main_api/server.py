@@ -77,23 +77,6 @@ def get_allcategory():
                 'categories': categories.category().get_all_name()
             }))
 
-@app.route('/get_uploaddate/', methods=['GET'])
-def get_all():
-    book_titles = []
-    cate = []
-    ids_category = books.book().get_categories()
-    book_ids = books.book().get_all_ids()
-    for count, id_ in enumerate(book_ids):
-        book_titles.append(id_[1])
-        if int(id_[0]) not in ids_category:
-            cate.append([])
-            continue
-        cate.append(ids_category[int(id_[0])])
-    return _make_response(json.dumps({
-                'titles': book_titles,
-                'category': cate
-            }))
-
 @app.route('/getlist_cate/', methods=['GET'])
 def get_allcategory():
     return _make_response(json.dumps({
