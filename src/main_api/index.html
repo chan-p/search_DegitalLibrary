@@ -59,7 +59,6 @@
       <ul>
         <li><a href="#gallery">Search</a></li>
         <li><a href="#all_list">ALL List</a></li>
-        <li><a href="#upload">Upload</a></li>
         <li><a href="http://wiki.wsl.mind.meiji.ac.jp/" target="_blank">WSL_Wiki</a></li>
       </ul>
     </nav>
@@ -116,37 +115,6 @@
        <div id="output"></div>
     </section>
     <p class="pagetop"><a href="#">↑</a></p>
-  </div>
-
-  <div class="contents" id="upload">
-
-  <section id="new">
-    <h2>upload</h2>
-    <p>ファイルのアップロード。<br>複数ファイルの選択が可能。<br></p>
-    <form id="my_form">
-      <input type="file" id="upload_files" name="upload_files" multiple="multiple" class="form-control"></input><br>
-      <input type="button" value="アップロード" onclick="up();"></input>
-    </form>
-  </section>
-
-  <script type="text/javascript">
-    function up(){
-      var formObj = document.getElementById("my_form");
-      var formObj1 = document.getElementById("upload_files");
-      var data = new FormData(formObj);
-      var xmlhttp = new XMLHttpRequest();
-      xmlhttp.onreadystatechange = function () {
-        if (xmlhttp.readyState == 4 && xmlhttp.status == 0) {
-          alert("アップロード完了");
-        }
-      };
-      xmlhttp.open("POST", "http://192.168.60.62:5000/upload/", true);
-      xmlhttp.send(data);
-      formObj1.value='';
-    }
-  </script>
-  <p class="pagetop"><a href="#">↑</a></p>
-
   </div>
 
   <!--/contents-->
