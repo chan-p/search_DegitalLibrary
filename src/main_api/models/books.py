@@ -42,7 +42,7 @@ class book:
         return books
 
     def get_all_ids(self):
-        return [(pdf['_id'], pdf['_source']['name']) for pdf in self.__ES.return_all_records("books")]
+        return [(pdf['_id'], pdf['_source']['name'], pdf['_source']['created']) for pdf in self.__ES.return_all_records("books")]
 
     def search_ids(self, word):
         title_list = []
@@ -69,9 +69,6 @@ class book:
         id_ = self.__table_books_categories.find_one(book_id=self.id, category_id=category_id)['id']
         self.__table_books_categories.delete(id=id_)
         self.__ES.delete_record(books_categories, id_)
-
-    def get_all_titles(self):
-        return [record["name"] + '.pdf' for record in self.__table_books.find()]
 
     def __return_date(self):
         da = dt.now()
