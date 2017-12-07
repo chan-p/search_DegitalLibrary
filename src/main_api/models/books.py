@@ -43,6 +43,7 @@ class book:
 
     def get_ids_date(self, date):
         print(date)
+        
 
     def get_all_ids(self):
         return [(pdf['_id'], pdf['_source']['name'], pdf['_source']['created']) for pdf in self.__ES.return_all_records("books")]
