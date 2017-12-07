@@ -35,7 +35,9 @@
       if(req.readyState == 4 && req.status == 200){
         var file_names = JSON.parse(req.response)['titles'];
         var category_names = JSON.parse(req.response)['category'];
+        var uploadDates = JSON.parse(req.response)['uploaddate'];
         generateElement(file_names, category_names);
+        uploaddateButton(uploadDates);
       }
     };
     req.open("GET", getAPI() + "/getlist/", true);
@@ -100,10 +102,13 @@
       <p>PDF化した書籍の検索ができます。</p>
       <h3>検索キーワード：<input type="text" name="txtb_kw" id="s1" value="" onkeypress="enterEvent(event.keyCode);"><input type="button" value="検索" onclick="dispButton();"><input type="button" value="クリア" onclick="clearText();"></3>
       <div id="output2"></div>
-      <h3>検索カテゴリ：<input type="text" name="txtb_kc" value=""><input type="button" value="検索"><input type="button" value="クリア" onclick="clearText();"></3></3>
+      <h3>検索カテゴリ</3>
       <br>
       <div id='output3'></div>
       <div id='output4'></div>
+      <h3>検索更新日</3></3>
+      <div id='output5'></div>
+      <div id='output6'></div>
     </section>
     <p class="pagetop"><a href="#">↑</a></p>
   </div>

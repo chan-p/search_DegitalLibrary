@@ -41,6 +41,9 @@ class book:
             books[record['_source']['book_id']].append(categories[record['_source']['category_id']])
         return books
 
+    def get_ids_date(self, date):
+        print(date)
+
     def get_all_ids(self):
         return [(pdf['_id'], pdf['_source']['name'], pdf['_source']['created']) for pdf in self.__ES.return_all_records("books")]
 
@@ -69,7 +72,6 @@ class book:
         id_ = self.__table_books_categories.find_one(book_id=self.id, category_id=category_id)['id']
         self.__table_books_categories.delete(id=id_)
         self.__ES.delete_record(books_categories, id_)
-
 
     def __return_date(self):
         da = dt.now()

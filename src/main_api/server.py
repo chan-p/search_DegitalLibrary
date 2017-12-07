@@ -40,6 +40,18 @@ def search_cate():
                 'titles': book_titles
             }))
 
+@app.route('/searchdate/', methods=['GET'])
+def search_date():
+    book_titles = {}
+    date = request.args.get('date')
+    book_ids = books.book().get_ids_date(date)
+    for id_ in book_ids:
+        target_book = books.book(id_=id_)
+        book_titles[target_book.get_title(True)] = target_book.get_category()
+    return _make_response(json.dumps({
+                'titles': book_titles
+            }))
+
 @app.route('/searchword/', methods=['GET'])
 def search_keyword():
     book_titles = {}
@@ -60,7 +72,7 @@ def get_all():
     book_ids = books.book().get_all_ids()
     for count, id_ in enumerate(book_ids):
         book_titles.append(id_[1])
-        uploaddates.append(id_[2])
+        uploaddates.append(id_[2].split('T')[0])
         if int(id_[0]) not in ids_category:
             cate.append([])
             continue
@@ -68,7 +80,7 @@ def get_all():
     return _make_response(json.dumps({
                 'titles': book_titles,
                 'category': cate,
-                'uploaddate': uploaddates
+                'uploaddate': list(set(uploaddates))
             }))
 
 @app.route('/getlist_cate/', methods=['GET'])

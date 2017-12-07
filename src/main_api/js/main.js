@@ -80,6 +80,21 @@ function cateSearch(cate_num) {
   request.send(null);
 }
 
+function uploadDateSearch(num) {
+  var upload = document.getElementById('date' + String(num)).value;
+  var request = new XMLHttpRequest();
+  var target = document.getElementById('output6');
+  request.open('GET', getAPI() +'/searhdate/?date=' + upload);
+  request.onreadystatechange = function() {
+    if(request.readyState == 4 && request.status == 200){
+      var file_names = JSON.parse(request.response)['titles'];
+      url = show(file_names);
+    }
+    target.innerHTML = url;
+  }
+  request.send(null);
+}
+
 // キーワード検索一覧表示
 function dispButton() {
   var word = document.getElementById('s1').value;
@@ -112,6 +127,19 @@ function categoryButton() {
   }
   request.open("GET", getAPI() + "/getlist_cate/", true);
   request.send(null);
+}
+
+function uploaddateButton(uploadDates) {
+  var out = document.getElementById("output5");
+  var elementInp = document.createElement('input');
+  for(key in uploadDates){
+    elementInp = document.createElement('input');
+    elementInp.id = 'date' + String(key);
+    elementInp.type = 'button';
+    elementInp.value = uploadDates[key];
+    elementInp.setAttribute("onclick", "uploadDateSearch("+key+");");
+    out.appendChild(elementInp);
+  }
 }
 
 function show(file_names){
