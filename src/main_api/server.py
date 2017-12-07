@@ -55,6 +55,32 @@ def search_keyword():
 def get_all():
     book_titles = []
     cate = []
+    uploaddates = []
+    ids_category = books.book().get_categories()
+    book_ids = books.book().get_all_ids()
+    for count, id_ in enumerate(book_ids):
+        book_titles.append(id_[1])
+        uploaddates.append(id_[2])
+        if int(id_[0]) not in ids_category:
+            cate.append([])
+            continue
+        cate.append(ids_category[int(id_[0])])
+    return _make_response(json.dumps({
+                'titles': book_titles,
+                'category': cate,
+                'uploaddate': uploaddates
+            }))
+
+@app.route('/getlist_cate/', methods=['GET'])
+def get_allcategory():
+    return _make_response(json.dumps({
+                'categories': categories.category().get_all_name()
+            }))
+
+@app.route('/get_uploaddate/', methods=['GET'])
+def get_all():
+    book_titles = []
+    cate = []
     ids_category = books.book().get_categories()
     book_ids = books.book().get_all_ids()
     for count, id_ in enumerate(book_ids):
@@ -88,22 +114,6 @@ def autodeploy():
                 cmd1 = 'nohup python server.py &'
                 subprocess.call(cmd1, shell=True)
     return _make_response()
-
-
-@app.route('/upload/', methods=['POST'])
-def file_upload():
-  import subprocess
-  new = []
-  if request.files.getlist('upload_files')[0].filename:
-      upload_files = request.files.getlist('upload_files')
-      for upload_file in upload_files:
-          new.append(upload_file.filename)
-          upload_file.save("./test_dlPDF/" + upload_file.filename)
-          subprocess.call(["zip", '--junk-paths', 'file', './test_dlPDF/' + upload_file.filename, upload_file.filename, './test_dlPDF/' + upload_file.filename])
-          subprocess.call(["mv", 'file.zip', './test_dlPDF/' + upload_file.filename + '.zip'])
-          books.book(title=upload_file.filename[:-4]).add_title()
-
-  return _make_response()
 
 @app.route('/download/', methods=['GET'])
 def file_download():
