@@ -77,12 +77,6 @@ def get_allcategory():
                 'categories': categories.category().get_all_name()
             }))
 
-@app.route('/getlist_cate/', methods=['GET'])
-def get_allcategory():
-    return _make_response(json.dumps({
-                'categories': categories.category().get_all_name()
-            }))
-
 @app.route('/autodeploy/', methods=['POST'])
 def autodeploy():
     import subprocess
