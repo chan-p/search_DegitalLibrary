@@ -84,7 +84,7 @@ function uploadDateSearch(num) {
   var upload = document.getElementById('date' + String(num)).value;
   var request = new XMLHttpRequest();
   var target = document.getElementById('output6');
-  request.open('GET', getAPI() +'/searhdate/?date=' + upload);
+  request.open('GET', getAPI() +'/searchdate/?date=' + upload);
   request.onreadystatechange = function() {
     if(request.readyState == 4 && request.status == 200){
       var file_names = JSON.parse(request.response)['titles'];

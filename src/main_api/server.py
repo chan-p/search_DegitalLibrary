@@ -80,7 +80,7 @@ def get_all():
     return _make_response(json.dumps({
                 'titles': book_titles,
                 'category': cate,
-                'uploaddate': list(set(uploaddates))
+                'uploaddate': list(sorted(list(set(uploaddates))))
             }))
 
 @app.route('/getlist_cate/', methods=['GET'])
