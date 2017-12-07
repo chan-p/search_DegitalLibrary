@@ -42,8 +42,17 @@ class book:
         return books
 
     def get_ids_date(self, date):
-        print(date)
-        
+        day = int(date.split('-')[2]) + 1
+        if int(day) < 10:
+            day = '0' + str(day)
+        month = str(int(date.split('-')[1]))
+        if int(day) > 31:
+            day = '01'
+            month = str(int(date.split('-')[1]) + 1)
+        next_day = '{0}-{1}-{2}'.format(date.split('-')[0], month, day)
+        print("SELECT * FROM books where created between "+str(date)+" and "+str(next_day))
+        result = self.__db.query("SELECT * FROM books where created between '"+str(date)+"' and '"+str(next_day)+"'")
+        return [(book['id'], book['name']) for book in result]
 
     def get_all_ids(self):
         return [(pdf['_id'], pdf['_source']['name'], pdf['_source']['created']) for pdf in self.__ES.return_all_records("books")]
