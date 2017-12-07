@@ -46,8 +46,8 @@ def search_date():
     date = request.args.get('date')
     book_ids = books.book().get_ids_date(date)
     for id_ in book_ids:
-        target_book = books.book(id_=id_)
-        book_titles[target_book.get_title(True)] = target_book.get_category()
+        target_book = books.book(id_=id_[0])
+        book_titles[id_[1]] = target_book.get_category()
     return _make_response(json.dumps({
                 'titles': book_titles
             }))
