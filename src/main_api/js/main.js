@@ -22,7 +22,7 @@ function addCategory(a) {
     if (huga == 1) {
       location.reload();
     }
-  }, 2000);
+  }, 3000);
 }
 
 //カテゴリ削除
