@@ -19,10 +19,6 @@ function addCategory(a) {
     }
     request.send(null);
     huga++;
-    if (huga == 1) {
-      location.reload();
-    }
-  }, 3000);
 }
 
 //カテゴリ削除
