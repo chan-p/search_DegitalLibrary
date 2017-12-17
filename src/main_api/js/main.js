@@ -4,21 +4,19 @@ function addCategory(a) {
   var add_val = document.getElementById('sss3' + tmp).value;
   var title = document.getElementById('s31' + tmp).value;
   var huga = 0;
-  var hoge = setInterval(function() {
-    var request = new XMLHttpRequest();
-    request.open('GET', getAPI() + '/addcate/?title=' + title + '&column=' + add_val);
-    request.onreadystatechange = function() {
-      if (request.readyState != 4) {
-        document.write("OK");
-      } else if (request.status != 0) {
-        document.write(request.status);
-        document.write('失敗');
-      } else {
-        var result = request.responseText;
-      }
+  var request = new XMLHttpRequest();
+  request.open('GET', getAPI() + '/addcate/?title=' + title + '&column=' + add_val);
+  request.onreadystatechange = function() {
+    if (request.readyState != 4) {
+      document.write("OK");
+    } else if (request.status != 0) {
+      document.write(request.status);
+      document.write('失敗');
+    } else {
+      var result = request.responseText;
     }
-    request.send(null);
-    huga++;
+  }
+  request.send(null);
 }
 
 //カテゴリ削除
@@ -187,13 +185,13 @@ function generateElement(file_names, category_names){
     elementA.href = '../test_dlPDF/' + file_names[key] + '.pdf#page=1 target="_blank"';
     elementDiv.appendChild(elementA);
 
-    elementA.appendChild(addImage('images/pdf-hiraku.png', 100, 100));
+    elementA.appendChild(addImageSRC('images/pdf-hiraku.png', 100, 100));
 
     elementA = document.createElement('a');
     elementA.href = '../test_dlPDF/' + file_names[key] + '.pdf.zip#page=1 target="_blank"';
     elementDiv.appendChild(elementA);
 
-    elementA.appendChild(addImage('images/pdf-DL.png', 100, 100));
+    elementA.appendChild(addImageSRC('images/pdf-DL.png', 100, 100));
     out.appendChild(elementCh);
 
     elementCa = document.createElement('h4');
@@ -237,6 +235,14 @@ function addInputText(key){
 function addImage(path, wid, hei){
   elementImg = document.createElement('img');
   elementImg.setAttribute('data-echo', path);
+  elementImg.width = wid;
+  elementImg.height = hei;
+  return elementImg;
+}
+
+function addImageSRC(path, wid, hei){
+  elementImg = document.createElement('img');
+  elementImg.setAttribute('src', path);
   elementImg.width = wid;
   elementImg.height = hei;
   return elementImg;
