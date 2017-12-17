@@ -10,7 +10,7 @@ class book:
         self.title = title
         self.id = id_
         self.__path = os.environ.get('DB02_CONNECT')
-        self.__es = Elasticsearch("localhost:9200")
+        self.__es = Elasticsearch("http://dryer:9200")
         self.__db = dataset.connect(self.__path)
         self.__table_books = self.__db['books']
         self.__table_books_categories = self.__db['books_categories']
