@@ -346,7 +346,6 @@ function pushingButton(a, b, c) {
 function viewPDF(b) {
   var tmp1 = String(b);
   var title = document.getElementById('s31' + tmp1).value;
-  alert(title)
   var url = '<iframe src="/web/viewer.html?file=/test_dlPDF/'+title+'.pdf#zoom=page-fit" width="100" height="600"></iframe><input type="button" value="クリア" WIDTH:150px; HEIGHT:70px onclick="clearPDF('+tmp1+');"></input><br><br>'
   var target = document.getElementById('output' + title);
   target.innerHTML = url;
