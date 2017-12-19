@@ -4,6 +4,7 @@ import codecs
 import json
 import configparser
 import dataset
+import requests
 
 app = Flask(__name__)
 config = configparser.ConfigParser()
@@ -123,7 +124,6 @@ def file_download():
     items = conn.listPath('PUBLIC', 'scansnap')
     yellow_num = list(filter(lambda x: '.pdf' in x, [item.filename for item in items]))
     db_num = []
-    mes = ''
     with open('yellow_filenames.csv') as f:
         for name in f:
             db_num.append(name[:-1])
@@ -131,6 +131,7 @@ def file_download():
         for name in yellow_num:
             f.write(name + '\n')
     if len(yellow_num) > len(db_num):
+        mes = 'http://http://192.168.60.62:10080/ \n以下のPDFが追加されました。\n'
         dif_names = list(set(yellow_num).difference(set(db_num)))
         for name in dif_names:
             mes += name[:-4] + '\n'
@@ -139,6 +140,11 @@ def file_download():
             subprocess.call(["zip", '--junk-paths', 'file', './test_dlPDF/' + name, name, './test_dlPDF/' + name])
             subprocess.call(["mv", 'file.zip', './test_dlPDF/' + name + '.zip'])
             books.book(title=name[:-4]).add_title()
+            
+        requests.post('上でコピったURL', data = json.dumps({
+            'text': mes, # 投稿するテキスト
+            'username': 'WSL Degital Library' # 投稿のユーザー名
+        }))
         return _make_response(json.dumps({
                     'message': mes + 'のアップロードが完了しました'
                 }))
