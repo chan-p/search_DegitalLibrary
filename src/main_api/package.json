@@ -5,7 +5,8 @@
   "main": "index.js",
   "dependencies": {
     "bower": "^1.8.2",
-    "echo-js": "^1.7.3"
+    "echo-js": "^1.7.3",
+    "pdf.js-controller": "^1.0.1"
   },
   "devDependencies": {},
   "scripts": {
