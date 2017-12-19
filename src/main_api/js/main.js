@@ -182,7 +182,8 @@ function generateElement(file_names, category_names){
     elementDiv.appendChild(addInputButtonKousin(key, '更新'));
 
     elementA = document.createElement('a');
-    elementA.href = '../test_dlPDF/' + file_names[key] + '.pdf#page=1 target="_blank"';
+    // elementA.href = '../test_dlPDF/' + file_names[key] + '.pdf#page=1 target="_blank"';
+    elementA.setAttribute('onclick', 'viewPDF('+key+');');
     elementDiv.appendChild(elementA);
 
     elementA.appendChild(addImageSRC('images/pdf-hiraku.png', 100, 100));
@@ -211,6 +212,9 @@ function generateElement(file_names, category_names){
     elementDi.align = 'center';
 
     elementDi.appendChild(addImage(take_image(file_names[key]), 256, 256));
+    var elementOut = document.createElement('div');
+    elementOut.id = 'output' + file_names[key];
+    elementDi.appendChild(elementOut);
     out.appendChild(elementCa);
     out.appendChild(elementDi);
   }
@@ -337,4 +341,20 @@ function pushingButton(a, b, c) {
     document.getElementById('sss3' + tmp2).value = '';
   }
   document.getElementById('sss3' + tmp1).value = val1;
+}
+
+function viewPDF(b) {
+  var tmp1 = String(b);
+  var title = document.getElementById('s31' + tmp1).value;
+  alert(title)
+  var url = '<iframe src="/web/viewer.html?file=/test_dlPDF/'+title+'.pdf#zoom=page-fit" width="100" height="600"></iframe><input type="button" value="クリア" WIDTH:150px; HEIGHT:70px onclick="clearPDF('+tmp1+');"></input><br><br>'
+  var target = document.getElementById('output' + title);
+  target.innerHTML = url;
+}
+
+function clearPDF(b){
+  var tmp1 = String(b);
+  var title = document.getElementById('s31' + tmp1).value;
+  var target = document.getElementById('output' + title);
+  target.innerHTML = '';
 }
