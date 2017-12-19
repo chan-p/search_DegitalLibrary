@@ -140,8 +140,8 @@ def file_download():
             subprocess.call(["zip", '--junk-paths', 'file', './test_dlPDF/' + name, name, './test_dlPDF/' + name])
             subprocess.call(["mv", 'file.zip', './test_dlPDF/' + name + '.zip'])
             books.book(title=name[:-4]).add_title()
-            
-        requests.post('上でコピったURL', data = json.dumps({
+
+        requests.post('https://hooks.slack.com/services/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', data = json.dumps({
             'text': mes, # 投稿するテキスト
             'username': 'WSL Degital Library' # 投稿のユーザー名
         }))
