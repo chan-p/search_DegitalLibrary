@@ -3,7 +3,7 @@ import json
 
 class elasticsearch:
     def __init__(self):
-        self.__es = Elasticsearch('http://dryer:9200')
+        self.__es = Elasticsearch('localhost:9200')
 
     def return_match_records(self, doc_type_, query_match_, index_='search_degital_library'):
         return self.__es.search(index=index_, doc_type=doc_type_, body={"query": {"match": query_match_}, "size": 200, "sort": [{"name": {"order": "desc"}}]})['hits']['hits']
