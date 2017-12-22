@@ -62,14 +62,15 @@ function enterEvent(code) {
 function cateSearch(cate_num) {
   var category = document.getElementById('cate' + String(cate_num)).value;
   var request = new XMLHttpRequest();
-  var target = document.getElementById('output4');
   request.open('GET', getAPI() +'/searchcate/?column=' + category);
   request.onreadystatechange = function() {
+    if(request.readyState < 4){
+      clear_show('output4');
+    }
     if(request.readyState == 4 && request.status == 200){
       var file_names = JSON.parse(request.response)['titles'];
-      url = show(file_names);
+      generate_show(file_names, 'output4');
     }
-    target.innerHTML = url;
   }
   request.send(null);
 }
@@ -77,16 +78,93 @@ function cateSearch(cate_num) {
 function uploadDateSearch(num) {
   var upload = document.getElementById('date' + String(num)).value;
   var request = new XMLHttpRequest();
-  var target = document.getElementById('output6');
   request.open('GET', getAPI() +'/searchdate/?date=' + upload);
   request.onreadystatechange = function() {
+    if(request.readyState < 4){
+      clear_show('output6');
+    }
     if(request.readyState == 4 && request.status == 200){
       var file_names = JSON.parse(request.response)['titles'];
-      url = show(file_names);
+      generate_show(file_names, 'output6');
     }
-    target.innerHTML = url;
   }
   request.send(null);
+}
+
+function clear_show(output){
+  var dom_obj = document.getElementById(output);
+  while (dom_obj) dom_obj.removeChild(dom_obj.firstChild);
+}
+
+function generate_show(file_names, output){
+  var elementCh = document.createElement('h3');
+  var elementDiv = document.createElement('div');
+  var element = document.createElement('div');
+  var out = document.getElementById(output);
+  var elementCa = document.createElement('h4');
+  var elementIn = document.createElement('input');
+  var elementIm = document.createElement('img');
+  var elementDi = document.createElement('div');
+  var elementA = document.createElement('a');
+  var ei =0
+  for (key in file_names) {
+    elementCh = document.createElement('h3');
+
+    elementDiv = document.createElement('div');
+    elementDiv.style = 'text-align:right;';
+    elementDiv.innerHTML = 'カテゴリ：';
+    elementCh.appendChild(elementDiv);
+
+    element = document.createElement('div');
+    element.style = 'text-align:left;float:left;';
+    element.innerHTML = key;
+    elementDiv.appendChild(element);
+
+    element.appendChild(addInputHidden(key, ei));
+    elementDiv.appendChild(addInputText(ei));
+
+    elementDiv.appendChild(addInputButtonAdd(ei, '追加'));
+    elementDiv.appendChild(addInputButtonDel(ei, '削除'));
+    elementDiv.appendChild(addInputButtonKousin(ei, '更新'));
+
+    elementA = document.createElement('a');
+    // elementA.href = '../test_dlPDF/' + file_names[key] + '.pdf#page=1 target="_blank"';
+    elementA.setAttribute('onclick', 'viewPDF('+ei+');');
+    elementDiv.appendChild(elementA);
+
+    elementA.appendChild(addImageSRC('images/pdf-hiraku.png', 100, 100));
+
+    elementA = document.createElement('a');
+    elementA.href = '../test_dlPDF/' + key + '.pdf.zip#page=1 target="_blank"';
+    elementDiv.appendChild(elementA);
+
+    elementA.appendChild(addImageSRC('images/pdf-DL.png', 100, 100));
+    out.appendChild(elementCh);
+
+    elementCa = document.createElement('h4');
+    elementCa.innerHTML = 'カテゴリ<br>';
+
+    for (n = 0; n < file_names[key].length; n++) {
+      elementIn = document.createElement('input');
+      elementIn.type = 'button';
+      elementIn.id = key + 's2' + String(n);
+      elementIn.style='font:10pt MS ゴシック; WIDTH:150px; HEIGHT:70px';
+      elementIn.setAttribute('value', file_names[key][n]);
+      elementIn.innerHTML = file_names[key][n];
+      elementIn.setAttribute('onclick', 'pushingButton('+n+','+ei+','+file_names[key].length+');');
+      elementCa.appendChild(elementIn);
+    }
+    elementDi = document.createElement('div');
+    elementDi.align = 'center';
+
+    elementDi.appendChild(addImage(take_image(key), 256, 256));
+    var elementOut = document.createElement('div');
+    elementOut.id = 'output' + key;
+    elementDi.appendChild(elementOut);
+    out.appendChild(elementCa);
+    out.appendChild(elementDi);
+    ei += 1;
+  }
 }
 
 // キーワード検索一覧表示
@@ -97,11 +175,13 @@ function dispButton() {
   var url = "<br>";
   request.open("GET", getAPI() + "/searchword/?keyword=" + word, true);
   request.onreadystatechange = function() {
+    if(request.readyState < 4){
+      clear_show('output2');
+    }
     if(request.readyState == 4 && request.status == 200){
       var file_names = JSON.parse(request.response)['titles'];
-      url += show(file_names);
+      generate_show(file_names, 'output2');
     }
-    target.innerHTML = url;
   }
   request.send(null);
 }
@@ -183,7 +263,7 @@ function generateElement(file_names, category_names){
 
     elementA = document.createElement('a');
     // elementA.href = '../test_dlPDF/' + file_names[key] + '.pdf#page=1 target="_blank"';
-    elementA.setAttribute('onclick', 'viewPDF('+key+');');
+    elementA.setAttribute('onclick', 'viewPDF2('+key+');');
     elementDiv.appendChild(elementA);
 
     elementA.appendChild(addImageSRC('images/pdf-hiraku.png', 100, 100));
@@ -347,6 +427,21 @@ function viewPDF(b) {
   var tmp1 = String(b);
   var title = document.getElementById('s31' + tmp1).value;
   var url = '<iframe src="/web/viewer.html?file=/test_dlPDF/'+title+'.pdf#zoom=page-fit" width="100" height="600"></iframe><input type="button" value="クリア" WIDTH:150px; HEIGHT:70px onclick="clearPDF('+tmp1+');"></input><br><br>'
+  var target = document.getElementById('output' + title);
+  target.innerHTML = url;
+}
+
+var page = 50;//ページ画像数
+var dividePerPage = 10;//ページボタンの幅調
+var name = '';
+var width = '668';//画像幅(px)
+var backToPage = '#all_list';//戻リンク先のパス
+
+function viewPDF2(b){
+  var tmp1 = String(b);
+  var title = document.getElementById('s31' + tmp1).value;
+  name = 'test';
+  var url = '<div id="manga-viewer"></div><input type="button" value="クリア" WIDTH:150px; HEIGHT:70px onclick="clearPDF('+tmp1+');"></input><br><br>'
   var target = document.getElementById('output' + title);
   target.innerHTML = url;
 }
