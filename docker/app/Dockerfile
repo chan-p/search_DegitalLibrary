@@ -1,15 +1,6 @@
 FROM ubuntu:16.04
 MAINTAINER syunyooo
 
-# elastic実行用にjavaを入れる
-ENV JAVA_HOME /usr/lib/jvm/java-8-oracle
-RUN echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | debconf-set-selections && \
-    apt-get update && \
-    apt-get install -y software-properties-common && \
-    add-apt-repository -y ppa:webupd8team/java && \
-    apt-get update && \
-    apt-get install -y oracle-java8-installer
-
 # nginx
 RUN apt-get update
 RUN apt-get install -y vim
@@ -47,7 +38,7 @@ RUN pip3 install --upgrade pip \
     && pip3 install -r /usr/src/app/requirements.txt
 
 # 日本語のフォントのインストール
-RUN apt-get update && apt-get install -y fonts-migmix
+RUN apt-get install -y fonts-migmix
 # フォントの設定書き換え
 COPY docker_local.conf /etc/fonts/local.conf
 
@@ -60,9 +51,7 @@ ENV PYTHONIOENCODING utf_8
 ENV TZ Asia/Tokyo
 
 # 起動時のアプリの設定
-# ADD setting.ini /home/python/src/main_api/setting.ini
-# ADD config/enviroment.yml /home/python/src/main_api/config/enviroment.yml
-
+ADD setting.ini /home/python/src/main_api/setting.ini
 # nginxの設定
 ADD default.conf /etc/nginx/conf.d/
 

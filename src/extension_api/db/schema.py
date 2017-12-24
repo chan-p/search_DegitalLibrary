@@ -127,7 +127,7 @@ url = '{}://{}{}@{}/{}?charset=utf8'.format(config['db']['DBMS'],
                                             config['db']['HOST'],
                                             config['db']['DB'])
 logger.debug(url)
-engine = create_engine(url, echo=True, pool_recycle=1000)
+engine = create_engine(url, echo=True)
 
 if config['db']['INIT_DB'] == 'True':
     engine.execute('SET FOREIGN_KEY_CHECKS=0;')
