@@ -46,7 +46,6 @@ services:
     volumes:
       - ./app/config/enviroment.yml:${MAIN_APP}/config/enviroment.yml
       - ./app/setting.ini:${MAIN_APP}/setting.ini
-      - ./app/models_config.py:${MAIN_APP}/models/config.py
     ports:
       - "10081:80"
       - "15000:5000"
