@@ -51,7 +51,7 @@ ENV PYTHONIOENCODING utf_8
 ENV TZ Asia/Tokyo
 
 # 起動時のアプリの設定
-ADD config.ini /home/python/src/extension_api/
+# ADD config.ini /home/python/src/extension_api/
 
 CMD ["/bin/bash"]
 # EXPOSE 3000
