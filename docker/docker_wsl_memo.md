@@ -1,6 +1,6 @@
 # Docker Compose
 
-書きかけです。
+書き途中なので、ちょっとまってください
 
 ## Dockerのインストール
 Docker for Macを[こちらのサイト](https://docs.docker.com/docker-for-mac/)を参考にしてインストールを行ってください。
@@ -18,20 +18,16 @@ Docker Composeは[こちらのサイト](https://docs.docker.com/compose/install
 
 ```shell
 # コンテナの起動
-docker-compose up --build
+docker-compose up
 ```
 
-dbコンテナとアプリコンテナの起動のタイミングのズレで、一回エラーがでる可能性があります。
-その時には、上のコマンドを再度実行してください。
-
-
-
-起動後は、http://localhost:10081/ にアクセス。
-dbは localhost:3300 より。  MYSQL_USER: spark  MYSQL_PASSWORD: wsl-slave
+dbコンテナとアプリコンテナの起動のズレで、一回エラーがでると思うので、その時には、上のコマンドを再度実行してください。
 
 
 
 ---
+
+
 
 
 
@@ -55,16 +51,6 @@ macなら `/usr/local/etc/nginx/nginx.conf`
 
 flaskで動作。
 
-## elastic search
-
-elasticフォルダ内のbinまでいってnohupで./elasticsearchを実行
-
-データはcron/insert_elasticすればいける。
-
-## dbサーバ
-
-プロダクションDBのをダンプして持ってくるのをやりたい。。
-
 
 
 ## docker compose
@@ -86,7 +72,7 @@ elasticフォルダ内のbinまでいってnohupで./elasticsearchを実行
 
 - docker-composeで作成したcontainerにattach
 
-  - `docker exec -it ID_OR_NAME bash`
+  - docker exec -it ID_OR_NAME bash
 
 - docker-composeの変更が反映されていない
 
@@ -112,14 +98,3 @@ Dockerコンテナの起動
 以下の手順で、コンテナの起動を行います。
 - Dockerfileにてmain_app(nginx&基本API), extension_apiのイメージ作成
 - docker-compose.ymlを利用してアプリケーションの起動
-
-```bash
-# 本番環境dbと同期を取る場合
-# パスワードは管理者より
-mysqldump -h db02.wsl.mind.meiji.ac.jp -u root -p search_degital_library > search_degital_library.sql
-
-# dockerのipを確認
-# パスワードはdocker-compose.ymlにある通り
-sudo mysql -h 0.0.0.0 -P 3300 -u spark -pwsl-slave search_degital_library < search_degital_library.sql
-```
-
