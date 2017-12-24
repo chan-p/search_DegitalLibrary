@@ -216,20 +216,6 @@ function uploaddateButton(uploadDates) {
   }
 }
 
-function show(file_names){
-  var url = "<br>";
-  var ei = 0
-  for (key in file_names) {
-    url += "<h3><div style='text-align:right;'><div style='text-align:left;float:left;'><input type='hidden' id='s31" + ei + "' value='" + key + "'>" + key + "</input></div>カテゴリ：<input type='text' name='word' id='sss3" + ei + "' value=''></input><input type='button' value='追加' onclick='addCategory(" + ei + ");'></input><input type='button' value='削除' onclick='deleteCategory(" + ei + ");'></input><input type='button'  value='更新' onclick='koshin();'><a href='../test_dlPDF/" + key + ".pdf#page=1 target='_blank''><img src='images/pdf-hiraku.png' alt='イラスト２' width=100 height=100></a><a href='../test_dlPDF/" + key + ".pdf.zip#page=1 target='_blank''><img src='images/pdf-DL.png' alt='イラスト3' width=100 height=100></a></div></h3><h4>カテゴリ<br>";
-    for (n = 0; n < file_names[key].length; n++) {
-      url += "<input type='button' id='" + key + "s2" + n + "' style='font:10pt MS ゴシック; WIDTH:150px; HEIGHT:70px' value='" + file_names[key][n] + "' onclick='pushingButton(" + n + ", " + ei + ", " + file_names[key].length + ");'>";
-    }
-    url += "</h4><div align='center'><img　data-echo='../test_dlPDF/pdfFront/"+key+".jpg' width='256' height='256'></div><br>";
-    ei += 1;
-  }
-  return url;
-}
-
 function generateElement(file_names, category_names){
   var elementCh = document.createElement('h3');
   var elementDiv = document.createElement('div');
@@ -263,7 +249,7 @@ function generateElement(file_names, category_names){
 
     elementA = document.createElement('a');
     // elementA.href = '../test_dlPDF/' + file_names[key] + '.pdf#page=1 target="_blank"';
-    elementA.setAttribute('onclick', 'viewPDF2('+key+');');
+    elementA.setAttribute('onclick', 'viewPDF('+key+');');
     elementDiv.appendChild(elementA);
 
     elementA.appendChild(addImageSRC('images/pdf-hiraku.png', 100, 100));
