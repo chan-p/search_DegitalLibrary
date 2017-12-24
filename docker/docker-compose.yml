@@ -20,6 +20,8 @@ services:
     image: mysql
     ports:
       - "3300:3306"
+    expose:
+      - "3306"
     environment:
       MYSQL_DATABASE: search_degital_library
       MYSQL_USER: spark
@@ -27,31 +29,63 @@ services:
       MYSQL_ROOT_PASSWORD: wsl-slave
     volumes_from:
       - data
+  elasticsearch:
+    image: elasticsearch:5.1
+    # ports:
+    #     - 9200:9200
+    expose: 
+      - "9200"
   # 基本アプリ
   app:
     # restart: always
     build: ./app
     # docker run -tオプションに相当
-    tty: true
+    # tty: true 
     volumes_from:
       - data
+    volumes:
+      - ./app/config/enviroment.yml:${MAIN_APP}/config/enviroment.yml
+      - ./app/setting.ini:${MAIN_APP}/setting.ini
     ports:
       - "10081:80"
+      - "15000:5000"
+    expose:
+      - "5000"
     links:
       - db
       - extension_api
+      - elasticsearch
     working_dir: ${MAIN_APP}
-    command: bash -c "sudo service nginx restart && python3 ${MAIN_APP}/server.py"
+    command: 
+      bash -c "
+      echo 'sudo service nginx restart' &&
+      sudo service nginx restart && 
+      echo 'sleep 30s elastic mysql 起動待ち' &&
+      sleep 30s &&
+      echo 'mysql import to search_degital_library.sql' &&
+      sudo mysql -h db -P 3306 -u spark -pwsl-slave search_degital_library < ${PROJECT_DIR}/docker/mysql/search_degital_library.sql &&
+      echo 'python3 insert_elastic' &&
+      python3 ${PROJECT_DIR}/docker/app/insert_elastic.py && 
+      echo 'python3 server.py' &&
+      python3 ${MAIN_APP}/server.py"
+      # ../../elasticsearch-2.3.4/bin/elasticsearch -Des.insecure.allow.root=true && 
   # 拡張用
   extension_api:
     # restart: always
     build: ./extension_api
-    tty: true
+    # tty: true 
     volumes_from:
       - data
+    volumes:
+      - ./extension_api/config.ini:${EXTENTION_APP}/config.ini
     ports:
       - "13000:3000"
     links:
       - db
     working_dir: ${EXTENTION_APP}
-    command: python3 ${EXTENTION_APP}/api.py --config-path ${PROJECT_DIR}/docker/extension_api/config.ini
+    command: 
+      bash -c "
+      echo 'sleep 25s mysql 起動待ち' &&
+      sleep 25s &&
+      echo 'python3 api.py' &&
+      python3 ${EXTENTION_APP}/api.py --config-path ${PROJECT_DIR}/docker/extension_api/config.ini"

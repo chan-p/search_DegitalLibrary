@@ -12,3 +12,4 @@ ipython
 numpy
 dataset
 elasticsearch
+requests
