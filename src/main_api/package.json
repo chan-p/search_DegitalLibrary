@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
-    "bower": "^1.8.2",
+    "bower": "^1.8.8",
     "echo-js": "^1.7.3",
     "pdf.js-controller": "^1.0.1"
   },
