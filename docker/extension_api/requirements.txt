@@ -2,7 +2,7 @@ pycrypto==2.6.1
 six==1.10.0
 pdfminer.six==20170720
 beautifulsoup4==4.6.0
-urllib3==1.22
+urllib3==1.26.5
 pprint==0.1
 SQLAlchemy==1.1.14
 sqlalchemy-migrate
